@@ -1,0 +1,9 @@
+<header class="header">
+    <ul class="menu">
+        <ng-container *ngFor="let menuOption of menuOptions">
+            <li>
+                <a [href]="menuOption.href">{{ menuOption.optionName }}</a>
+            </li>
+        </ng-container>
+    </ul>
+</header>
