@@ -1,6 +1,7 @@
 .page-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   min-height: 100vh;
   height: auto;
   margin: 0;
@@ -8,8 +9,8 @@
 
 .page-content {
   position: relative;
-  top: 3rem;
   flex: 1;
   height: auto;
+  width: 90%;
   margin: 0;
 }

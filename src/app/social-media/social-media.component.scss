@@ -1,0 +1,16 @@
+.social-media-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 12rem;
+
+  .icon-button {
+    img {
+      width: 3rem;
+    }
+  }
+
+  .icon-button:hover {
+    opacity: 75%;
+  }
+}
