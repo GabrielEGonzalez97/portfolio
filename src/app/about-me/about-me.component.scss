@@ -152,23 +152,27 @@
 }
 
 .main-button {
+  display: block;
   background-color: #55198b;
   border: solid 1px #55198b;
+  border-radius: 6px;
   color: white;
   width: max-content;
-  padding: 13px 22px;
+  padding: 18px 24px;
   margin-right: 50px;
+  margin-top: 20px;
   text-transform: uppercase;
-  border-radius: 6px;
   text-align: center;
   text-decoration: none;
-  display: block;
-  margin-top: 20px;
   font-size: 1.25rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease-in-out 0s;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
 }
 
 .main-button:hover {
