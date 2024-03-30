@@ -22,16 +22,10 @@
         </p>
         <app-social-media></app-social-media>
         <div class="button-greeting-div">
-            <div>
-                <a class="main-button" href="#contact">Contact me</a>
-            </div>
-            <div>
-                <a class="main-button"
-                    href="https://www.canva.com/design/DAFYIlwFtLQ/dZ46bUGym4U2qsgGU3w92w/edit?utm_content=DAFYIlwFtLQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-                    target="_blank">
-                    See my resume
-                </a>
-            </div>
+            <app-main-button [buttonName]="'Contact me'" [href]="'#contact'"></app-main-button>
+            <app-main-button [buttonName]="'See my resume'"
+                [href]="'https://www.canva.com/design/DAFYIlwFtLQ/dZ46bUGym4U2qsgGU3w92w/edit?utm_content=DAFYIlwFtLQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'">
+            </app-main-button>
         </div>
     </div>
     <div class="greeting-image-div">

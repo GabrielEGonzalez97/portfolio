@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
+
 .page-container {
   display: flex;
   flex-direction: column;
@@ -5,12 +7,14 @@
   min-height: 100vh;
   height: auto;
   margin: 0;
+  font-family: 'Montserrat';
 }
 
 .page-content {
   position: relative;
   flex: 1;
   height: auto;
-  width: 90%;
+  width: 80%;
   margin: 0;
+  margin-bottom: 15rem;
 }

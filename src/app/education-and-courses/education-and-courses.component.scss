@@ -1,0 +1,186 @@
+.education-section-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto 0;
+
+  .education-heading {
+    font-size: 56px;
+    font-weight: 400;
+    margin-bottom: 0rem;
+  }
+
+  .education-card-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+  }
+}
+
+.education-section > * {
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1380px) {
+  .education-heading {
+    font-size: 40px;
+  }
+
+  .education-card-container {
+    padding-top: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .education-heading {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .education-card-container {
+    padding-top: 0px;
+  }
+}
+
+.education-card {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+
+  .education-card-left {
+    .education-roundedimg {
+      object-fit: cover;
+      margin-right: 2rem;
+      width: 6rem;
+      height: 6rem;
+      box-shadow: 0 0.5rem 1rem black;
+      border-radius: 50%;
+    }
+  }
+
+  .education-card-right {
+    max-width: 70%;
+
+    .education-text-school-name {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      height: 27px;
+    }
+
+    .education-text-title {
+      color: black;
+      font-weight: 700;
+      font-size: 19px;
+      margin: 0px;
+      padding-top: 0.8rem;
+      line-height: normal;
+    }
+
+    .education-text-duration {
+      color: black;
+      font-size: 19px;
+      margin: 0px;
+      padding-top: 0.5rem;
+    }
+
+    .education-text-description {
+      font-size: 19px;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .education-text-bullets > ul {
+      margin-top: 0.5rem;
+    }
+
+    .education-text-bullet-item {
+      font-size: 19px;
+      color: #868e96 !important;
+      margin-top: 0.5rem;
+
+      span {
+        display: flex;
+        align-items: center;
+      }
+
+      .skill-logo {
+        width: 24px;
+        height: 24px;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+.education-card:hover {
+  border-color: black;
+  width: 100%;
+  -webkit-transition: width 0.6s ease-in-out;
+  -moz-transition: width 0.6s ease-in-out;
+  -o-transition: width 0.6s ease-in-out;
+  transition: width 0.6s ease-in-out;
+}
+
+/* Media Query */
+
+@media (max-width: 1380px) {
+  .education-card {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+
+  .education-card-left {
+    .education-roundedimg {
+      width: 4rem;
+      height: 4rem;
+      margin-bottom: 0.5rem;
+      margin-right: 0px;
+    }
+  }
+
+  .education-card-right {
+    max-width: 90%;
+
+    .education-text-school-name {
+      font-size: 20px;
+      height: 23px;
+    }
+
+    .education-text-title {
+      padding-top: 0.5rem;
+      font-size: 16px;
+    }
+
+    .education-text-duration {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .education-card {
+    text-align: center;
+  }
+
+  .education-card-left {
+    .education-roundedimg {
+      margin-top: 10px;
+      width: 4rem;
+      height: 4rem;
+      margin-bottom: 1rem;
+      margin-right: 0;
+    }
+  }
+
+  .education-card-right {
+    max-width: 100%;
+
+    .education-text-bullets > ul {
+      max-width: 80%;
+      margin: auto;
+    }
+  }
+}

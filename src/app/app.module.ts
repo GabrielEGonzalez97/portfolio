@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SocialMediaComponent } from './social-media/social-media.component';
+import { EducationAndCoursesComponent } from './education-and-courses/education-and-courses.component';
+import { MainButtonComponent } from './main-button/main-button.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +15,8 @@ import { SocialMediaComponent } from './social-media/social-media.component';
     HeaderComponent,
     AboutMeComponent,
     SocialMediaComponent,
+    EducationAndCoursesComponent,
+    MainButtonComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

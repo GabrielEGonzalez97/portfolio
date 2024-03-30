@@ -1,0 +1,73 @@
+<div class="education-section-container" id="education-and-courses">
+    <h1 class="education-heading">Education</h1>
+    <div class="education-card-container">
+        <ng-container *ngFor="let educationInfo of educationInfoElements">
+            <div class="education-card">
+                <div class="education-card-left">
+                    <img crossorigin="anonymous" class="education-roundedimg" [src]="educationInfo.schoolLogoPath"
+                        [alt]="educationInfo.schoolName">
+                </div>
+                <div class="education-card-right">
+                    <h5 class="education-text-school-name">{{ educationInfo.schoolName }}</h5>
+                    <div class="education-text-details">
+                        <h5 class="education-text-title">{{ educationInfo.title }}</h5>
+                        <p class="education-text-duration">{{ educationInfo.duration }}</p>
+                        <p class="education-text-description">{{ educationInfo.description }}</p>
+                        <ng-container *ngIf="educationInfo.descriptionBullets">
+                            <div class="education-text-bullets">
+                                <ul>
+                                    <ng-container
+                                        *ngFor="let educationInfoDescBullet of educationInfo.descriptionBullets">
+                                        <li class="education-text-bullet-item">{{ educationInfoDescBullet }}</li>
+                                    </ng-container>
+                                </ul>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    <h1 class="education-heading">Courses</h1>
+    <div class="education-card-container">
+        <ng-container *ngFor="let courseInfo of courseInfoElements">
+            <div class="education-card">
+                <div class="education-card-left">
+                    <img crossorigin="anonymous" class="education-roundedimg"
+                        [src]="courseInfo.issuingCompany.companyLogoPath" [alt]="courseInfo.issuingCompany.companyName">
+                </div>
+                <div class="education-card-right">
+                    <h5 class="education-text-school-name">{{ courseInfo.courseName }}</h5>
+                    <div class="education-text-details">
+                        <h5 class="education-text-title">{{ courseInfo.issuingCompany.companyName }}</h5>
+                        <p class="education-text-duration">
+                            <ng-container *ngIf="!courseInfo.durationHours">
+                                {{ courseInfo.expeditionDate }}
+                            </ng-container>
+                            <ng-container *ngIf="courseInfo.durationHours">
+                                {{ courseInfo.expeditionDate }} ({{ courseInfo.durationHours }} hours)
+                            </ng-container>
+                        </p>
+                        <ng-container *ngIf="courseInfo.skills">
+                            <div class="skills">
+                                <ul>
+                                    <ng-container *ngFor="let courseInfoSkill of courseInfo.skills">
+                                        <li class="education-text-bullet-item">
+                                            <span>
+                                                <img class="skill-logo" [src]="courseInfoSkill.skillLogoPath"
+                                                    [alt]="courseInfoSkill.skillName">
+                                                {{ courseInfoSkill.skillName }}
+                                            </span>
+                                        </li>
+                                    </ng-container>
+                                </ul>
+                            </div>
+                        </ng-container>
+                        <app-main-button [buttonName]="'Show credential'" [href]="courseInfo.credentialUrl">
+                        </app-main-button>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

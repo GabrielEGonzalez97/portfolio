@@ -7,7 +7,6 @@
 
     .greeting-title {
       font-size: 70px;
-      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.1;
       color: black;
 
@@ -28,8 +27,7 @@
     }
 
     .greeting-text {
-      font-size: 30px;
-      font-family: Arial, Helvetica, sans-serif;
+      font-size: 24px;
       line-height: 40px;
       color: #868e96;
       padding-right: 3rem;
@@ -148,50 +146,5 @@
     .profile-image {
       max-width: 250px !important;
     }
-  }
-}
-
-.main-button {
-  display: block;
-  background-color: #55198b;
-  border: solid 1px #55198b;
-  border-radius: 6px;
-  color: white;
-  width: max-content;
-  padding: 18px 24px;
-  margin-right: 50px;
-  margin-top: 20px;
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  font-size: 1.25rem;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out 0s;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-}
-
-.main-button:hover {
-  background-color: white;
-  color: #55198b;
-  transition: all 0.3s ease 0s;
-  transform: translateY(-3px);
-}
-
-@media (max-width: 768px) {
-  .main-button {
-    font-size: 0.938rem;
-    padding: 12px 18px;
-    margin-right: 0px;
-  }
-}
-
-@media (max-width: 320px) {
-  .main-button {
-    font-size: 0.75rem;
   }
 }
