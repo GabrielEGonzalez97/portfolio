@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EF_COMPANY, ENGLISH_SKILL } from './constants';
 import { ICourseInfo, IEducationInfo } from './interfaces';
 
 @Component({
@@ -26,19 +27,11 @@ export class EducationAndCoursesComponent {
   public courseInfoElements: ICourseInfo[] = [
     {
       courseName: 'EFSET English Certificate 66/100 (C1 Advanced)',
-      issuingCompany: {
-        companyName: 'EF Standard English Test (EF SET)',
-        companyLogoPath: 'assets/images/EF_Logo.jpeg',
-      },
+      issuingCompany: EF_COMPANY,
       expeditionDate: 'January 2024',
       durationHours: '',
       credentialUrl: 'https://www.efset.org/cert/x9312N',
-      skills: [
-        {
-          skillName: 'English',
-          skillLogoPath: 'assets/icons/united-kingdom-flag-icon.svg',
-        },
-      ],
+      skills: [ENGLISH_SKILL],
     },
   ];
 }

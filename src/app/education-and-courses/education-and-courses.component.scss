@@ -34,7 +34,6 @@
 @media (max-width: 768px) {
   .education-heading {
     font-size: 30px;
-    text-align: center;
   }
 
   .education-card-container {
@@ -59,15 +58,14 @@
   }
 
   .education-card-right {
-    max-width: 70%;
+    max-width: 90%;
 
     .education-text-school-name {
       margin: 0;
       font-size: 28px;
       font-weight: 700;
       text-overflow: ellipsis;
-      white-space: nowrap;
-      height: 27px;
+      white-space: pre-wrap;
     }
 
     .education-text-title {
@@ -128,25 +126,19 @@
 
 @media (max-width: 1380px) {
   .education-card {
-    flex-direction: column;
     padding-bottom: 10px;
   }
 
   .education-card-left {
     .education-roundedimg {
-      width: 4rem;
-      height: 4rem;
-      margin-bottom: 0.5rem;
-      margin-right: 0px;
+      width: 4rem !important;
+      height: 4rem !important;
     }
   }
 
   .education-card-right {
-    max-width: 90%;
-
     .education-text-school-name {
       font-size: 20px;
-      height: 23px;
     }
 
     .education-text-title {
@@ -161,22 +153,18 @@
 }
 
 @media (max-width: 768px) {
-  .education-card {
-    text-align: center;
-  }
-
   .education-card-left {
     .education-roundedimg {
       margin-top: 10px;
-      width: 4rem;
-      height: 4rem;
+      width: 4rem !important;
+      height: 4rem !important;
       margin-bottom: 1rem;
       margin-right: 0;
     }
   }
 
   .education-card-right {
-    max-width: 100%;
+    max-width: 100% !important;
 
     .education-text-bullets > ul {
       max-width: 80%;
