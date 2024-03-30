@@ -34,6 +34,11 @@
       color: #868e96;
       padding-right: 3rem;
     }
+
+    .button-greeting-div {
+      display: flex;
+      margin-top: 20px;
+    }
   }
 
   .greeting-image-div {
@@ -136,8 +141,53 @@
       padding-right: 0rem !important;
     }
 
+    .button-greeting-div {
+      justify-content: space-around;
+    }
+
     .profile-image {
       max-width: 250px !important;
     }
+  }
+}
+
+.main-button {
+  background-color: #55198b;
+  border: solid 1px #55198b;
+  color: white;
+  width: max-content;
+  padding: 13px 22px;
+  margin-right: 50px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin-top: 20px;
+  font-size: 1.25rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.main-button:hover {
+  background-color: white;
+  color: #55198b;
+  transition: all 0.3s ease 0s;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .main-button {
+    font-size: 0.938rem;
+    padding: 12px 18px;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 320px) {
+  .main-button {
+    font-size: 0.75rem;
   }
 }
