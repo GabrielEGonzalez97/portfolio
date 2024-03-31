@@ -126,5 +126,13 @@
                 </span>
             </div>
         </ng-container>
+
+        <ng-container *ngIf="courseInfoElementsToShow.length === 0">
+            <div class="no-result-found-container">
+                <img src="assets/icons/no-result-found-on-web-icon.svg" alt="No result found">
+                <h5>No courses found</h5>
+                <p>Try changing the filters to find courses</p>
+            </div>
+        </ng-container>
     </div>
 </div>

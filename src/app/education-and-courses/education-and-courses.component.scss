@@ -255,3 +255,65 @@
     }
   }
 }
+
+.no-result-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 3rem;
+
+  img {
+    width: 10rem;
+    height: 10rem;
+    filter: invert(11%) sepia(55%) saturate(5751%) hue-rotate(269deg)
+      brightness(95%) contrast(96%);
+  }
+
+  h5 {
+    font-size: 36px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1380px) {
+  .no-result-found-container {
+    img {
+      width: 8rem;
+      height: 8rem;
+    }
+
+    h5 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .no-result-found-container {
+    img {
+      width: 6rem;
+      height: 6rem;
+    }
+
+    h5 {
+      font-size: 20px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+}
