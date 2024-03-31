@@ -7,9 +7,10 @@ import {
 
 export const EDUCATION_INFO_ELEMENTS: IEducationInfo[] = [
   {
-    schoolName:
-      'Universidad Nacional del Centro de la Provincia de Buenos Aires',
-    schoolLogoPath: 'assets/images/UNICEN_Logo.png',
+    school: {
+      name: 'Universidad Nacional del Centro de la Provincia de Buenos Aires',
+      logoPath: 'assets/images/UNICEN_Logo.png',
+    },
     title: 'Software Engineer',
     duration: 'March 2017 - October 2023',
     description: 'Five-year bachelor degree.',

@@ -4,11 +4,11 @@
         <ng-container *ngFor="let educationInfo of educationInfoElements">
             <div class="education-card">
                 <div class="education-card-left">
-                    <img crossorigin="anonymous" class="education-roundedimg" [src]="educationInfo.schoolLogoPath"
-                        [alt]="educationInfo.schoolName">
+                    <img crossorigin="anonymous" class="education-roundedimg" [src]="educationInfo.school.logoPath"
+                        [alt]="educationInfo.school.name">
                 </div>
                 <div class="education-card-right">
-                    <h5 class="education-text-school-name">{{ educationInfo.schoolName }}</h5>
+                    <h5 class="education-text-school-name">{{ educationInfo.school.name }}</h5>
                     <div class="education-text-details">
                         <h5 class="education-text-title">{{ educationInfo.title }}</h5>
                         <p class="education-text-duration">{{ educationInfo.duration }}</p>
