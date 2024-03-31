@@ -9,6 +9,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EducationAndCoursesComponent } from './education-and-courses/education-and-courses.component';
+import { ExperiencesComponent } from './experiences/experiences.component';
 import { HeaderComponent } from './header/header.component';
 import { MainButtonComponent } from './main-button/main-button.component';
 import { SocialMediaComponent } from './social-media/social-media.component';
@@ -18,6 +19,7 @@ import { SocialMediaComponent } from './social-media/social-media.component';
     AppComponent,
     AboutMeComponent,
     EducationAndCoursesComponent,
+    ExperiencesComponent,
     HeaderComponent,
     MainButtonComponent,
     SocialMediaComponent,

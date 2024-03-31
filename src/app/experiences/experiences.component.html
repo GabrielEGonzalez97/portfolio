@@ -1,0 +1,31 @@
+<div class="work-experiences-section-container" id="work-experiences">
+    <h1 class="work-experiences-heading">Work Experiences</h1>
+    <div class="experience-cards-div">
+        <ng-container *ngFor="let experience of experiences">
+            <div class="experience-card">
+                <div class="experience-banner" [style]="'background:' + experience.company.color + ';'">
+                    <div class="experience-blurred_div"></div>
+                    <div class="experience-div-company">
+                        <h5 class="experience-text-company">{{ experience.company.name }}</h5>
+                    </div>
+                    <img crossorigin="anonymous" class="experience-roundedimg" [src]="experience.company.logoPath"
+                        [alt]="experience.company.name">
+                </div>
+                <div class="experience-text-details">
+                    <h5 class="experience-text-role">{{ experience.role }}</h5>
+                    <h5 class="experience-text-date">{{ experience.date }}</h5>
+                    <p class="experience-text-description">{{ experience.description }}</p>
+                    <ng-container *ngIf="experience.descriptionBullets">
+                        <div class="experience-text-bullets">
+                            <ul>
+                                <ng-container *ngFor="let experienceInfoDescBullet of experience.descriptionBullets">
+                                    <li class="experience-text-bullet-item">{{ experienceInfoDescBullet }}</li>
+                                </ng-container>
+                            </ul>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
