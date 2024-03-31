@@ -1,7 +1,6 @@
 .education-section-container {
   display: flex;
   flex-direction: column;
-  margin: 1rem auto 0;
 
   .education-heading {
     font-size: 56px;
@@ -12,7 +11,6 @@
   .education-card-container {
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
   }
 }
 
@@ -25,30 +23,21 @@
   .education-heading {
     font-size: 40px;
   }
-
-  .education-card-container {
-    padding-top: 0px;
-  }
 }
 
 @media (max-width: 768px) {
   .education-heading {
     font-size: 30px;
   }
-
-  .education-card-container {
-    padding-top: 0px;
-  }
 }
 
 .education-card {
   display: flex;
   flex-direction: row;
-  margin-top: 1rem;
+  margin-top: 3rem;
 
   .education-card-left {
     .education-roundedimg {
-      object-fit: cover;
       margin-right: 2rem;
       width: 6rem;
       height: 6rem;
@@ -102,6 +91,7 @@
       span {
         display: flex;
         align-items: center;
+        margin-top: 1rem;
       }
 
       .skill-logo {
