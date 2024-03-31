@@ -28,9 +28,9 @@
             </div>
         </ng-container>
     </div>
-    <h1 class="education-heading">Courses</h1>
+    <h1 class="education-heading">Courses ({{ courseInfoElements.length }})</h1>
     <div class="education-card-container">
-        <ng-container *ngFor="let courseInfo of courseInfoElements">
+        <ng-container *ngFor="let courseInfo of courseInfoElementsToShow">
             <div class="education-card">
                 <div class="education-card-left">
                     <img crossorigin="anonymous" class="education-roundedimg"
@@ -67,6 +67,15 @@
                         </app-main-button>
                     </div>
                 </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="courseInfoElementsToShow.length < courseInfoElements.length">
+            <div class="show-more-container">
+                <span (click)="addCourseElementsToShow()">
+                    Show more
+                    <img src="assets/icons/angle-bottom-icon.svg" alt="Show more">
+                </span>
             </div>
         </ng-container>
     </div>

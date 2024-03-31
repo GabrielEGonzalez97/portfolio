@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   ANGULAR_SKILL,
   CSS_SKILL,
@@ -27,7 +27,7 @@ import { ICourseInfo, IEducationInfo } from './interfaces';
   templateUrl: './education-and-courses.component.html',
   styleUrls: ['./education-and-courses.component.scss'],
 })
-export class EducationAndCoursesComponent {
+export class EducationAndCoursesComponent implements OnInit {
   public educationInfoElements: IEducationInfo[] = [
     {
       schoolName:
@@ -243,6 +243,15 @@ export class EducationAndCoursesComponent {
       skills: [R_SKILL],
     },
     {
+      courseName: 'Data Manipulation with R',
+      issuingCompany: DATACAMP_COMPANY,
+      expeditionDate: 'January 2021',
+      durationHours: '20',
+      credentialUrl:
+        'https://www.datacamp.com/statement-of-accomplishment/track/49b10a290d9b912015891e75cdc2d054133f3bd3',
+      skills: [R_SKILL],
+    },
+    {
       courseName: 'HTML5 from Scratch 2020 Edition',
       issuingCompany: UDEMY_COMPANY,
       expeditionDate: 'January 2021',
@@ -306,4 +315,23 @@ export class EducationAndCoursesComponent {
       skills: [JAVA_SKILL, SQL_SKILL],
     },
   ];
+
+  public courseInfoElementsToShow: ICourseInfo[] = [];
+
+  constructor() {}
+
+  public ngOnInit(): void {
+    this.courseInfoElementsToShow = this.courseInfoElements.slice(0, 2);
+  }
+
+  public addCourseElementsToShow(): void {
+    const startIndex: number = this.courseInfoElementsToShow.length;
+    let endIndex: number = startIndex + 2;
+    if (endIndex > this.courseInfoElements.length) {
+      endIndex = this.courseInfoElements.length;
+    }
+    this.courseInfoElementsToShow.push(
+      ...this.courseInfoElements.slice(startIndex, endIndex)
+    );
+  }
 }

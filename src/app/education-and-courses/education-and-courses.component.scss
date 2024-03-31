@@ -21,13 +21,13 @@
 
 @media (max-width: 1380px) {
   .education-heading {
-    font-size: 40px;
+    font-size: 40px !important;
   }
 }
 
 @media (max-width: 768px) {
   .education-heading {
-    font-size: 30px;
+    font-size: 30px !important;
   }
 }
 
@@ -92,6 +92,7 @@
         display: flex;
         align-items: center;
         margin-top: 1rem;
+        font-size: 19px;
       }
 
       .skill-logo {
@@ -128,16 +129,20 @@
 
   .education-card-right {
     .education-text-school-name {
-      font-size: 20px;
+      font-size: 20px !important;
     }
 
     .education-text-title {
-      padding-top: 0.5rem;
-      font-size: 16px;
+      padding-top: 0.5rem !important;
+      font-size: 16px !important;
     }
 
     .education-text-duration {
-      font-size: 16px;
+      font-size: 16px !important;
+    }
+
+    .education-text-description {
+      font-size: 16px !important;
     }
   }
 }
@@ -145,11 +150,10 @@
 @media (max-width: 768px) {
   .education-card-left {
     .education-roundedimg {
-      margin-top: 10px;
+      margin-top: 10px !important;
       width: 4rem !important;
       height: 4rem !important;
-      margin-bottom: 1rem;
-      margin-right: 0;
+      margin-bottom: 1rem !important;
     }
   }
 
@@ -157,8 +161,65 @@
     max-width: 100% !important;
 
     .education-text-bullets > ul {
-      max-width: 80%;
-      margin: auto;
+      max-width: 80% !important;
+      margin: auto !important;
+    }
+
+    .education-text-bullet-item {
+      font-size: 14px !important;
+    }
+  }
+}
+
+.show-more-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  width: 100%;
+  font-size: 24px;
+
+  span {
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  span:hover {
+    cursor: pointer;
+    color: #55198b;
+
+    img {
+      filter: invert(11%) sepia(55%) saturate(5751%) hue-rotate(269deg)
+        brightness(95%) contrast(96%);
+    }
+  }
+}
+
+@media (max-width: 1380px) {
+  .show-more-container {
+    font-size: 20px !important;
+
+    span {
+      img {
+        width: 14px !important;
+        height: 14px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .show-more-container {
+    font-size: 16px !important;
+    margin-top: 2rem;
+
+    span {
+      img {
+        width: 12px !important;
+        height: 12px !important;
+      }
     }
   }
 }
