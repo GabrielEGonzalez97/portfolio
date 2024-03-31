@@ -116,5 +116,15 @@
                 </span>
             </div>
         </ng-container>
+
+        <ng-container
+            *ngIf="courseInfoElementsToShow.length === courseInfoElements.length && courseInfoElementsToShow.length > 2">
+            <div class="show-more-container">
+                <span (click)="showLessCourses()">
+                    Show less
+                    <img src="assets/icons/angle-top-icon.svg" alt="Show less">
+                </span>
+            </div>
+        </ng-container>
     </div>
 </div>

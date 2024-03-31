@@ -22,6 +22,8 @@ export class EducationAndCoursesComponent implements OnInit {
   public skills: ISkill[] = [];
   public issuingCompanies: IIssuingCompany[] = [];
 
+  public numberCoursesToShow: number = 2;
+
   private selectedYears: string[] = [];
   private selectedSkills: string[] = [];
   private selectedIssuingCompanies: string[] = [];
@@ -41,9 +43,16 @@ export class EducationAndCoursesComponent implements OnInit {
         return numericDateB - numericDateA;
       }
     );
-    this.courseInfoElementsToShow = this.courseInfoElements.slice(0, 2);
+    this.initializeCourseInfoElementsToShow();
 
     this.completeFilters(this.courseInfoElements);
+  }
+
+  private initializeCourseInfoElementsToShow(): void {
+    this.courseInfoElementsToShow = this.courseInfoElements.slice(
+      0,
+      this.numberCoursesToShow
+    );
   }
 
   private convertExpeditionDateToNumeric(expeditionDate: string): number {
@@ -122,13 +131,17 @@ export class EducationAndCoursesComponent implements OnInit {
 
   public addCourseElementsToShow(): void {
     const startIndex: number = this.courseInfoElementsToShow.length;
-    let endIndex: number = startIndex + 2;
+    let endIndex: number = startIndex + this.numberCoursesToShow;
     if (endIndex > this.courseInfoElements.length) {
       endIndex = this.courseInfoElements.length;
     }
     this.courseInfoElementsToShow.push(
       ...this.courseInfoElements.slice(startIndex, endIndex)
     );
+  }
+
+  public showLessCourses(): void {
+    this.initializeCourseInfoElementsToShow();
   }
 
   private onFilterChange(): void {
@@ -159,7 +172,7 @@ export class EducationAndCoursesComponent implements OnInit {
       }
     );
 
-    this.courseInfoElementsToShow = this.courseInfoElements.slice(0, 2);
+    this.initializeCourseInfoElementsToShow();
   }
 
   public onFilterByYear(yearsToFilter: string[]): void {
