@@ -223,3 +223,24 @@
     }
   }
 }
+
+.filters-container {
+  display: flex;
+
+  .mat-mdc-form-field {
+    width: 30%;
+    margin-top: 1.5rem;
+    margin-right: 3%;
+  }
+}
+
+.dropdown-option-container {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+  }
+}

@@ -29,6 +29,44 @@
         </ng-container>
     </div>
     <h1 class="education-heading">Courses ({{ courseInfoElements.length }})</h1>
+    <div class="filters-container">
+        <mat-form-field>
+            <mat-label>Filter by Year</mat-label>
+            <mat-select multiple>
+                <ng-container *ngFor="let year of years">
+                    <mat-option [value]="year">
+                        {{year}}
+                    </mat-option>
+                </ng-container>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Filter by Skill</mat-label>
+            <mat-select multiple>
+                <ng-container *ngFor="let skill of skills">
+                    <mat-option [value]="skill.skillName">
+                        <span class="dropdown-option-container">
+                            <img [src]="skill.skillLogoPath" [alt]="skill.skillName">
+                            {{skill.skillName}}
+                        </span>
+                    </mat-option>
+                </ng-container>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Filter by Issuing Company</mat-label>
+            <mat-select multiple>
+                <ng-container *ngFor="let issuingCompany of issuingCompanies">
+                    <mat-option [value]="issuingCompany.companyName">
+                        <span class="dropdown-option-container">
+                            <img [src]="issuingCompany.companyLogoPath" [alt]="issuingCompany.companyName">
+                            {{issuingCompany.companyName}}
+                        </span>
+                    </mat-option>
+                </ng-container>
+            </mat-select>
+        </mat-form-field>
+    </div>
     <div class="education-card-container">
         <ng-container *ngFor="let courseInfo of courseInfoElementsToShow">
             <div class="education-card">
