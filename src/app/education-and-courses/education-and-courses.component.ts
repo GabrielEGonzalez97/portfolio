@@ -321,7 +321,36 @@ export class EducationAndCoursesComponent implements OnInit {
   constructor() {}
 
   public ngOnInit(): void {
+    this.courseInfoElements = this.courseInfoElements.sort((a, b) => {
+      const numericDateA: number = this.convertExpeditionDateToNumeric(
+        a.expeditionDate
+      );
+      const numericDateB: number = this.convertExpeditionDateToNumeric(
+        b.expeditionDate
+      );
+
+      return numericDateB - numericDateA;
+    });
     this.courseInfoElementsToShow = this.courseInfoElements.slice(0, 2);
+  }
+
+  private convertExpeditionDateToNumeric(expeditionDate: string): number {
+    const [month, year] = expeditionDate.split(' ');
+    const monthsMap: { [month: string]: number } = {
+      January: 1,
+      February: 2,
+      March: 3,
+      April: 4,
+      May: 5,
+      June: 6,
+      July: 7,
+      August: 8,
+      September: 9,
+      October: 10,
+      November: 11,
+      December: 12,
+    };
+    return parseInt(year, 10) * 100 + monthsMap[month];
   }
 
   public addCourseElementsToShow(): void {
