@@ -32,7 +32,7 @@
     <div class="filters-container">
         <mat-form-field>
             <mat-label>Filter by Year</mat-label>
-            <mat-select multiple>
+            <mat-select multiple (selectionChange)="onFilterByYear($event.value)">
                 <ng-container *ngFor="let year of years">
                     <mat-option [value]="year">
                         {{year}}
@@ -42,7 +42,7 @@
         </mat-form-field>
         <mat-form-field>
             <mat-label>Filter by Skill</mat-label>
-            <mat-select multiple>
+            <mat-select multiple (selectionChange)="onFilterBySkill($event.value)">
                 <ng-container *ngFor="let skill of skills">
                     <mat-option [value]="skill.skillName">
                         <span class="dropdown-option-container">
@@ -55,7 +55,7 @@
         </mat-form-field>
         <mat-form-field>
             <mat-label>Filter by Issuing Company</mat-label>
-            <mat-select multiple>
+            <mat-select multiple (selectionChange)="onFilterByIssuingCompany($event.value)">
                 <ng-container *ngFor="let issuingCompany of issuingCompanies">
                     <mat-option [value]="issuingCompany.companyName">
                         <span class="dropdown-option-container">

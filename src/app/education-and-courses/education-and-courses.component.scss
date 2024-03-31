@@ -226,11 +226,11 @@
 
 .filters-container {
   display: flex;
+  justify-content: space-between;
 
   .mat-mdc-form-field {
     width: 30%;
     margin-top: 1.5rem;
-    margin-right: 3%;
   }
 }
 
@@ -242,5 +242,16 @@
     width: 24px;
     height: 24px;
     margin-right: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .filters-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .mat-mdc-form-field {
+      width: 45%;
+    }
   }
 }

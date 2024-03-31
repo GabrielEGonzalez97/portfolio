@@ -22,6 +22,10 @@ export class EducationAndCoursesComponent implements OnInit {
   public skills: ISkill[] = [];
   public issuingCompanies: IIssuingCompany[] = [];
 
+  private selectedYears: string[] = [];
+  private selectedSkills: string[] = [];
+  private selectedIssuingCompanies: string[] = [];
+
   constructor() {}
 
   public ngOnInit(): void {
@@ -70,8 +74,8 @@ export class EducationAndCoursesComponent implements OnInit {
     >();
 
     courseInfoElements.forEach((course: ICourseInfo) => {
-      const [_, year] = course.expeditionDate.split(' ');
-      uniqueYearsMap.set(year, year);
+      const [_, expeditionDateYear] = course.expeditionDate.split(' ');
+      uniqueYearsMap.set(expeditionDateYear, expeditionDateYear);
 
       course.skills.forEach((skill: ISkill) => {
         uniqueSkillsMap.set(skill.skillName, skill);
@@ -125,5 +129,51 @@ export class EducationAndCoursesComponent implements OnInit {
     this.courseInfoElementsToShow.push(
       ...this.courseInfoElements.slice(startIndex, endIndex)
     );
+  }
+
+  private onFilterChange(): void {
+    this.courseInfoElements = COURSE_INFO_ELEMENTS.filter(
+      (courseInfo: ICourseInfo) => {
+        let filterYear: boolean = true;
+        let filterSkill: boolean = true;
+        let filterCompany: boolean = true;
+
+        if (this.selectedYears.length > 0) {
+          const [_, expeditionDateYear] = courseInfo.expeditionDate.split(' ');
+          filterYear = this.selectedYears.includes(expeditionDateYear);
+        }
+
+        if (this.selectedSkills.length > 0) {
+          filterSkill = courseInfo.skills.some((skill: ISkill) =>
+            this.selectedSkills.includes(skill.skillName)
+          );
+        }
+
+        if (this.selectedIssuingCompanies.length > 0) {
+          filterCompany = this.selectedIssuingCompanies.includes(
+            courseInfo.issuingCompany.companyName
+          );
+        }
+
+        return filterYear && filterSkill && filterCompany;
+      }
+    );
+
+    this.courseInfoElementsToShow = this.courseInfoElements.slice(0, 2);
+  }
+
+  public onFilterByYear(yearsToFilter: string[]): void {
+    this.selectedYears = yearsToFilter;
+    this.onFilterChange();
+  }
+
+  public onFilterBySkill(skillsToFilter: string[]): void {
+    this.selectedSkills = skillsToFilter;
+    this.onFilterChange();
+  }
+
+  public onFilterByIssuingCompany(issuingCompaniesToFilter: string[]): void {
+    this.selectedIssuingCompanies = issuingCompaniesToFilter;
+    this.onFilterChange();
   }
 }
