@@ -1,0 +1,111 @@
+.projects-section-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+
+  .projects-heading {
+    font-size: 56px;
+    font-weight: 400;
+    margin-bottom: 0rem;
+  }
+
+  .projects-container {
+    margin-top: 3rem;
+    grid-gap: 1rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem 1rem;
+  }
+}
+
+@media (max-width: 1380px) {
+  .projects-heading {
+    font-size: 40px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-heading {
+    font-size: 30px !important;
+  }
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(211, 211, 211, 0.397);
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+  .project-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card-image {
+      border-radius: 50%;
+      max-width: 100%;
+      height: auto;
+      width: 250px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+  }
+
+  .project-detail {
+    text-align: center;
+
+    .card-title {
+      color: black;
+      font-size: 22px;
+      line-height: 24px;
+      font-weight: 700;
+      margin: 15px 0 0 0;
+    }
+
+    .card-subtitle {
+      color: #666666;
+      font-size: 17px;
+      line-height: 1.5rem;
+    }
+
+    .project-card-footer {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+}
+
+.project-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -10px;
+}
+
+@media (max-width: 1380px) {
+  .card-image {
+    width: 200px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-image {
+    width: 150px !important;
+  }
+}
+
+:host ::ng-deep {
+  .main-button {
+    margin-right: 0rem !important;
+  }
+}

@@ -12,6 +12,7 @@ import { EducationAndCoursesComponent } from './education-and-courses/education-
 import { ExperiencesComponent } from './experiences/experiences.component';
 import { HeaderComponent } from './header/header.component';
 import { MainButtonComponent } from './main-button/main-button.component';
+import { ProjectsComponent } from './projects/projects.component';
 import { SocialMediaComponent } from './social-media/social-media.component';
 
 @NgModule({
@@ -22,6 +23,7 @@ import { SocialMediaComponent } from './social-media/social-media.component';
     ExperiencesComponent,
     HeaderComponent,
     MainButtonComponent,
+    ProjectsComponent,
     SocialMediaComponent,
   ],
   imports: [
