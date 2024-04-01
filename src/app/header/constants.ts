@@ -14,6 +14,10 @@ export const MENU_OPTIONS: IMenuOption[] = [
     href: '#education-and-courses',
   },
   {
+    optionName: 'Projects',
+    href: '#projects',
+  },
+  {
     optionName: 'Research',
     href: '#research',
   },
