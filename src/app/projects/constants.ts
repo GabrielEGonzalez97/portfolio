@@ -11,7 +11,7 @@ export const PROJECTS: IProject[] = [
   {
     name: 'SurfPhotos',
     description:
-      'A website to showcase surfing photos taken by a photographer from the city where I am residing. The photos can be grouped into albums, and information is provided to contact the photographer.',
+      'Co-creator of the website. A website to showcase surfing photos taken by a photographer from the city where I am residing. The photos can be grouped into albums, and information is provided to contact the photographer.',
     logoPath: 'assets/images/SurfPhotos.jpeg',
     websiteLink: 'https://surfphotos.com.ar',
   },
