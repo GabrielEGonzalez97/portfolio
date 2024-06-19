@@ -45,7 +45,6 @@
 
   .project-image {
     position: relative;
-    height: 250px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -66,10 +65,10 @@
   .project-detail {
     display: flex;
     flex-direction: column;
-    text-align: center;
     flex-grow: 1;
 
     .card-title {
+      text-align: center;
       color: black;
       font-size: 22px;
       line-height: 24px;
