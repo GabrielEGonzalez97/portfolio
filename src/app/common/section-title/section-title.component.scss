@@ -1,0 +1,17 @@
+.section-heading {
+  font-size: 56px;
+  font-weight: 400;
+  margin-bottom: 0rem;
+}
+
+@media (max-width: 1380px) {
+  .section-heading {
+    font-size: 40px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 30px !important;
+  }
+}

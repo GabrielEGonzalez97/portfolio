@@ -3,12 +3,6 @@
   flex-direction: column;
   margin-bottom: 3rem;
 
-  .work-experiences-heading {
-    font-size: 56px;
-    font-weight: 400;
-    margin-bottom: 0rem;
-  }
-
   .experience-cards-div {
     margin-top: 3rem;
     grid-gap: 1rem 1rem;
@@ -19,18 +13,8 @@
 }
 
 @media (max-width: 1380px) {
-  .work-experiences-heading {
-    font-size: 40px !important;
-  }
-
   .experience-cards-div {
     grid-template-columns: 1fr !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .work-experiences-heading {
-    font-size: 30px !important;
   }
 }
 

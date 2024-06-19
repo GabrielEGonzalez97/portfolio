@@ -3,27 +3,9 @@
   flex-direction: column;
   margin-bottom: 3rem;
 
-  .education-heading {
-    font-size: 56px;
-    font-weight: 400;
-    margin-bottom: 0rem;
-  }
-
   .education-card-container {
     display: flex;
     flex-direction: column;
-  }
-}
-
-@media (max-width: 1380px) {
-  .education-heading {
-    font-size: 40px !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .education-heading {
-    font-size: 30px !important;
   }
 }
 
