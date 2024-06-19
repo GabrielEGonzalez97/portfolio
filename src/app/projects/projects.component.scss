@@ -13,7 +13,7 @@
     margin-top: 3rem;
     grid-gap: 1rem 1rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem 1rem;
   }
 }
@@ -21,6 +21,10 @@
 @media (max-width: 1380px) {
   .projects-heading {
     font-size: 40px !important;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr !important;
   }
 }
 
