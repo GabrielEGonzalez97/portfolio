@@ -1,0 +1,25 @@
+<div class="research-section-container" id="research" name="research">
+    <h1 class="research-heading">Research</h1>
+    <div class="research-container">
+        <ng-container *ngFor="let publication of publications">
+            <div class="research-card">
+                <div class="research-detail">
+                    <h5 class="card-title">{{ publication.title }}</h5>
+                    <p class="card-subtitle">{{ publication.abstract }}</p>
+                    <div class="publication-detail">
+                        <p class="publication-date">
+                            <strong>Publication date:</strong> {{ publication.publicationDate }}
+                        </p>
+                        <p class="presented-at">
+                            <strong>Presented at:</strong> {{ publication.presentedAt }}
+                        </p>
+                    </div>
+                    <div class="research-card-footer">
+                        <app-main-button [buttonName]="'Link to paper'" [href]="publication.publicationLink">
+                        </app-main-button>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

@@ -1,15 +1,15 @@
-.projects-section-container {
+.research-section-container {
   display: flex;
   flex-direction: column;
   margin-bottom: 3rem;
 
-  .projects-heading {
+  .research-heading {
     font-size: 56px;
     font-weight: 400;
     margin-bottom: 0rem;
   }
 
-  .projects-container {
+  .research-container {
     margin-top: 3rem;
     grid-gap: 1rem 1rem;
     display: grid;
@@ -19,18 +19,18 @@
 }
 
 @media (max-width: 1380px) {
-  .projects-heading {
+  .research-heading {
     font-size: 40px !important;
   }
 }
 
 @media (max-width: 768px) {
-  .projects-heading {
+  .research-heading {
     font-size: 30px !important;
   }
 }
 
-.project-card {
+.research-card {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -43,35 +43,18 @@
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 
-  .project-image {
-    position: relative;
-    height: 250px;
-    overflow: hidden;
+  .research-detail {
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .card-image {
-      border-radius: 50%;
-      max-width: 100%;
-      height: auto;
-      width: 250px;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      -o-border-radius: 50%;
-    }
-  }
-
-  .project-detail {
+    flex-direction: column;
     text-align: center;
+    flex-grow: 1;
 
     .card-title {
       color: black;
       font-size: 22px;
       line-height: 24px;
       font-weight: 700;
-      margin: 15px 0 0 0;
+      margin: 15px 0 12px 0;
     }
 
     .card-subtitle {
@@ -80,28 +63,27 @@
       line-height: 1.5rem;
     }
 
-    .project-card-footer {
+    .publication-detail {
+      display: flex;
+      flex-direction: column;
+      padding: 0 1rem;
+
+      p {
+        text-align: start;
+      }
+    }
+
+    .research-card-footer {
       display: flex;
       justify-content: center;
+      margin-top: auto;
       width: 100%;
     }
   }
 }
 
-.project-card:hover {
+.research-card:hover {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -10px;
-}
-
-@media (max-width: 1380px) {
-  .card-image {
-    width: 200px !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .card-image {
-    width: 150px !important;
-  }
 }
 
 :host ::ng-deep {

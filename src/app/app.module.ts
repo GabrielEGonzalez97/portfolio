@@ -14,6 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { MainButtonComponent } from './main-button/main-button.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SocialMediaComponent } from './social-media/social-media.component';
+import { ResearchComponent } from './research/research.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SocialMediaComponent } from './social-media/social-media.component';
     MainButtonComponent,
     ProjectsComponent,
     SocialMediaComponent,
+    ResearchComponent,
   ],
   imports: [
     AppRoutingModule,
