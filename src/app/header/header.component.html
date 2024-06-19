@@ -1,8 +1,8 @@
-<header class="header">
+<header class="header" #headerElement>
     <ul class="menu">
         <ng-container *ngFor="let menuOption of menuOptions">
             <li>
-                <a [href]="menuOption.href">{{ menuOption.optionName }}</a>
+                <a href="javascript:void(0)" (click)="scrollToElement(menuOption.href)">{{ menuOption.optionName }}</a>
             </li>
         </ng-container>
     </ul>

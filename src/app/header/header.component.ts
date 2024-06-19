@@ -1,4 +1,11 @@
-import { Component } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  EventEmitter,
+  Output,
+  ViewChild,
+} from '@angular/core';
 import { MENU_OPTIONS } from './constants';
 import { IMenuOption } from './interfaces';
 
@@ -7,6 +14,33 @@ import { IMenuOption } from './interfaces';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
+export class HeaderComponent implements AfterViewInit {
+  @ViewChild('headerElement') headerElement!: ElementRef;
+
+  @Output() headerHeightChange = new EventEmitter<number>();
+
   public menuOptions: IMenuOption[] = MENU_OPTIONS;
+
+  public headerHeight: number = 0;
+
+  constructor() {}
+
+  public ngAfterViewInit(): void {
+    this.headerHeight = this.headerElement.nativeElement.offsetHeight;
+    this.headerHeightChange.emit(this.headerHeight);
+  }
+
+  public scrollToElement(id: string): void {
+    const element: HTMLElement | null = document.getElementById(id);
+    if (element) {
+      const elementPosition: number =
+        element.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition: number = elementPosition - this.headerHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+  }
 }

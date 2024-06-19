@@ -1,6 +1,6 @@
 <div class="page-container">
-  <app-header></app-header>
-  <div class="page-content">
+  <app-header (headerHeightChange)="onHeaderHeightChange($event)"></app-header>
+  <div class="page-content" [style]="'margin-top: ' + headerHeight + 'px'">
     <app-about-me></app-about-me>
     <app-experiences></app-experiences>
     <app-education-and-courses></app-education-and-courses>
