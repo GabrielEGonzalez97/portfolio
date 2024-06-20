@@ -10,13 +10,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainButtonComponent } from './common/main-button/main-button.component';
 import { SectionTitleComponent } from './common/section-title/section-title.component';
-import { EducationAndCoursesComponent } from './education-and-courses/education-and-courses.component';
-import { ExperiencesComponent } from './experiences/experiences.component';
-import { HeaderComponent } from './header/header.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { ResearchComponent } from './research/research.component';
-import { SocialMediaComponent } from './social-media/social-media.component';
 import { SectionComponent } from './common/section/section.component';
+import { HeaderComponent } from './header/header.component';
+import { EducationAndCoursesComponent } from './page-sections/education-and-courses/education-and-courses.component';
+import { ExperiencesComponent } from './page-sections/experiences/experiences.component';
+import { ProjectsComponent } from './page-sections/projects/projects.component';
+import { ResearchComponent } from './page-sections/research/research.component';
+import { SocialMediaComponent } from './social-media/social-media.component';
 
 @NgModule({
   declarations: [
