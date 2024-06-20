@@ -1,17 +1,3 @@
-.research-container {
-  margin-top: 3rem;
-  grid-gap: 1rem 1rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem 1rem;
-}
-
-@media (max-width: 1380px) {
-  .research-container {
-    grid-template-columns: 1fr !important;
-  }
-}
-
 .research-card {
   display: flex;
   flex-direction: column;

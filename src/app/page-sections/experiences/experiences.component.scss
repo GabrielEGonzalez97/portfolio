@@ -1,17 +1,3 @@
-.experience-cards-div {
-  margin-top: 3rem;
-  grid-gap: 1rem 1rem;
-  display: grid;
-  gap: 1rem 1rem;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-@media (max-width: 1380px) {
-  .experience-cards-div {
-    grid-template-columns: 1fr !important;
-  }
-}
-
 .experience-card {
   position: relative;
   background-color: white;

@@ -1,4 +1,6 @@
 <div class="section-container" [id]="sectionId">
     <app-section-title [title]="sectionTitle" />
-    <ng-content></ng-content>
+    <div [ngClass]="{'cards-container': includeCardsContainer}">
+        <ng-content></ng-content>
+    </div>
 </div>

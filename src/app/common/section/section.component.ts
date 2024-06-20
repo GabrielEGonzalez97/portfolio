@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class SectionComponent {
   @Input() sectionId: string = '';
   @Input() sectionTitle: string = '';
+  @Input() includeCardsContainer: boolean = false;
 
   constructor() {}
 }

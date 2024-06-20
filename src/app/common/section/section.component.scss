@@ -3,3 +3,17 @@
   flex-direction: column;
   margin-bottom: 3rem;
 }
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem 1rem;
+  gap: 1rem 1rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 1380px) {
+  .cards-container {
+    grid-template-columns: 1fr !important;
+  }
+}
