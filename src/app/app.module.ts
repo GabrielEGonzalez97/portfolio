@@ -8,14 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MainButtonComponent } from './common/main-button/main-button.component';
+import { SectionTitleComponent } from './common/section-title/section-title.component';
 import { EducationAndCoursesComponent } from './education-and-courses/education-and-courses.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
 import { HeaderComponent } from './header/header.component';
-import { MainButtonComponent } from './main-button/main-button.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { SocialMediaComponent } from './social-media/social-media.component';
 import { ResearchComponent } from './research/research.component';
-import { SectionTitleComponent } from './common/section-title/section-title.component';
+import { SocialMediaComponent } from './social-media/social-media.component';
 
 @NgModule({
   declarations: [
