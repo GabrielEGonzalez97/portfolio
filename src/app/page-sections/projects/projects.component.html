@@ -1,17 +1,10 @@
 <app-section sectionId="projects" sectionTitle="Projects" [includeCardsContainer]="true">
     <ng-container *ngFor="let project of projects">
-        <div class="project-card">
-            <div class="project-image">
-                <img class="card-image" [src]="project.logoPath" [alt]="project.name">
+        <app-card [title]="project.name" [subtitle]="project.description" fotterButtonText="Visit Website"
+            [fotterButtonLink]="project.websiteLink">
+            <div id="card-image">
+                <img [src]="project.logoPath" [alt]="project.name">
             </div>
-            <div class="project-detail">
-                <h5 class="card-title">{{ project.name }}</h5>
-                <p class="card-subtitle">{{ project.description }}</p>
-                <div class="project-card-footer">
-                    <app-main-button [buttonName]="'Visit Website'" [href]="project.websiteLink">
-                    </app-main-button>
-                </div>
-            </div>
-        </div>
+        </app-card>
     </ng-container>
 </app-section>

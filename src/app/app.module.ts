@@ -20,6 +20,7 @@ import { SocialMediaComponent } from './social-media/social-media.component';
 import { EducationComponent } from './page-sections/education-and-courses/education/education.component';
 import { CoursesComponent } from './page-sections/education-and-courses/courses/courses.component';
 import { ItemComponent } from './page-sections/education-and-courses/item/item.component';
+import { CardComponent } from './common/card/card.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ItemComponent } from './page-sections/education-and-courses/item/item.c
     EducationComponent,
     CoursesComponent,
     ItemComponent,
+    CardComponent,
   ],
   imports: [
     AppRoutingModule,

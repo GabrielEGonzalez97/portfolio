@@ -1,55 +1,8 @@
-.research-card {
+app-card {
+  display: contents;
+}
+
+#card-extra-details {
   display: flex;
   flex-direction: column;
-  background-color: white;
-  padding: 48px;
-  border-radius: 10px;
-  border: 1px solid rgba(211, 211, 211, 0.397);
-  justify-content: center;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-
-  .research-detail {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-
-    .card-title {
-      color: black;
-      font-size: 22px;
-      line-height: 24px;
-      font-weight: 700;
-      margin: 15px 0 12px 0;
-    }
-
-    .card-subtitle {
-      color: #666666;
-      font-size: 17px;
-      line-height: 1.5rem;
-    }
-
-    .publication-detail {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .research-card-footer {
-      display: flex;
-      justify-content: center;
-      margin-top: auto;
-      width: 100%;
-    }
-  }
-}
-
-.research-card:hover {
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -10px;
-}
-
-:host ::ng-deep {
-  .main-button {
-    margin-right: 0rem !important;
-  }
 }

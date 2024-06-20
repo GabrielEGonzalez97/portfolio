@@ -1,22 +1,15 @@
 <app-section sectionId="research" sectionTitle="Research" [includeCardsContainer]="true">
     <ng-container *ngFor="let publication of publications">
-        <div class="research-card">
-            <div class="research-detail">
-                <h5 class="card-title">{{ publication.title }}</h5>
-                <p class="card-subtitle">{{ publication.abstract }}</p>
-                <div class="publication-detail">
-                    <p class="publication-date">
-                        <strong>Publication date:</strong> {{ publication.publicationDate }}
-                    </p>
-                    <p class="presented-at">
-                        <strong>Presented at:</strong> {{ publication.presentedAt }}
-                    </p>
-                </div>
-                <div class="research-card-footer">
-                    <app-main-button [buttonName]="'Link to paper'" [href]="publication.publicationLink">
-                    </app-main-button>
-                </div>
+        <app-card [title]="publication.title" [subtitle]="publication.abstract" fotterButtonText="Link to paper"
+            [fotterButtonLink]="publication.publicationLink">
+            <div id="card-extra-details">
+                <p class="publication-date">
+                    <strong>Publication date:</strong> {{ publication.publicationDate }}
+                </p>
+                <p class="presented-at">
+                    <strong>Presented at:</strong> {{ publication.presentedAt }}
+                </p>
             </div>
-        </div>
+        </app-card>
     </ng-container>
 </app-section>
