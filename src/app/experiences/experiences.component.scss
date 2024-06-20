@@ -1,15 +1,9 @@
-.work-experiences-section-container {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 3rem;
-
-  .experience-cards-div {
-    margin-top: 3rem;
-    grid-gap: 1rem 1rem;
-    display: grid;
-    gap: 1rem 1rem;
-    grid-template-columns: repeat(2, 1fr);
-  }
+.experience-cards-div {
+  margin-top: 3rem;
+  grid-gap: 1rem 1rem;
+  display: grid;
+  gap: 1rem 1rem;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 @media (max-width: 1380px) {

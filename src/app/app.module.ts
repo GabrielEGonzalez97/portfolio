@@ -16,6 +16,7 @@ import { HeaderComponent } from './header/header.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ResearchComponent } from './research/research.component';
 import { SocialMediaComponent } from './social-media/social-media.component';
+import { SectionComponent } from './common/section/section.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { SocialMediaComponent } from './social-media/social-media.component';
     SocialMediaComponent,
     ResearchComponent,
     SectionTitleComponent,
+    SectionComponent,
   ],
   imports: [
     AppRoutingModule,

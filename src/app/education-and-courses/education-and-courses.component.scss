@@ -1,12 +1,6 @@
-.education-section-container {
+.education-card-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 3rem;
-
-  .education-card-container {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 .education-card {
