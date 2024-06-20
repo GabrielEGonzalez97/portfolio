@@ -1,0 +1,146 @@
+.show-more-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  width: 100%;
+  font-size: 24px;
+
+  span {
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  span:hover {
+    cursor: pointer;
+    color: #55198b;
+
+    img {
+      filter: invert(11%) sepia(55%) saturate(5751%) hue-rotate(269deg)
+        brightness(95%) contrast(96%);
+    }
+  }
+}
+
+@media (max-width: 1380px) {
+  .show-more-container {
+    font-size: 20px !important;
+
+    span {
+      img {
+        width: 14px !important;
+        height: 14px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .show-more-container {
+    font-size: 16px !important;
+    margin-top: 2rem;
+
+    span {
+      img {
+        width: 12px !important;
+        height: 12px !important;
+      }
+    }
+  }
+}
+
+.filters-container {
+  display: flex;
+  justify-content: space-between;
+
+  .mat-mdc-form-field {
+    width: 30%;
+    margin-top: 1.5rem;
+  }
+}
+
+.dropdown-option-container {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .filters-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .mat-mdc-form-field {
+      width: 45%;
+    }
+  }
+}
+
+.no-result-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 3rem;
+
+  img {
+    width: 10rem;
+    height: 10rem;
+    filter: invert(11%) sepia(55%) saturate(5751%) hue-rotate(269deg)
+      brightness(95%) contrast(96%);
+  }
+
+  h5 {
+    font-size: 36px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1380px) {
+  .no-result-found-container {
+    img {
+      width: 8rem;
+      height: 8rem;
+    }
+
+    h5 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .no-result-found-container {
+    img {
+      width: 6rem;
+      height: 6rem;
+    }
+
+    h5 {
+      font-size: 20px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+}

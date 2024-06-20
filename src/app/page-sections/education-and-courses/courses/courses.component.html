@@ -1,1 +1,92 @@
-<p>courses works!</p>
+<app-section-title title="Courses ({{ courseInfoElements.length }})" />
+<div class="filters-container">
+    <mat-form-field>
+        <mat-label>Filter by Year</mat-label>
+        <mat-select multiple (selectionChange)="onFilterByYear($event.value)">
+            <ng-container *ngFor="let year of years">
+                <mat-option [value]="year">
+                    {{year}}
+                </mat-option>
+            </ng-container>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Filter by Skill</mat-label>
+        <mat-select multiple (selectionChange)="onFilterBySkill($event.value)">
+            <ng-container *ngFor="let skill of skills">
+                <mat-option [value]="skill.skillName">
+                    <span class="dropdown-option-container">
+                        <img [src]="skill.skillLogoPath" [alt]="skill.skillName">
+                        {{skill.skillName}}
+                    </span>
+                </mat-option>
+            </ng-container>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Filter by Issuing Company</mat-label>
+        <mat-select multiple (selectionChange)="onFilterByIssuingCompany($event.value)">
+            <ng-container *ngFor="let issuingCompany of issuingCompanies">
+                <mat-option [value]="issuingCompany.companyName">
+                    <span class="dropdown-option-container">
+                        <img [src]="issuingCompany.companyLogoPath" [alt]="issuingCompany.companyName">
+                        {{issuingCompany.companyName}}
+                    </span>
+                </mat-option>
+            </ng-container>
+        </mat-select>
+    </mat-form-field>
+</div>
+<div class="item-container">
+    <ng-container *ngFor="let courseInfo of courseInfoElementsToShow">
+        <app-item [logoPath]="courseInfo.issuingCompany.companyLogoPath"
+            [logoDescription]="courseInfo.issuingCompany.companyName" [itemTitle]="courseInfo.courseName"
+            [itemSubtitle]="courseInfo.issuingCompany.companyName"
+            [duration]="courseInfo.durationHours ? courseInfo.expeditionDate + '(' + courseInfo.durationHours + ' hours)' : courseInfo.expeditionDate">
+            <ng-container *ngIf="courseInfo.skills">
+                <div class="skills">
+                    <ul>
+                        <ng-container *ngFor="let courseInfoSkill of courseInfo.skills">
+                            <li class="education-text-bullet-item">
+                                <span>
+                                    <img class="skill-logo" [src]="courseInfoSkill.skillLogoPath"
+                                        [alt]="courseInfoSkill.skillName">
+                                    {{ courseInfoSkill.skillName }}
+                                </span>
+                            </li>
+                        </ng-container>
+                    </ul>
+                </div>
+            </ng-container>
+            <app-main-button [buttonName]="'Show credential'" [href]="courseInfo.credentialUrl">
+            </app-main-button>
+        </app-item>
+    </ng-container>
+
+    <ng-container *ngIf="courseInfoElementsToShow.length < courseInfoElements.length">
+        <div class="show-more-container">
+            <span (click)="addCourseElementsToShow()">
+                Show more
+                <img src="assets/icons/angle-bottom-icon.svg" alt="Show more">
+            </span>
+        </div>
+    </ng-container>
+
+    <ng-container
+        *ngIf="courseInfoElementsToShow.length === courseInfoElements.length && courseInfoElementsToShow.length > 2">
+        <div class="show-more-container">
+            <span (click)="showLessCourses()">
+                Show less
+                <img src="assets/icons/angle-top-icon.svg" alt="Show less">
+            </span>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="courseInfoElementsToShow.length === 0">
+        <div class="no-result-found-container">
+            <img src="assets/icons/no-result-found-on-web-icon.svg" alt="No result found">
+            <h5>No courses found</h5>
+            <p>Try changing the filters to find courses</p>
+        </div>
+    </ng-container>
+</div>
