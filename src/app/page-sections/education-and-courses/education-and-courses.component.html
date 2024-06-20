@@ -1,12 +1,12 @@
 <app-section sectionId="education-and-courses" sectionTitle="Education">
-    <div class="education-card-container">
+    <div class="education-item-container">
         <ng-container *ngFor="let educationInfo of educationInfoElements">
-            <div class="education-card">
-                <div class="education-card-left">
+            <div class="education-item">
+                <div class="education-item-left">
                     <img crossorigin="anonymous" class="education-roundedimg" [src]="educationInfo.school.logoPath"
                         [alt]="educationInfo.school.name">
                 </div>
-                <div class="education-card-right">
+                <div class="education-item-right">
                     <h5 class="education-text-school-name">{{ educationInfo.school.name }}</h5>
                     <div class="education-text-details">
                         <h5 class="education-text-title">{{ educationInfo.title }}</h5>
@@ -66,14 +66,14 @@
             </mat-select>
         </mat-form-field>
     </div>
-    <div class="education-card-container">
+    <div class="education-item-container">
         <ng-container *ngFor="let courseInfo of courseInfoElementsToShow">
-            <div class="education-card">
-                <div class="education-card-left">
+            <div class="education-item">
+                <div class="education-item-left">
                     <img crossorigin="anonymous" class="education-roundedimg"
                         [src]="courseInfo.issuingCompany.companyLogoPath" [alt]="courseInfo.issuingCompany.companyName">
                 </div>
-                <div class="education-card-right">
+                <div class="education-item-right">
                     <h5 class="education-text-school-name">{{ courseInfo.courseName }}</h5>
                     <div class="education-text-details">
                         <h5 class="education-text-title">{{ courseInfo.issuingCompany.companyName }}</h5>
