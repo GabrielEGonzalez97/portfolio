@@ -1,12 +1,11 @@
 <div class="card-container">
-    <ng-content select="#card-image"></ng-content>
+    <ng-content select="#card-image" />
     <div class="card-details">
         <h5 class="card-title">{{ title }}</h5>
         <p class="card-subtitle">{{ subtitle }}</p>
-        <ng-content select="#card-extra-details"></ng-content>
+        <ng-content select="#card-extra-details" />
         <div class="card-footer">
-            <app-main-button [buttonName]="fotterButtonText" [href]="fotterButtonLink">
-            </app-main-button>
+            <app-main-button [buttonName]="fotterButtonText" [href]="fotterButtonLink" />
         </div>
     </div>
 </div>

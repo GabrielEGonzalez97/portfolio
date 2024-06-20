@@ -1,10 +1,11 @@
 <div class="page-container">
-  <app-header (headerHeightChange)="onHeaderHeightChange($event)"></app-header>
+  <app-header (headerHeightChange)="onHeaderHeightChange($event)" />
   <div class="page-content" [style]="'margin-top: ' + headerHeight + 'px'">
-    <app-about-me></app-about-me>
-    <app-experiences></app-experiences>
-    <app-education-and-courses></app-education-and-courses>
-    <app-projects></app-projects>
-    <app-research></app-research>
+    <app-about-me />
+    <app-experiences />
+    <app-education-and-courses />
+    <app-projects />
+    <app-research />
+    <app-reach-out-to-me />
   </div>
 </div>
