@@ -42,7 +42,7 @@
         <app-item [logoPath]="courseInfo.issuingCompany.companyLogoPath"
             [logoDescription]="courseInfo.issuingCompany.companyName" [itemTitle]="courseInfo.courseName"
             [itemSubtitle]="courseInfo.issuingCompany.companyName"
-            [duration]="courseInfo.durationHours ? courseInfo.expeditionDate + '(' + courseInfo.durationHours + ' hours)' : courseInfo.expeditionDate">
+            [duration]="courseInfo.durationHours ? courseInfo.expeditionDate + ' (' + courseInfo.durationHours + ' hours)' : courseInfo.expeditionDate">
             <ng-container *ngIf="courseInfo.skills">
                 <div class="skills">
                     <ul>
