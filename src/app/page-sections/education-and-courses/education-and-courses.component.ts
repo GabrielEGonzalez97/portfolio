@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { COURSE_INFO_ELEMENTS, EDUCATION_INFO_ELEMENTS } from './constants';
-import {
-  ICourseInfo,
-  IEducationInfo,
-  IIssuingCompany,
-  ISkill,
-} from './interfaces';
+import { COURSE_INFO_ELEMENTS } from './constants';
+import { ICourseInfo, IIssuingCompany, ISkill } from './interfaces';
 
 @Component({
   selector: 'app-education-and-courses',
@@ -13,8 +8,6 @@ import {
   styleUrls: ['./education-and-courses.component.scss'],
 })
 export class EducationAndCoursesComponent implements OnInit {
-  public educationInfoElements: IEducationInfo[] = EDUCATION_INFO_ELEMENTS;
-
   public courseInfoElements: ICourseInfo[] = COURSE_INFO_ELEMENTS;
   public courseInfoElementsToShow: ICourseInfo[] = [];
 

@@ -1,0 +1,13 @@
+<div class="item">
+    <div class="item-left">
+        <img crossorigin="anonymous" class="item-logo" [src]="logoPath" [alt]="logoDescription">
+    </div>
+    <div class="item-right">
+        <h5 class="item-title">{{ itemTitle }}</h5>
+        <div class="item-details">
+            <h5 class="item-subtitle">{{ itemSubtitle }}</h5>
+            <p class="item-duration">{{ duration }}</p>
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

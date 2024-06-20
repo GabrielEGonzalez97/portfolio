@@ -17,6 +17,9 @@ import { ExperiencesComponent } from './page-sections/experiences/experiences.co
 import { ProjectsComponent } from './page-sections/projects/projects.component';
 import { ResearchComponent } from './page-sections/research/research.component';
 import { SocialMediaComponent } from './social-media/social-media.component';
+import { EducationComponent } from './page-sections/education-and-courses/education/education.component';
+import { CoursesComponent } from './page-sections/education-and-courses/courses/courses.component';
+import { ItemComponent } from './page-sections/education-and-courses/item/item.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { SocialMediaComponent } from './social-media/social-media.component';
     ResearchComponent,
     SectionTitleComponent,
     SectionComponent,
+    EducationComponent,
+    CoursesComponent,
+    ItemComponent,
   ],
   imports: [
     AppRoutingModule,

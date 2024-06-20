@@ -1,0 +1,18 @@
+<div class="education-item-container">
+    <ng-container *ngFor="let educationInfo of educationInfoElements">
+        <app-item [logoPath]="educationInfo.school.logoPath" [logoDescription]="educationInfo.school.name"
+            [itemTitle]="educationInfo.school.name" [itemSubtitle]="educationInfo.title"
+            [duration]="educationInfo.duration">
+            <p class="education-text-description">{{ educationInfo.description }}</p>
+            <ng-container *ngIf="educationInfo.descriptionBullets">
+                <div class="education-text-bullets">
+                    <ul>
+                        <ng-container *ngFor="let educationInfoDescBullet of educationInfo.descriptionBullets">
+                            <li class="education-text-bullet-item">{{ educationInfoDescBullet }}</li>
+                        </ng-container>
+                    </ul>
+                </div>
+            </ng-container>
+        </app-item>
+    </ng-container>
+</div>
