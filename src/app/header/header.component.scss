@@ -1,24 +1,32 @@
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   left: 0;
   background-color: #fff;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 100%;
+  margin: 0;
+  width: calc(100% - 40px);
   padding: 15px 20px;
   z-index: 1000;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4392156863);
 
   .menu {
+    max-height: none;
     margin: 0;
     padding: 0;
     list-style: none;
     overflow: hidden;
     clear: both;
-    max-height: 0;
     transition: max-height 0.2s ease-out;
+    -webkit-transition: max-height 0.2s ease-out;
+    -moz-transition: max-height 0.2s ease-out;
+    -ms-transition: max-height 0.2s ease-out;
+    -o-transition: max-height 0.2s ease-out;
 
     li {
+      float: left;
+
       a {
         display: block;
         padding: 15px 20px;
@@ -34,18 +42,31 @@
   }
 }
 
-@media (min-width: 48em) {
+@media (max-width: 1380px) {
   .header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: calc(100% - 30px);
+    padding: 10px 15px;
 
-    .menu {
-      max-height: none;
-
-      li {
-        float: left;
+    li {
+      a {
+        padding: 10px 15px !important;
+        font-size: 1.25rem !important;
       }
     }
+  }
+}
+
+@media (max-width: 1000px) {
+  .header {
+    li {
+      a {
+        font-size: 1rem !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
   }
 }
