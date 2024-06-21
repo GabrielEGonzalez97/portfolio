@@ -4,7 +4,7 @@
   justify-content: center;
   position: fixed;
   left: 0;
-  background-color: #fff;
+  background-color: white;
   margin: 0;
   width: calc(100% - 40px);
   padding: 15px 20px;
@@ -12,6 +12,8 @@
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4392156863);
 
   .menu {
+    display: flex;
+    align-items: center;
     max-height: none;
     margin: 0;
     padding: 0;

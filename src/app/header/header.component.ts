@@ -26,7 +26,7 @@ export class HeaderComponent implements AfterViewInit {
   constructor() {}
 
   public ngAfterViewInit(): void {
-    this.headerHeight = this.headerElement.nativeElement.offsetHeight;
+    this.headerHeight = this.headerElement.nativeElement.offsetHeight + 16;
     this.headerHeightChange.emit(this.headerHeight);
   }
 
@@ -35,7 +35,7 @@ export class HeaderComponent implements AfterViewInit {
     if (element) {
       const elementPosition: number =
         element.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition: number = elementPosition - this.headerHeight;
+      const offsetPosition: number = elementPosition - this.headerHeight + 16;
 
       window.scrollTo({
         top: offsetPosition,

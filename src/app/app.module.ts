@@ -22,6 +22,7 @@ import { ProjectsComponent } from './page-sections/projects/projects.component';
 import { ReachOutToMeComponent } from './page-sections/reach-out-to-me/reach-out-to-me.component';
 import { ResearchComponent } from './page-sections/research/research.component';
 import { SocialMediaComponent } from './social-media/social-media.component';
+import { ThemeSwitcherComponent } from './header/theme-switcher/theme-switcher.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { SocialMediaComponent } from './social-media/social-media.component';
     ItemComponent,
     CardComponent,
     ReachOutToMeComponent,
+    ThemeSwitcherComponent,
   ],
   imports: [
     AppRoutingModule,
