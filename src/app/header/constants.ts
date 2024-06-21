@@ -21,4 +21,8 @@ export const MENU_OPTIONS: IMenuOption[] = [
     optionName: 'Research',
     href: 'research',
   },
+  {
+    optionName: 'Contact me',
+    href: 'contact-me',
+  },
 ];

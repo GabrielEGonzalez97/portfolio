@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class MainButtonComponent {
   @Input() buttonName: string = '';
   @Input() href: string = '';
+  @Input() openLinkNewUrl: boolean = true;
 
   constructor() {}
 }
