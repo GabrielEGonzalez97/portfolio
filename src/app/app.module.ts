@@ -23,6 +23,8 @@ import { ReachOutToMeComponent } from './page-sections/reach-out-to-me/reach-out
 import { ResearchComponent } from './page-sections/research/research.component';
 import { SocialMediaComponent } from './social-media/social-media.component';
 import { ThemeSwitcherComponent } from './header/theme-switcher/theme-switcher.component';
+import { AngleBottomIconComponent } from './page-sections/education-and-courses/courses/angle-bottom-icon/angle-bottom-icon.component';
+import { AngleTopIconComponent } from './page-sections/education-and-courses/courses/angle-top-icon/angle-top-icon.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { ThemeSwitcherComponent } from './header/theme-switcher/theme-switcher.c
     CardComponent,
     ReachOutToMeComponent,
     ThemeSwitcherComponent,
+    AngleBottomIconComponent,
+    AngleTopIconComponent,
   ],
   imports: [
     AppRoutingModule,

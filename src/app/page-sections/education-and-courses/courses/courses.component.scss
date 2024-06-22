@@ -8,21 +8,16 @@
 
   span {
     color: var(--theme-primary-text-color);
-
-    img {
-      width: 16px;
-      height: 16px;
-      fill: var(--theme-primary-text-color);
-    }
   }
 
   span:hover {
     cursor: pointer;
     color: #55198b;
 
-    img {
-      filter: invert(11%) sepia(55%) saturate(5751%) hue-rotate(269deg)
-        brightness(95%) contrast(96%);
+    ::ng-deep {
+      .icon {
+        fill: #55198b;
+      }
     }
   }
 }
@@ -30,13 +25,6 @@
 @media (max-width: 1380px) {
   .show-more-container {
     font-size: 20px !important;
-
-    span {
-      img {
-        width: 14px !important;
-        height: 14px !important;
-      }
-    }
   }
 }
 
@@ -44,13 +32,6 @@
   .show-more-container {
     font-size: 16px !important;
     margin-top: 2rem;
-
-    span {
-      img {
-        width: 12px !important;
-        height: 12px !important;
-      }
-    }
   }
 }
 
