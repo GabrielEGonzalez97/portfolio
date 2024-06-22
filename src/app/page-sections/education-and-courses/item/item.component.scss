@@ -9,7 +9,12 @@
   width: 6rem;
   height: 6rem;
   box-shadow: 0 0.5rem 1rem black;
+  background-color: white;
   border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .item-right {
