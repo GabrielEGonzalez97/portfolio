@@ -45,3 +45,17 @@ body {
   font-family: "Monserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+
+:root {
+  --theme-background-color: #ffffff;
+  --theme-primary-text-color: #000000;
+  --theme-secondary-text-color: #868e96;
+  --theme-card-description-text-color: #666666;
+}
+
+[data-theme="dark"] {
+  --theme-background-color: #171c28;
+  --theme-primary-text-color: #ffffff;
+  --theme-secondary-text-color: #ffffff;
+  --theme-card-description-text-color: #ffffff;
+}

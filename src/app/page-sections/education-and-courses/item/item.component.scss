@@ -18,6 +18,7 @@
 
 .item-title {
   margin: 0;
+  color: var(--theme-primary-text-color);
   font-size: 28px;
   font-weight: 700;
   text-overflow: ellipsis;
@@ -25,7 +26,7 @@
 }
 
 .item-subtitle {
-  color: black;
+  color: var(--theme-primary-text-color);
   font-weight: 700;
   font-size: 19px;
   margin: 0px;
@@ -34,7 +35,7 @@
 }
 
 .item-duration {
-  color: black;
+  color: var(--theme-primary-text-color);
   font-size: 19px;
   margin: 0px;
   padding-top: 0.5rem;

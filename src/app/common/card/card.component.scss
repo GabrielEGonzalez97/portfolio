@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: center;
   padding: 48px;
-  background-color: white;
   border: 1px solid rgba(211, 211, 211, 0.397);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
   border-radius: 10px;
@@ -28,14 +27,14 @@
 
 .card-title {
   margin: 15px 0 12px 0;
-  color: black;
+  color: var(--theme-primary-text-color);
   font-size: 22px;
   font-weight: 700;
   line-height: 24px;
 }
 
 .card-subtitle {
-  color: #666666;
+  color: var(--theme-card-description-text-color);
   font-size: 17px;
   line-height: 1.5rem;
 }
