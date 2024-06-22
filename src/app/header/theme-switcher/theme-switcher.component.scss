@@ -27,6 +27,18 @@ $transition-duration: 0.3s;
   -o-transition: transform $transition-duration ease-in-out;
 }
 
+.theme.no-transition .theme__fill,
+.theme.no-transition .theme__icon,
+.theme.no-transition .theme__icon-part,
+.theme.no-transition .theme__toggle,
+.theme.no-transition .theme__toggle::before {
+  transition: none !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
 .theme__fill {
   display: block;
   mix-blend-mode: difference;

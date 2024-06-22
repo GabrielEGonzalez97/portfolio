@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
@@ -6,8 +6,21 @@ import { ThemeService } from 'src/app/services/theme.service';
   templateUrl: './theme-switcher.component.html',
   styleUrls: ['./theme-switcher.component.scss'],
 })
-export class ThemeSwitcherComponent {
-  constructor(private themeService: ThemeService) {}
+export class ThemeSwitcherComponent implements AfterViewInit {
+  public isDarkTheme: boolean = false;
+
+  constructor(private themeService: ThemeService) {
+    this.isDarkTheme = this.themeService.getIsDarkTheme();
+  }
+
+  public ngAfterViewInit(): void {
+    setTimeout(() => {
+      const themeElement: Element | null = document.querySelector('.theme');
+      if (themeElement) {
+        themeElement.classList.remove('no-transition');
+      }
+    }, 0);
+  }
 
   public toggleTheme(): void {
     this.themeService.toggleTheme();
