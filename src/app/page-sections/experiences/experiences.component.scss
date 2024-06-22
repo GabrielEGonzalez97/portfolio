@@ -1,12 +1,12 @@
 .experience-card {
   position: relative;
-  box-shadow: #0003 0px 10px 30px -15px;
+  box-shadow: var(--theme-experience-card-box-shadow-color) 0px 10px 30px -15px;
   border-radius: 10px;
   border: 1px solid hsla(0, 0%, 83%, 0.397);
 }
 
 .experience-card:hover {
-  box-shadow: #0003 0px 20px 30px -10px;
+  box-shadow: var(--theme-experience-card-box-shadow-color) 0px 20px 30px -10px;
 }
 
 .experience-banner {
@@ -71,7 +71,7 @@
   white-space: nowrap;
 }
 
-.experience-roundedimg {
+.experience-image {
   position: absolute;
   left: 0;
   right: 0;
@@ -81,7 +81,7 @@
   background-color: white;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.5rem 1rem var(--theme-experience-image-box-shadow-color);
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -142,7 +142,7 @@
     font-size: 18px;
   }
 
-  .experience-roundedimg {
+  .experience-image {
     width: 6.5rem;
     height: 6.5rem;
   }

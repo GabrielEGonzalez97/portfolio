@@ -51,6 +51,12 @@ body {
   --theme-primary-text-color: #000000;
   --theme-secondary-text-color: #868e96;
   --theme-card-description-text-color: #666666;
+  --theme-card-box-shadow-color: rgba(0, 0, 0, 0.2);
+  --theme-item-logo-box-shadow-color: #000000;
+  --theme-experience-card-box-shadow-color: #0003;
+  --theme-experience-image-box-shadow-color: rgba(0, 0, 0, 0.3);
+  --theme-profile-image-border-color: #000000;
+  --theme-profile-image-box-shadow-color: #000000;
 }
 
 [data-theme="dark"] {
@@ -58,4 +64,10 @@ body {
   --theme-primary-text-color: #ffffff;
   --theme-secondary-text-color: #ffffff;
   --theme-card-description-text-color: #ffffff;
+  --theme-card-box-shadow-color: rgba(255, 255, 255, 0.2);
+  --theme-item-logo-box-shadow-color: #d9dbdf;
+  --theme-experience-card-box-shadow-color: #fff3;
+  --theme-experience-image-box-shadow-color: rgba(255, 255, 255, 0.3);
+  --theme-profile-image-border-color: #ffffff;
+  --theme-profile-image-box-shadow-color: #ffffff;
 }
