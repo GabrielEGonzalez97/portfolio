@@ -12,11 +12,11 @@
 
   span:hover {
     cursor: pointer;
-    color: #55198b;
+    color: var(--primary-button-color);
 
     ::ng-deep {
       .icon {
-        fill: #55198b;
+        fill: var(--primary-button-color);
       }
     }
   }

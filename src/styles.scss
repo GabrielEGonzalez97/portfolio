@@ -47,6 +47,7 @@ body {
 }
 
 :root {
+  --primary-button-color: #55198b;
   --theme-background-color: #ffffff;
   --theme-primary-text-color: #000000;
   --theme-secondary-text-color: #868e96;
@@ -57,6 +58,7 @@ body {
   --theme-experience-image-box-shadow-color: rgba(0, 0, 0, 0.3);
   --theme-profile-image-border-color: #000000;
   --theme-profile-image-box-shadow-color: #000000;
+  --theme-header-button-background-color: #f4f4f4;
 }
 
 [data-theme="dark"] {
@@ -70,4 +72,5 @@ body {
   --theme-experience-image-box-shadow-color: rgba(255, 255, 255, 0.3);
   --theme-profile-image-border-color: #ffffff;
   --theme-profile-image-box-shadow-color: #ffffff;
+  --theme-header-button-background-color: var(--primary-button-color);
 }

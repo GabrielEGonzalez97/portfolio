@@ -1,7 +1,7 @@
 .main-button {
   display: block;
-  background-color: #55198b;
-  border: solid 1px #55198b;
+  background-color: var(--primary-button-color);
+  border: solid 1px var(--primary-button-color);
   border-radius: 6px;
   color: white;
   width: max-content;
@@ -23,7 +23,7 @@
 
 .main-button:hover {
   background-color: white;
-  color: #55198b;
+  color: var(--primary-button-color);
   transition: all 0.3s ease 0s;
   transform: translateY(-3px);
 }
