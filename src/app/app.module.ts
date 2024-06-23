@@ -26,6 +26,7 @@ import { ThemeSwitcherComponent } from './header/theme-switcher/theme-switcher.c
 import { AngleBottomIconComponent } from './page-sections/education-and-courses/courses/angle-bottom-icon/angle-bottom-icon.component';
 import { AngleTopIconComponent } from './page-sections/education-and-courses/courses/angle-top-icon/angle-top-icon.component';
 import { LocationIconComponent } from './page-sections/reach-out-to-me/location-icon/location-icon.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { LocationIconComponent } from './page-sections/reach-out-to-me/location-
     AngleBottomIconComponent,
     AngleTopIconComponent,
     LocationIconComponent,
+    FooterComponent,
   ],
   imports: [
     AppRoutingModule,
