@@ -58,7 +58,7 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1070px) {
   .header {
     li {
       a {
@@ -68,7 +68,24 @@
   }
 }
 
+@media (max-width: 894px) {
+  .header {
+    li {
+      a {
+        font-size: 12px !important;
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .header {
+    justify-content: end;
+
+    .menu {
+      li {
+        display: none;
+      }
+    }
   }
 }

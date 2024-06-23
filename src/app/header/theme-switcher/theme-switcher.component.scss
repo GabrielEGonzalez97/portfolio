@@ -185,6 +185,10 @@ $transition-duration: 0.3s;
 .theme__toggle:checked::before,
 .theme__toggle:checked ~ .theme__icon {
   transform: translateX(3em);
+  -webkit-transform: translateX(3em);
+  -moz-transform: translateX(3em);
+  -ms-transform: translateX(3em);
+  -o-transform: translateX(3em);
 }
 
 .theme__toggle:checked::before {
@@ -212,4 +216,58 @@ $transition-duration: 0.3s;
 
 .theme__toggle-wrap {
   margin: 0 0.75em;
+}
+
+@media (max-width: 1070px) {
+  .theme__toggle {
+    width: 4em;
+    height: 2em;
+  }
+
+  .theme__toggle::before {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .theme__toggle:checked::before,
+  .theme__toggle:checked ~ .theme__icon {
+    transform: translateX(2em);
+    -webkit-transform: translateX(2em);
+    -moz-transform: translateX(2em);
+    -ms-transform: translateX(2em);
+    -o-transform: translateX(2em);
+  }
+
+  .theme__icon {
+    top: 0.5em;
+    left: 0.5em;
+    width: 1em;
+    height: 1em;
+  }
+
+  .theme__icon-part {
+    top: calc(50% - 0.3em);
+    left: calc(50% - 0.3em);
+    width: 0.6em;
+    height: 0.6em;
+    box-shadow: 0.2em -0.2em 0 0.3em hsl(0, 0%, 100%) inset;
+  }
+
+  .theme__icon-part-dark {
+    left: calc(50% - 0.5em) !important;
+  }
+
+  .theme__icon-part ~ .theme__icon-part {
+    transform: rotate(0) translateY(0.25em);
+    -webkit-transform: rotate(0) translateY(0.25em);
+    -moz-transform: rotate(0) translateY(0.25em);
+    -ms-transform: rotate(0) translateY(0.25em);
+    -o-transform: rotate(0) translateY(0.25em);
+  }
+
+  @for $i from 3 through 9 {
+    .theme__icon-part:nth-child(#{$i}) {
+      @include transform-light-mode(45deg * ($i - 2), 0.25em);
+    }
+  }
 }
