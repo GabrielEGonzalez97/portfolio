@@ -95,6 +95,10 @@ $transition-duration: 0.3s;
     transform $transition-duration ease-in-out;
 }
 
+.theme__icon-part-dark {
+  left: calc(50% - 1em) !important;
+}
+
 .theme__icon-part ~ .theme__icon-part {
   background-color: hsl(0, 0%, 100%);
   border-radius: 0.05em;
