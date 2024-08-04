@@ -11,4 +11,8 @@ export class ResearchComponent {
   public publications: IPublication[] = PUBLICATIONS;
 
   constructor() {}
+
+  public openLinkNewTab(link: string): void {
+    window.open(link, '_blank');
+  }
 }

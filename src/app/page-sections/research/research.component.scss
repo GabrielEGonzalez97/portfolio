@@ -2,6 +2,27 @@ app-card {
   display: contents;
 }
 
+#awards {
+  .award-container {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    color: var(--theme-primary-text-color);
+    font-weight: 600;
+
+    .award-icon {
+      margin-left: 0.25rem;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .award-container:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}
+
 #card-extra-details {
   display: flex;
   flex-direction: column;

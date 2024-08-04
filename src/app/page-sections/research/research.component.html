@@ -2,6 +2,15 @@
     <ng-container *ngFor="let publication of publications">
         <app-card [title]="publication.title" [subtitle]="publication.abstract" fotterButtonText="Link to paper"
             [fotterButtonLink]="publication.publicationLink">
+            <div id="awards">
+                <ng-container *ngFor="let bestPaperAward of publication.bestPaperAwards">
+                    <div class="award-container" (click)="openLinkNewTab(bestPaperAward.link)">
+                        {{ bestPaperAward.award }}
+                        <img class="award-icon" src="assets/icons/achievement-award-medal-icon.svg"
+                            alt="best paper award">
+                    </div>
+                </ng-container>
+            </div>
             <div id="card-extra-details">
                 <p class="authors">
                     <strong>Authors:</strong>
