@@ -3,6 +3,14 @@
         <app-card [title]="publication.title" [subtitle]="publication.abstract" fotterButtonText="Link to paper"
             [fotterButtonLink]="publication.publicationLink">
             <div id="card-extra-details">
+                <p class="authors">
+                    <strong>Authors:</strong>
+                    <ng-container *ngFor="let author of publication.authors; let i = index">
+                        <span [ngClass]="{'highlight-author': author.highlightName}">
+                            {{ author.name }}<span class="comma" *ngIf="i < publication.authors.length - 1">, </span>
+                        </span>
+                    </ng-container>
+                </p>
                 <p class="publication-date">
                     <strong>Publication date:</strong> {{ publication.publicationDate }}
                 </p>

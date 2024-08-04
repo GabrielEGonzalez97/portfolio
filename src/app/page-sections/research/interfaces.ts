@@ -4,4 +4,10 @@ export interface IPublication {
   publicationLink: string;
   publicationDate: string;
   presentedAt: string;
+  authors: Author[];
+}
+
+export interface Author {
+  name: string;
+  highlightName: boolean;
 }
