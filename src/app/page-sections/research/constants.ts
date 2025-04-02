@@ -3,6 +3,94 @@ import { IPublication } from './interfaces';
 export const PUBLICATIONS: IPublication[] = [
   {
     title:
+      'Controlling AI Agent Participation in Group Conversations: A Human-Centered Approach',
+    bestPaperAwards: [],
+    abstract: `Conversational AI agents are commonly applied within single-user, turn-taking scenarios. The interaction mechanics of these scenarios are trivial: when the user enters a message, the AI agent produces a response. However, the interaction dynamics are more complex within group settings. How should an agent behave in these settings? We report on two experiments aimed at uncovering users' experiences of an AI agent's participation within a group, in the context of group ideation (brainstorming). In the first study, participants benefited from and preferred having the AI agent in the group, but participants disliked when the agent seemed to dominate the conversation and they desired various controls over its interactive behaviors. In the second study, we created functional controls over the agent's behavior, operable by group members, to validate their utility and probe for additional requirements. Integrating our findings across both studies, we developed a taxonomy of controls for when, what, and where a conversational AI agent in a group should respond, who can control its behavior, and how those controls are specified and implemented. Our taxonomy is intended to aid AI creators to think through important considerations in the design of mixed-initiative conversational agents.`,
+    publicationLink: 'https://dl.acm.org/doi/full/10.1145/3708359.3712089',
+    publicationDate: 'March 24, 2025',
+    presentedAt:
+      'ACM International Conference on Intelligent User Interfaces 2025',
+    authors: [
+      {
+        name: 'Stephanie Houde',
+        highlightName: false,
+      },
+      {
+        name: 'Kristina Brimijoin',
+        highlightName: false,
+      },
+      {
+        name: 'Michael Muller',
+        highlightName: false,
+      },
+      {
+        name: 'Steven I. Ross',
+        highlightName: false,
+      },
+      {
+        name: 'Darío Andrés Silva Moran',
+        highlightName: false,
+      },
+      {
+        name: 'Gabriel Enrique Gonzalez',
+        highlightName: true,
+      },
+      {
+        name: 'Siya Kunde',
+        highlightName: false,
+      },
+      {
+        name: 'Morgan A. Foreman',
+        highlightName: false,
+      },
+      {
+        name: 'Justin D. Weisz',
+        highlightName: false,
+      },
+    ],
+  },
+  {
+    title: 'ACE: Moving toward Co-Investigation with the Agentic Code Explorer',
+    bestPaperAwards: [],
+    abstract: `In this workshop demonstration paper, we present ACE -- the Agentic Code Explorer -- a prototype agentic system designed to help software developers conduct sensemaking tasks within large code repositories. The design of this system was motivated by the observation that software developers often use AI coding assistants to help understand and ask questions about source code prior to planning and implementing code changes. Using ACE as a testbed, we present initial steps to explore whether a large language model (LLM)-based agent that is capable of invoking external tools and iteratively refining its own outputs (per the agentic design pattern) might be able to robustly support such a code discovery process. In this way, we use ACE as a means to explore more generally how generative models need not solely focus on the artifact production aspects of co-creative tasks; instead they might focus on the co-investigative activities where initial understanding and plans are formed.`,
+    publicationLink:
+      'https://hai-gen.github.io/2025/papers/P3-HAI-GEN-2025%20Silva%20Moran%20et%20al.pdf',
+    publicationDate: 'March 24, 2025',
+    presentedAt:
+      'ACM International Conference on Intelligent User Interfaces 2025: 6th Workshop on Human-AI Co-Creation with Generative Models',
+    authors: [
+      {
+        name: 'Darío Andrés Silva Moran',
+        highlightName: false,
+      },
+      {
+        name: 'Kristina Brimijoin',
+        highlightName: false,
+      },
+      {
+        name: 'Gabriel Enrique Gonzalez',
+        highlightName: true,
+      },
+      {
+        name: 'Stephanie Houde',
+        highlightName: false,
+      },
+      {
+        name: 'Michael Muller',
+        highlightName: false,
+      },
+      {
+        name: 'Michelle Brachman',
+        highlightName: false,
+      },
+      {
+        name: 'Justin D. Weisz',
+        highlightName: false,
+      },
+    ],
+  },
+  {
+    title:
       'AI and the Future of Collaborative Work: Group Ideation with an LLM in a Virtual Canvas',
     bestPaperAwards: [
       {
@@ -97,7 +185,8 @@ export const PUBLICATIONS: IPublication[] = [
       'We present the Collaborative Canvas, a prototype tool for exploring ways for groups to interact with large language models (LLMs) in ideation tasks. Collaborative Canvas provides a shared, graphical canvas in which multiple parties – human and LLM – can share ideas in the form of virtual “sticky notes” that can be moved around the canvas. The development of Collaborative Canvas raised numerous issues about the role of an LLM in group interactions: is it useful, what role does it play within the group’s workflow, and how do people interact with generated content? A preliminary examination of the Collaborative Canvas shows that users found the generative capabilities to be useful, although they preferred to review and filter generated content before sharing it with the group. Users also speculated that the role of the AI could extend into facilitating group brainstorming rather than being confined to idea generation. Our work motivates the study of human-AI co-creation in group settings beyond dyadic interactions.',
     publicationLink: 'https://hai-gen.github.io/2024/papers/1541-Gonzalez.pdf',
     publicationDate: 'March 18, 2024',
-    presentedAt: 'HAI-GEN Workshop at IUI 2024',
+    presentedAt:
+      'ACM International Conference on Intelligent User Interfaces 2024: 5th Workshop on Human-AI Co-Creation with Generative Models',
     authors: [
       {
         name: 'Gabriel Enrique Gonzalez',
