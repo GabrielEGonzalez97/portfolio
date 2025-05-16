@@ -37,6 +37,11 @@ export const ANGULAR_SKILL: ISkill = {
   skillLogoPath: 'assets/icons/angular-icon.svg',
 };
 
+export const COMMUNICATION: ISkill = {
+  skillName: 'Communication',
+  skillLogoPath: 'assets/icons/communication-icon.svg',
+};
+
 export const CSS_SKILL: ISkill = {
   skillName: 'CSS',
   skillLogoPath: 'assets/icons/css-icon.svg',
@@ -65,6 +70,11 @@ export const JAVA_SKILL: ISkill = {
 export const JAVASCRIPT_SKILL: ISkill = {
   skillName: 'JavaScript',
   skillLogoPath: 'assets/icons/javascript-programming-language-icon.svg',
+};
+
+export const LEADERSHIP: ISkill = {
+  skillName: 'Leadership',
+  skillLogoPath: 'assets/icons/leadership-icon.svg',
 };
 
 export const PYTHON_SKILL: ISkill = {
@@ -98,6 +108,52 @@ export const VUE_JS_SKILL: ISkill = {
 };
 
 export const COURSE_INFO_ELEMENTS: ICourseInfo[] = [
+  {
+    courseName: 'Eliminate Your Stage Fright 2.0',
+    issuingCompany: UDEMY_COMPANY,
+    expeditionDate: 'May 2025',
+    durationHours: '4',
+    credentialUrl:
+      'https://www.udemy.com/certificate/UC-857562c6-5c13-406c-b592-27213045f1de/',
+    skills: [COMMUNICATION],
+  },
+  {
+    courseName: 'Comprehensive Guide to Public Speaking',
+    issuingCompany: UDEMY_COMPANY,
+    expeditionDate: 'May 2025',
+    durationHours: '5.5',
+    credentialUrl:
+      'https://www.udemy.com/certificate/UC-1fe95d5b-3eca-43c8-988f-9fe65141d7ca/',
+    skills: [COMMUNICATION],
+  },
+  {
+    courseName:
+      'Educate Your Voice: Learn Public Speaking, Speaking, Reading, and Audio Editing',
+    issuingCompany: UDEMY_COMPANY,
+    expeditionDate: 'November 2024',
+    durationHours: '6.5',
+    credentialUrl:
+      'https://www.udemy.com/certificate/UC-03355166-5290-49ca-b00f-3d11e52efc9b/',
+    skills: [COMMUNICATION],
+  },
+  {
+    courseName: 'Master in Leadership',
+    issuingCompany: UDEMY_COMPANY,
+    expeditionDate: 'November 2024',
+    durationHours: '3',
+    credentialUrl:
+      'https://www.udemy.com/certificate/UC-01881674-3aa7-4cb3-9c3f-424404444626/',
+    skills: [LEADERSHIP],
+  },
+  {
+    courseName: 'Leadership: Technology/Engineering Management',
+    issuingCompany: UDEMY_COMPANY,
+    expeditionDate: 'September 2024',
+    durationHours: '3',
+    credentialUrl:
+      'https://www.udemy.com/certificate/UC-fae970cf-2907-428a-8861-cce5b701e459/',
+    skills: [LEADERSHIP],
+  },
   {
     courseName: 'EFSET English Certificate 66/100 (C1 Advanced)',
     issuingCompany: EF_COMPANY,
@@ -177,6 +233,15 @@ export const COURSE_INFO_ELEMENTS: ICourseInfo[] = [
     credentialUrl:
       'https://www.udemy.com/certificate/UC-906847cf-c4cc-43f6-8a74-98ca46b75241/',
     skills: [PYTHON_SKILL],
+  },
+  {
+    courseName: 'Communication Skills: Improve Your Communication',
+    issuingCompany: UDEMY_COMPANY,
+    expeditionDate: 'November 2022',
+    durationHours: '3',
+    credentialUrl:
+      'https://www.udemy.com/certificate/UC-165711ae-0d8a-45ff-9795-d319bf3c4823/',
+    skills: [COMMUNICATION],
   },
   {
     courseName: 'Angular: Unit Testing with Jasmine and Karma',
