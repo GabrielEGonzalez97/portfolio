@@ -18,7 +18,7 @@ export const EXPERIENCES: IExperienceInfo[] = [
     role: 'Software Engineer',
     date: 'November 2021 - Present',
     description:
-      'I mainly worked on tasks related to the frontend, being the leader in the tasks related to that area and the person in charge of carrying out those tasks. I also developed some important features on the backend side. I have experience working with remote teams from multiple parts of the world.',
+      'I work as a software engineer in Human-Centered AI (HCAI) research, focusing on the interaction between humans and AI agents in areas such as collaborative AI, mutual theory of mind, and group ideation with AI tools. I lead frontend development tasks and am responsible for implementing key features in that area, while also contributing to backend functionalities.',
     descriptionBullets: [],
   },
   {
