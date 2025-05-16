@@ -94,8 +94,7 @@ export const PUBLICATIONS: IPublication[] = [
       'Establishing the Cooperative Game Wavelength as a Testbed to Explore Mutual Theory of Mind',
     bestPaperAwards: [],
     abstract: `Machine learning (ML) and human-centered AI (HCAI) researchers have considered numerous methods to evaluate Theory of Mind (ToM)-like capabilities in artificial intelligence (AI). These methods have independently captured multiple aspects of ToM capabilities (i.e., beliefs, goals, knowledge). Recent research has proposed exploring the Mutual Theory of Mind (MToM) as a way to understand how a human's mental model and an AI’s user model can be mutually shaped to benefit future interactions. However, there is a lack of methods for understanding the development and impact of MToM-like capabilities in human-AI teams. We propose using a collaborative party game called Wavelength as a testbed to explore the complexities of MToM-like capabilities in human-AI teams. We compare Wavelength to other methods (i.e., Overcooked and Hanabi) and discuss how game mechanics help players mutually construct, recognize, and revise their models of their teammates. Lastly, we briefly suggest how future work can explore MToM with Wavelength.`,
-    publicationLink:
-      'https://research.ibm.com/publications/establishing-the-cooperative-game-wavelength-as-a-testbed-to-explore-mutual-theory-of-mind',
+    publicationLink: 'https://arxiv.org/abs/2505.03770',
     publicationDate: 'February 25, 2025',
     presentedAt:
       'AAAI 2025: Theory of Mind for Artificial Intelligence Workshop',
