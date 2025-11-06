@@ -110,7 +110,8 @@
 
 .experience-text-description {
   color: var(--theme-primary-text-color);
-  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.25;
 }
 
 .experience-text-bullets > ul {
@@ -120,7 +121,8 @@
 .experience-text-bullet-item {
   margin-top: 0.5rem;
   color: var(--theme-secondary-text-color) !important;
-  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .experience-text-details {
@@ -162,7 +164,7 @@
   }
 
   .experience-text-description {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .experience-text-bullets > ul {
