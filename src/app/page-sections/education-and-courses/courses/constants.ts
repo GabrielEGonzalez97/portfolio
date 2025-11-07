@@ -109,6 +109,15 @@ export const VUE_JS_SKILL: ISkill = {
 
 export const COURSE_INFO_ELEMENTS: ICourseInfo[] = [
   {
+    courseName: 'The Most Common Mistakes in English',
+    issuingCompany: UDEMY_COMPANY,
+    expeditionDate: 'June 2025',
+    durationHours: '25.5',
+    credentialUrl:
+      'https://www.udemy.com/certificate/UC-1feedbe1-2ad6-4206-99bb-caa2a5256629/',
+    skills: [ENGLISH_SKILL],
+  },
+  {
     courseName: 'Eliminate Your Stage Fright 2.0',
     issuingCompany: UDEMY_COMPANY,
     expeditionDate: 'May 2025',
