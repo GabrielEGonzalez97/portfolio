@@ -168,3 +168,10 @@
     font-size: 1rem;
   }
 }
+
+:host ::ng-deep {
+  .main-button {
+    font-size: 1rem !important;
+    padding: 9px 12px !important;
+  }
+}
