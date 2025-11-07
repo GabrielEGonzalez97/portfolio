@@ -8,7 +8,8 @@ import { ICourseInfo, IIssuingCompany, ISkill } from './interfaces';
   styleUrls: ['./courses.component.scss'],
 })
 export class CoursesComponent implements OnInit {
-  public courseInfoElements: ICourseInfo[] = COURSE_INFO_ELEMENTS;
+  private allCourseInfoElements: ICourseInfo[] = COURSE_INFO_ELEMENTS;
+  public courseInfoElements: ICourseInfo[] = [];
   public courseInfoElementsToShow: ICourseInfo[] = [];
 
   public years: string[] = [];
@@ -17,14 +18,14 @@ export class CoursesComponent implements OnInit {
 
   public numberCoursesToShow: number = 2;
 
-  private selectedYears: string[] = [];
-  private selectedSkills: string[] = [];
-  private selectedIssuingCompanies: string[] = [];
+  public selectedYears: string[] = [];
+  public selectedSkills: string[] = [];
+  public selectedIssuingCompanies: string[] = [];
 
   constructor() {}
 
   public ngOnInit(): void {
-    this.courseInfoElements = this.courseInfoElements.sort(
+    this.allCourseInfoElements = this.allCourseInfoElements.sort(
       (a: ICourseInfo, b: ICourseInfo) => {
         const numericDateA: number = this.convertExpeditionDateToNumeric(
           a.expeditionDate
@@ -36,8 +37,9 @@ export class CoursesComponent implements OnInit {
         return numericDateB - numericDateA;
       }
     );
-    this.initializeCourseInfoElementsToShow();
 
+    this.courseInfoElements = [...this.allCourseInfoElements];
+    this.initializeCourseInfoElementsToShow();
     this.completeFilters(this.courseInfoElements);
   }
 
@@ -138,7 +140,7 @@ export class CoursesComponent implements OnInit {
   }
 
   private onFilterChange(): void {
-    this.courseInfoElements = COURSE_INFO_ELEMENTS.filter(
+    this.courseInfoElements = this.allCourseInfoElements.filter(
       (courseInfo: ICourseInfo) => {
         let filterYear: boolean = true;
         let filterSkill: boolean = true;
@@ -181,5 +183,42 @@ export class CoursesComponent implements OnInit {
   public onFilterByIssuingCompany(issuingCompaniesToFilter: string[]): void {
     this.selectedIssuingCompanies = issuingCompaniesToFilter;
     this.onFilterChange();
+  }
+
+  public trackByCourseName(index: number, course: ICourseInfo): string {
+    return course.courseName;
+  }
+
+  public hasActiveFilters(): boolean {
+    return (
+      this.selectedYears.length > 0 ||
+      this.selectedSkills.length > 0 ||
+      this.selectedIssuingCompanies.length > 0
+    );
+  }
+
+  public removeFilter(type: 'year' | 'skill' | 'company', value: string): void {
+    switch (type) {
+      case 'year':
+        this.selectedYears = this.selectedYears.filter((y) => y !== value);
+        break;
+      case 'skill':
+        this.selectedSkills = this.selectedSkills.filter((s) => s !== value);
+        break;
+      case 'company':
+        this.selectedIssuingCompanies = this.selectedIssuingCompanies.filter(
+          (c) => c !== value
+        );
+        break;
+    }
+    this.onFilterChange();
+  }
+
+  public clearFilters(): void {
+    this.selectedYears = [];
+    this.selectedSkills = [];
+    this.selectedIssuingCompanies = [];
+    this.courseInfoElements = [...this.allCourseInfoElements];
+    this.initializeCourseInfoElementsToShow();
   }
 }

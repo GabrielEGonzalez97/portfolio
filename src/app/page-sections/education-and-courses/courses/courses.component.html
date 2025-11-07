@@ -2,7 +2,7 @@
 <div class="filters-container">
     <mat-form-field>
         <mat-label>Filter by Year</mat-label>
-        <mat-select multiple (selectionChange)="onFilterByYear($event.value)">
+        <mat-select multiple [(value)]="selectedYears" (selectionChange)="onFilterByYear($event.value)">
             <ng-container *ngFor="let year of years">
                 <mat-option [value]="year">
                     <span class="filter-option-text">{{year}}</span>
@@ -12,7 +12,7 @@
     </mat-form-field>
     <mat-form-field>
         <mat-label>Filter by Skill</mat-label>
-        <mat-select multiple (selectionChange)="onFilterBySkill($event.value)">
+        <mat-select multiple [(value)]="selectedSkills" (selectionChange)="onFilterBySkill($event.value)">
             <ng-container *ngFor="let skill of skills">
                 <mat-option [value]="skill.skillName">
                     <span class="dropdown-option-container">
@@ -25,7 +25,8 @@
     </mat-form-field>
     <mat-form-field>
         <mat-label>Filter by Issuing Company</mat-label>
-        <mat-select multiple (selectionChange)="onFilterByIssuingCompany($event.value)">
+        <mat-select multiple [(value)]="selectedIssuingCompanies"
+            (selectionChange)="onFilterByIssuingCompany($event.value)">
             <ng-container *ngFor="let issuingCompany of issuingCompanies">
                 <mat-option [value]="issuingCompany.companyName">
                     <span class="dropdown-option-container">
@@ -37,8 +38,39 @@
         </mat-select>
     </mat-form-field>
 </div>
+
+<div class="active-filters" *ngIf="hasActiveFilters()">
+    <mat-chip-set>
+        <mat-chip *ngFor="let year of selectedYears" (removed)="removeFilter('year', year)" removable>
+            {{ year }}
+            <button matChipRemove aria-label="Remove year filter">
+                <mat-icon>cancel</mat-icon>
+            </button>
+        </mat-chip>
+
+        <mat-chip *ngFor="let skill of selectedSkills" (removed)="removeFilter('skill', skill)" removable>
+            {{ skill }}
+            <button matChipRemove aria-label="Remove skill filter">
+                <mat-icon>cancel</mat-icon>
+            </button>
+        </mat-chip>
+
+        <mat-chip *ngFor="let company of selectedIssuingCompanies" (removed)="removeFilter('company', company)"
+            removable>
+            {{ company }}
+            <button matChipRemove aria-label="Remove company filter">
+                <mat-icon>cancel</mat-icon>
+            </button>
+        </mat-chip>
+    </mat-chip-set>
+
+    <button mat-stroked-button class="clear-filters-btn" (click)="clearFilters()">
+        Clear Filters
+    </button>
+</div>
+
 <div class="item-container">
-    <ng-container *ngFor="let courseInfo of courseInfoElementsToShow">
+    <ng-container *ngFor="let courseInfo of courseInfoElementsToShow; trackBy: trackByCourseName">
         <app-item [logoPath]="courseInfo.issuingCompany.companyLogoPath"
             [logoDescription]="courseInfo.issuingCompany.companyName" [itemTitle]="courseInfo.courseName"
             [itemSubtitle]="courseInfo.issuingCompany.companyName"
