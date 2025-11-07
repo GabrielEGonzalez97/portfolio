@@ -5,7 +5,7 @@
         <mat-select multiple (selectionChange)="onFilterByYear($event.value)">
             <ng-container *ngFor="let year of years">
                 <mat-option [value]="year">
-                    {{year}}
+                    <span class="filter-option-text">{{year}}</span>
                 </mat-option>
             </ng-container>
         </mat-select>
@@ -17,7 +17,7 @@
                 <mat-option [value]="skill.skillName">
                     <span class="dropdown-option-container">
                         <img [src]="skill.skillLogoPath" [alt]="skill.skillName">
-                        {{skill.skillName}}
+                        <span class="filter-option-text">{{skill.skillName}}</span>
                     </span>
                 </mat-option>
             </ng-container>
@@ -30,7 +30,7 @@
                 <mat-option [value]="issuingCompany.companyName">
                     <span class="dropdown-option-container">
                         <img [src]="issuingCompany.companyLogoPath" [alt]="issuingCompany.companyName">
-                        {{issuingCompany.companyName}}
+                        <span class="filter-option-text">{{issuingCompany.companyName}}</span>
                     </span>
                 </mat-option>
             </ng-container>
