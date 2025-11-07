@@ -3,7 +3,7 @@ import { IEducationInfo } from './interfaces';
 export const EDUCATION_INFO_ELEMENTS: IEducationInfo[] = [
   {
     school: {
-      name: 'Universidad Nacional del Centro de la Provincia de Buenos Aires',
+      name: 'Universidad Nacional del Centro de la Provincia de Buenos Aires 🇦🇷',
       logoPath: 'assets/images/UNICEN_Logo.png',
     },
     title: 'Software Engineer',
