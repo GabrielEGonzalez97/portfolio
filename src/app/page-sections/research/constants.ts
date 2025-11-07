@@ -3,6 +3,67 @@ import { IPublication } from './interfaces';
 export const PUBLICATIONS: IPublication[] = [
   {
     title:
+      'Bridging the Gap: Unifying HCI & ML Perspectives on Mutual Theory of Mind',
+    bestPaperAwards: [],
+    abstract: `Within the machine learning community, the notion of theory of mind is commonly understood as an emergent property of models that are able to make predictions about the behavior of others. Within the HCI community, the notion of "mental models" incorporates information about the knowledge, skills, and intentions of an AI agent. In this technical position paper, we synthesize these two views and offer a single point of view on mutual theory of mind (MToM): what it is and how it can be achieved between one (or more) humans and one (or more) AI agents. Specifically, we argue that uni-directional, first-order models (e.g., a human's mental model of an AI agent) are not enough to achieve MToM; rather, at least second-order models (e.g., an AI agent explicitly models a human's understanding of the AI's knowledge and skills in addition to the human's knowledge and skills) are required to fully see the benefits of MToM. Our analysis aims to provide a roadmap for the design of MToM within human-AI collaborative scenarios and identifies the complexities of its implementation and evaluation.`,
+    publicationLink:
+      'https://tomworkshop.github.io/assets/acceptedPapers/3_Bridging_Gap_HCI_ML.pdf',
+    publicationDate: 'August 16, 2025',
+    presentedAt:
+      'Workshop on Theory-of-Mind at International Joint Conference on Artificial Intelligence (IJCAI) 2025',
+    authors: [
+      {
+        name: 'Zahra Ashktorab',
+        highlightName: false,
+      },
+      {
+        name: 'Djallel Bouneffouf',
+        highlightName: false,
+      },
+      {
+        name: 'Kristina Brimijoin',
+        highlightName: false,
+      },
+      {
+        name: 'Rachel Bellamy',
+        highlightName: false,
+      },
+      {
+        name: 'Murray Campbell',
+        highlightName: false,
+      },
+      {
+        name: 'Arielle Goldberg',
+        highlightName: false,
+      },
+      {
+        name: 'Gabriel Enrique Gonzalez',
+        highlightName: true,
+      },
+      {
+        name: 'Stephanie Houde',
+        highlightName: false,
+      },
+      {
+        name: 'Miao Liu',
+        highlightName: false,
+      },
+      {
+        name: 'Darío Andrés Silva Moran',
+        highlightName: false,
+      },
+      {
+        name: 'Matt Riemer',
+        highlightName: false,
+      },
+      {
+        name: 'Justin D. Weisz',
+        highlightName: false,
+      },
+    ],
+  },
+  {
+    title:
       'Controlling AI Agent Participation in Group Conversations: A Human-Centered Approach',
     bestPaperAwards: [],
     abstract: `Conversational AI agents are commonly applied within single-user, turn-taking scenarios. The interaction mechanics of these scenarios are trivial: when the user enters a message, the AI agent produces a response. However, the interaction dynamics are more complex within group settings. How should an agent behave in these settings? We report on two experiments aimed at uncovering users' experiences of an AI agent's participation within a group, in the context of group ideation (brainstorming). In the first study, participants benefited from and preferred having the AI agent in the group, but participants disliked when the agent seemed to dominate the conversation and they desired various controls over its interactive behaviors. In the second study, we created functional controls over the agent's behavior, operable by group members, to validate their utility and probe for additional requirements. Integrating our findings across both studies, we developed a taxonomy of controls for when, what, and where a conversational AI agent in a group should respond, who can control its behavior, and how those controls are specified and implemented. Our taxonomy is intended to aid AI creators to think through important considerations in the design of mixed-initiative conversational agents.`,
