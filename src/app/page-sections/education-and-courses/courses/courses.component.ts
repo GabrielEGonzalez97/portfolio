@@ -10,17 +10,19 @@ import { ICourseInfo, IIssuingCompany, ISkill } from './interfaces';
 export class CoursesComponent implements OnInit {
   private allCourseInfoElements: ICourseInfo[] = COURSE_INFO_ELEMENTS;
   public courseInfoElements: ICourseInfo[] = [];
-  public courseInfoElementsToShow: ICourseInfo[] = [];
+  public currentPageCourses: ICourseInfo[] = [];
 
   public years: string[] = [];
   public skills: ISkill[] = [];
   public issuingCompanies: IIssuingCompany[] = [];
 
-  public numberCoursesToShow: number = 2;
-
   public selectedYears: string[] = [];
   public selectedSkills: string[] = [];
   public selectedIssuingCompanies: string[] = [];
+
+  public numberCoursesPerPage: number = 2;
+  public currentPage: number = 1;
+  public totalPages: number = 0;
 
   constructor() {}
 
@@ -39,15 +41,31 @@ export class CoursesComponent implements OnInit {
     );
 
     this.courseInfoElements = [...this.allCourseInfoElements];
-    this.initializeCourseInfoElementsToShow();
+    this.calculateTotalPages();
+    this.loadCurrentPageCourses();
     this.completeFilters(this.courseInfoElements);
   }
 
-  private initializeCourseInfoElementsToShow(): void {
-    this.courseInfoElementsToShow = this.courseInfoElements.slice(
-      0,
-      this.numberCoursesToShow
+  private calculateTotalPages(): void {
+    this.totalPages = Math.ceil(
+      this.courseInfoElements.length / this.numberCoursesPerPage
     );
+  }
+
+  private loadCurrentPageCourses(): void {
+    const startIndex: number =
+      (this.currentPage - 1) * this.numberCoursesPerPage;
+    const endIndex: number = startIndex + this.numberCoursesPerPage;
+    this.currentPageCourses = this.courseInfoElements.slice(
+      startIndex,
+      endIndex
+    );
+  }
+
+  public changePage(page: number): void {
+    if (page < 1 || page > this.totalPages) return; // Prevent invalid page change
+    this.currentPage = page;
+    this.loadCurrentPageCourses();
   }
 
   private convertExpeditionDateToNumeric(expeditionDate: string): number {
@@ -124,21 +142,6 @@ export class CoursesComponent implements OnInit {
     this.issuingCompanies = uniqueIssuingCompaniesArray;
   }
 
-  public addCourseElementsToShow(): void {
-    const startIndex: number = this.courseInfoElementsToShow.length;
-    let endIndex: number = startIndex + this.numberCoursesToShow;
-    if (endIndex > this.courseInfoElements.length) {
-      endIndex = this.courseInfoElements.length;
-    }
-    this.courseInfoElementsToShow.push(
-      ...this.courseInfoElements.slice(startIndex, endIndex)
-    );
-  }
-
-  public showLessCourses(): void {
-    this.initializeCourseInfoElementsToShow();
-  }
-
   private onFilterChange(): void {
     this.courseInfoElements = this.allCourseInfoElements.filter(
       (courseInfo: ICourseInfo) => {
@@ -167,7 +170,9 @@ export class CoursesComponent implements OnInit {
       }
     );
 
-    this.initializeCourseInfoElementsToShow();
+    this.calculateTotalPages();
+    this.currentPage = 1;
+    this.loadCurrentPageCourses();
   }
 
   public onFilterByYear(yearsToFilter: string[]): void {
@@ -219,6 +224,8 @@ export class CoursesComponent implements OnInit {
     this.selectedSkills = [];
     this.selectedIssuingCompanies = [];
     this.courseInfoElements = [...this.allCourseInfoElements];
-    this.initializeCourseInfoElementsToShow();
+    this.calculateTotalPages();
+    this.currentPage = 1;
+    this.loadCurrentPageCourses();
   }
 }
