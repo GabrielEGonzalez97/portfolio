@@ -28,6 +28,7 @@ import { ProjectsComponent } from './page-sections/projects/projects.component';
 import { LocationIconComponent } from './page-sections/reach-out-to-me/location-icon/location-icon.component';
 import { ReachOutToMeComponent } from './page-sections/reach-out-to-me/reach-out-to-me.component';
 import { ResearchComponent } from './page-sections/research/research.component';
+import { PaginationComponent } from './pagination/pagination.component';
 import { SocialMediaComponent } from './social-media/social-media.component';
 
 @NgModule({
@@ -53,6 +54,7 @@ import { SocialMediaComponent } from './social-media/social-media.component';
     AngleTopIconComponent,
     LocationIconComponent,
     FooterComponent,
+    PaginationComponent,
   ],
   imports: [
     AppRoutingModule,

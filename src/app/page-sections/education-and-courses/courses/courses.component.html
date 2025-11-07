@@ -70,15 +70,8 @@
 </div>
 
 <div class="item-container">
-    <div *ngIf="totalPages > 1" class="pagination">
-        <button mat-button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1">
-            Previous
-        </button>
-        <span>{{ currentPage }} / {{ totalPages }}</span>
-        <button mat-button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages">
-            Next
-        </button>
-    </div>
+    <app-pagination [currentPage]="currentPage" [totalPages]="totalPages" [onPageChange]="changePage.bind(this)">
+    </app-pagination>
 
     <ng-container *ngFor="let courseInfo of currentPageCourses; trackBy: trackByCourseName">
         <app-item [logoPath]="courseInfo.issuingCompany.companyLogoPath"

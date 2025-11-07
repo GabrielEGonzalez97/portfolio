@@ -46,6 +46,7 @@ body {
 }
 
 :root {
+  --primary-color: #55198b;
   --primary-button-color: #55198b;
   --theme-background-color: #ffffff;
   --theme-primary-text-color: #000000;
@@ -61,6 +62,7 @@ body {
 }
 
 [data-theme="dark"] {
+  --primary-color: #ffffff;
   --theme-background-color: #171c28;
   --theme-primary-text-color: #ffffff;
   --theme-secondary-text-color: #ffffff;
