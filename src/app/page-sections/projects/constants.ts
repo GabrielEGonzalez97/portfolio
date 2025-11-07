@@ -9,11 +9,11 @@ export const PROJECTS: IProject[] = [
     websiteLink: 'https://aiattribution.github.io/',
   },
   {
-    name: 'La Guía Exacta',
+    name: 'Exactamente',
     description:
-      'Creator and maintainer of the website. The idea of the website is to provide a place where students can find tools and useful material to help them during their time at university. On the website, there are tools such as a matrix calculator and a deterministic finite automaton evaluator.',
-    logoPath: 'assets/images/La_Guia_Exacta_Logo.png',
-    websiteLink: 'https://laguiaexacta.ar',
+      'Creator and maintainer of the website. The idea of the website is to provide a place where students can find tools and useful material to help them during their time at university.',
+    logoPath: 'assets/images/Exactamente_Logo.jpg',
+    websiteLink: 'https://www.exactamente.com.ar/',
   },
   {
     name: 'SurfPhotos',
