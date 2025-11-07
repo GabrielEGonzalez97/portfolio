@@ -127,10 +127,18 @@
 
     .button-greeting-div {
       justify-content: space-around;
+      gap: 0rem !important;
     }
 
     .profile-image {
       max-width: 250px !important;
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .button-greeting-div {
+    flex-direction: column;
+    gap: 1rem !important;
   }
 }
