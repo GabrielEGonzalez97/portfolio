@@ -11,6 +11,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardComponent } from './common/card/card.component';
+import { ExperienceBannerComponent } from './common/experience-banner/experience-banner.component';
 import { MainButtonComponent } from './common/main-button/main-button.component';
 import { SectionTitleComponent } from './common/section-title/section-title.component';
 import { SectionComponent } from './common/section/section.component';
@@ -33,28 +34,29 @@ import { SocialMediaComponent } from './social-media/social-media.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
     AboutMeComponent,
-    EducationAndCoursesComponent,
-    ExperiencesComponent,
-    HeaderComponent,
-    MainButtonComponent,
-    ProjectsComponent,
-    SocialMediaComponent,
-    ResearchComponent,
-    SectionTitleComponent,
-    SectionComponent,
-    EducationComponent,
-    CoursesComponent,
-    ItemComponent,
-    CardComponent,
-    ReachOutToMeComponent,
-    ThemeSwitcherComponent,
     AngleBottomIconComponent,
     AngleTopIconComponent,
-    LocationIconComponent,
+    AppComponent,
+    CardComponent,
+    CoursesComponent,
+    EducationAndCoursesComponent,
+    EducationComponent,
+    ExperienceBannerComponent,
+    ExperiencesComponent,
     FooterComponent,
+    HeaderComponent,
+    ItemComponent,
+    LocationIconComponent,
+    MainButtonComponent,
     PaginationComponent,
+    ProjectsComponent,
+    ReachOutToMeComponent,
+    ResearchComponent,
+    SectionComponent,
+    SectionTitleComponent,
+    SocialMediaComponent,
+    ThemeSwitcherComponent,
   ],
   imports: [
     AppRoutingModule,

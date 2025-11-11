@@ -1,0 +1,8 @@
+<div class="experience-banner" [style]="'background:' + experience.company.color + ';'">
+    <div class="experience-blurred-div"></div>
+    <div class="experience-div-company">
+        <h5 class="experience-text-company">{{ experience.company.name }}</h5>
+    </div>
+    <img crossorigin="anonymous" class="experience-image" [src]="experience.company.logoPath"
+        [alt]="experience.company.name">
+</div>
