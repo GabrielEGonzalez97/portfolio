@@ -2,6 +2,31 @@ app-card {
   display: contents;
 }
 
+#card-company {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: center;
+
+  img {
+    width: 64px;
+    height: 64px;
+    background-color: white;
+    border-bottom-left-radius: 1rem;
+    padding: 4px;
+    border: 2px solid black;
+  }
+
+  span {
+    color: var(--theme-primary-text-color);
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+
 #card-image {
   position: relative;
   display: flex;
@@ -22,12 +47,22 @@ app-card {
 }
 
 @media (max-width: 1380px) {
+  #card-company img {
+    width: 48px;
+    height: 48px;
+  }
+
   #card-image img {
     width: 200px !important;
   }
 }
 
 @media (max-width: 768px) {
+  #card-company img {
+    width: 32px;
+    height: 32px;
+  }
+
   #card-image img {
     width: 150px !important;
   }

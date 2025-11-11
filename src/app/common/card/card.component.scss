@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
   padding: 48px;
   border: 1px solid rgba(211, 211, 211, 0.397);
   box-shadow: var(--theme-card-box-shadow-color) 0px 10px 30px -15px;

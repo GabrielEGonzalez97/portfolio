@@ -3,4 +3,6 @@ export interface IProject {
   description: string;
   logoPath: string;
   websiteLink: string;
+  isFreelanceProject: boolean;
+  companyLogoPath?: string;
 }
