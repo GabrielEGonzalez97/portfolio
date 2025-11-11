@@ -1,18 +1,8 @@
 <div class="social-media-div">
-    <a href="https://github.com/GabrielEGonzalez97" class="icon-button" target="_blank" rel="noopener noreferrer">
+    <a *ngFor="let link of socialLinks" [href]="link.url" class="icon-button" target="_blank" rel="noopener noreferrer"
+        [attr.aria-label]="link.name">
         <span>
-            <img src="assets/icons/github-icon.svg" alt="GitHub icon">
-        </span>
-    </a>
-    <a href="https://linkedin.com/in/gabriel-enrique-gonzalez" class="icon-button" target="_blank"
-        rel="noopener noreferrer">
-        <span>
-            <img src="assets/icons/linkedin-app-icon.svg" alt="LinkedIn icon">
-        </span>
-    </a>
-    <a href="mailto:gabrielenrique.gonzalez97@gmail.com" class="icon-button" target="_blank" rel="noopener noreferrer">
-        <span>
-            <img src="assets/icons/gmail-icon.svg" alt="Gmail icon">
+            <img [src]="link.icon" [alt]="link.alt" />
         </span>
     </a>
 </div>
