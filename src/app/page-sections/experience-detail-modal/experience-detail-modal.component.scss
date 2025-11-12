@@ -54,6 +54,9 @@
 }
 
 .project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   margin-top: 0.5rem;
 }
 
@@ -66,7 +69,6 @@
 .project-description {
   color: var(--theme-secondary-text-color);
   font-size: 1rem;
-  margin: 0.25rem 0 0.5rem 0;
 }
 
 .private-project-text {
@@ -121,4 +123,15 @@
 
 .skill-name {
   font-size: 0.9rem;
+}
+
+:host ::ng-deep {
+  .project-description-image {
+    width: 100%;
+  }
+
+  .project-description-image-caption {
+    font-size: 14px;
+    line-height: 1.25rem;
+  }
 }

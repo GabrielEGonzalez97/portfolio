@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { marked } from 'marked';
 import { IExperienceInfo } from '../experiences/interfaces';
 
 @Component({
@@ -15,5 +16,9 @@ export class ExperienceDetailModalComponent {
 
   public closeModal(): void {
     this.dialogRef.close();
+  }
+
+  public projectDescriptionAsHtml(projectDescription: string) {
+    return marked(projectDescription);
   }
 }

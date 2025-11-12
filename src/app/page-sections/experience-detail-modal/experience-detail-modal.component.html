@@ -9,13 +9,17 @@
                 <div class="experience-detail-internal-container">
                     <div class="experience-detail">
                         <div *ngIf="!experienceDetail.isPrivateProject; else privateProjectBlock" class="project-info">
-                            <h4 class="project-name">{{ experienceDetail.projectName }}</h4>
-                            <span class="project-description">{{ experienceDetail.projectDescription }}</span>
+                            <span class="project-name">{{ experienceDetail.projectName }}</span>
+                            <ng-container *ngIf="experienceDetail.projectDescription">
+                                <div class="project-description"
+                                    [innerHTML]="projectDescriptionAsHtml(experienceDetail.projectDescription)"></div>
+                            </ng-container>
                         </div>
 
                         <ng-template #privateProjectBlock>
-                            <span class="private-project-text">🔒 Private project - details not publicly
-                                available</span>
+                            <span class="private-project-text">
+                                🔒 Private project - details not publicly available
+                            </span>
                         </ng-template>
 
                         <span class="label">Contribution:</span>
