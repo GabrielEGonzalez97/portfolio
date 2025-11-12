@@ -7,6 +7,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class MainButtonComponent {
   @Input() buttonName: string = '';
+  @Input() isPrimaryButton: boolean = true;
   @Input() href?: string = '';
   @Input() openLinkNewUrl?: boolean = true;
 

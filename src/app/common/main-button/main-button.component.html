@@ -1,10 +1,12 @@
 <div>
-    <a *ngIf="href; else spanButton" class="main-button" [href]="href" [target]="openLinkNewUrl ? '_blank' : '_self'"
-        (click)="onClick($event)">
+    <a *ngIf="href; else spanButton" class="main-button"
+        [ngClass]="isPrimaryButton ? 'primary-button' : 'secondary-button'" [href]="href"
+        [target]="openLinkNewUrl ? '_blank' : '_self'" (click)="onClick($event)">
         {{ buttonName }}
     </a>
 
     <ng-template #spanButton>
-        <span class="main-button" (click)="onClick($event)">{{ buttonName }}</span>
+        <span class="main-button" [ngClass]="isPrimaryButton ? 'primary-button' : 'secondary-button'"
+            (click)="onClick($event)">{{ buttonName }}</span>
     </ng-template>
 </div>

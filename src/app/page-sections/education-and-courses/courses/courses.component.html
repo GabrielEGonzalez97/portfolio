@@ -64,9 +64,7 @@
         </mat-chip>
     </mat-chip-set>
 
-    <button mat-stroked-button class="clear-filters-btn" (click)="clearFilters()">
-        Clear Filters
-    </button>
+    <app-main-button buttonName="Clear Filters" [isPrimaryButton]="false" (buttonClicked)="clearFilters()" />
 </div>
 
 <div class="item-container">

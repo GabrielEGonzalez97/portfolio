@@ -8,8 +8,8 @@
 }
 
 .dialog-actions {
-  margin-top: auto;
   background-color: var(--theme-background-color);
+  padding: 1rem;
 }
 
 .experience-details-container {
@@ -72,6 +72,7 @@
   width: 25%;
   height: fit-content;
   padding: 1rem;
+  user-select: none;
   border: 2px solid var(--theme-border-color);
   border-radius: 8px;
   -webkit-border-radius: 8px;
