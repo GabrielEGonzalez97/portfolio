@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-main-button',
@@ -7,8 +7,14 @@ import { Component, Input } from '@angular/core';
 })
 export class MainButtonComponent {
   @Input() buttonName: string = '';
-  @Input() href: string = '';
-  @Input() openLinkNewUrl: boolean = true;
+  @Input() href?: string = '';
+  @Input() openLinkNewUrl?: boolean = true;
+
+  @Output() buttonClicked = new EventEmitter<void>();
 
   constructor() {}
+
+  public onClick(_: MouseEvent): void {
+    this.buttonClicked.emit();
+  }
 }
