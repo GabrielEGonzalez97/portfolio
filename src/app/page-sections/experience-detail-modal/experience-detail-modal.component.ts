@@ -1,0 +1,12 @@
+import { Component, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { IExperienceInfo } from '../experiences/interfaces';
+
+@Component({
+  selector: 'app-experience-detail-modal',
+  templateUrl: './experience-detail-modal.component.html',
+  styleUrls: ['./experience-detail-modal.component.scss'],
+})
+export class ExperienceDetailModalComponent {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: IExperienceInfo) {}
+}

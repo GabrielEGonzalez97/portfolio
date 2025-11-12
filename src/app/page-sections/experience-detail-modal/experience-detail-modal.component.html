@@ -1,0 +1,15 @@
+<mat-dialog-content class="dialog-content">
+    <app-experience-banner [experience]="data" />
+
+    <div class="experience-details-container">
+        <ng-container *ngFor="let experienceDetail of data.experienceDetails">
+            <span class="experience-detail-role">{{ experienceDetail.role }}</span>
+            <span class="experience-detail-duration">{{ experienceDetail.duration }}</span>
+            <span class="experience-detail-contribution-text">{{ experienceDetail.contribution }}</span>
+        </ng-container>
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions class="dialog-actions" align="end">
+    <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
