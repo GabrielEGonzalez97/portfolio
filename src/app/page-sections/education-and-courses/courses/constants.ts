@@ -37,6 +37,11 @@ export const ANGULAR_SKILL: ISkill = {
   skillLogoPath: 'assets/icons/angular-icon.svg',
 };
 
+export const CLOUDANT_SKILL: ISkill = {
+  skillName: 'IBM Cloudant',
+  skillLogoPath: 'assets/icons/database-line-icon.svg',
+};
+
 export const COMMUNICATION: ISkill = {
   skillName: 'Communication',
   skillLogoPath: 'assets/icons/communication-icon.svg',
@@ -60,6 +65,11 @@ export const DOCKER_SKILL: ISkill = {
 export const ENGLISH_SKILL: ISkill = {
   skillName: 'English',
   skillLogoPath: 'assets/icons/united-kingdom-flag-icon.svg',
+};
+
+export const FASTAPI_SKILL: ISkill = {
+  skillName: 'FastAPI',
+  skillLogoPath: 'assets/icons/fastapi-icon.png',
 };
 
 export const FLASK_SKILL: ISkill = {
