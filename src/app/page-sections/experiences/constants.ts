@@ -1,6 +1,8 @@
 import {
   ANGULAR_SKILL,
   CSS_SKILL,
+  DB2_SKILL,
+  FLASK_SKILL,
   HTML_SKILL,
   PYTHON_SKILL,
   TYPESCRIPT_SKILL,
@@ -30,6 +32,20 @@ export const EXPERIENCES: IExperienceInfo[] = [
     experienceDetails: [
       {
         role: 'Software Engineer',
+        duration: 'IBM Research | Feb 2023 - Jun 2023',
+        isPrivateProject: true,
+        contribution:
+          'I was responsible for frontend development across three research initiatives. I conducted exploratory work to assess the feasibility of integrating new design components into existing products. I designed and implemented complete UIs for multiple demo applications showcased within these initiatives. In addition, I contributed to backend-related development tasks. Beyond these projects, I also developed a full UI and recorded a demo video that was presented at IBM Think 2023.',
+        skills: [
+          ANGULAR_SKILL,
+          CSS_SKILL,
+          HTML_SKILL,
+          TYPESCRIPT_SKILL,
+          PYTHON_SKILL,
+        ],
+      },
+      {
+        role: 'Software Engineer',
         duration: 'Chief Analytics Office | Nov 2021 - Dec 2022',
         isPrivateProject: true,
         contribution:
@@ -39,7 +55,9 @@ export const EXPERIENCES: IExperienceInfo[] = [
           CSS_SKILL,
           HTML_SKILL,
           TYPESCRIPT_SKILL,
+          FLASK_SKILL,
           PYTHON_SKILL,
+          DB2_SKILL,
         ],
       },
     ],

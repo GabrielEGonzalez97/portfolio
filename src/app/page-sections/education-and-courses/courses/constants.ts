@@ -47,6 +47,11 @@ export const CSS_SKILL: ISkill = {
   skillLogoPath: 'assets/icons/css-icon.svg',
 };
 
+export const DB2_SKILL: ISkill = {
+  skillName: 'DB2',
+  skillLogoPath: 'assets/icons/database-line-icon.svg',
+};
+
 export const DOCKER_SKILL: ISkill = {
   skillName: 'Docker',
   skillLogoPath: 'assets/icons/docker-icon.svg',
@@ -55,6 +60,11 @@ export const DOCKER_SKILL: ISkill = {
 export const ENGLISH_SKILL: ISkill = {
   skillName: 'English',
   skillLogoPath: 'assets/icons/united-kingdom-flag-icon.svg',
+};
+
+export const FLASK_SKILL: ISkill = {
+  skillName: 'Flask',
+  skillLogoPath: 'assets/icons/flask-logo-icon.svg',
 };
 
 export const HTML_SKILL: ISkill = {
