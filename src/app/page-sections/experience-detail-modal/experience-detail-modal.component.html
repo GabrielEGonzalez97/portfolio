@@ -5,7 +5,32 @@
         <ng-container *ngFor="let experienceDetail of data.experienceDetails">
             <span class="experience-detail-role">{{ experienceDetail.role }}</span>
             <span class="experience-detail-duration">{{ experienceDetail.duration }}</span>
-            <span class="experience-detail-contribution-text">{{ experienceDetail.contribution }}</span>
+            <div class="experience-detail-internal-container">
+                <div class="experience-detail">
+                    <div *ngIf="!experienceDetail.isPrivateProject; else privateProjectBlock" class="project-info">
+                        <h4 class="project-name">{{ experienceDetail.projectName }}</h4>
+                        <span class="project-description">{{ experienceDetail.projectDescription }}</span>
+                    </div>
+
+                    <ng-template #privateProjectBlock>
+                        <span class="private-project-text">🔒 Private project - details not publicly available</span>
+                    </ng-template>
+
+                    <p class="experience-detail-contribution-text">{{ experienceDetail.contribution }}</p>
+                </div>
+                <div class="skills-container" *ngIf="experienceDetail.skills?.length">
+                    <span class="skills-label">Technologies used:</span>
+                    <div class="skills-list">
+                        <ng-container *ngFor="let skill of experienceDetail.skills">
+                            <div class="skill-item">
+                                <img class="skill-logo" [src]="skill.skillLogoPath" [alt]="skill.skillName"
+                                    loading="lazy" />
+                                <span class="skill-name">{{ skill.skillName }}</span>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
         </ng-container>
     </div>
 </mat-dialog-content>

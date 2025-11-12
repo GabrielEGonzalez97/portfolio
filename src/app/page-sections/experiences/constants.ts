@@ -1,3 +1,10 @@
+import {
+  ANGULAR_SKILL,
+  CSS_SKILL,
+  HTML_SKILL,
+  PYTHON_SKILL,
+  TYPESCRIPT_SKILL,
+} from '../education-and-courses/courses/constants';
 import { ICompany, IExperienceInfo } from './interfaces';
 
 export const IBM_COMPANY: ICompany = {
@@ -26,8 +33,14 @@ export const EXPERIENCES: IExperienceInfo[] = [
         duration: 'Chief Analytics Office | Nov 2021 - Dec 2022',
         isPrivateProject: true,
         contribution:
-          "I led and developed the frontend side of the project using the Angular framework, which allowed me to take on a significant role within the team and be involved in all aspects of the UI. I worked closely with the backend developers and the team's data scientists to incorporate all the necessary requirements for showcasing specific functionalities in the UI.\n When I joined these projects, they had already been in existence for a few years. One of the actions I took was restructuring the HTML code to use semantic HTML. This code restructuring not only served to apply better programming techniques in the frontend, but also led to an improvement in the UI design by, for example, enhancing the way text was displayed on the screen.\n In addition, I implemented essential features on the backend side, building REST API services with Flask using Python and a DB2 database. Additionally, I was also responsible for carrying out a paradigm shift that the product stakeholders were looking for by stopping offering the information through a web page and starting to send that information to users in personalized insights by email.",
-        skills: [],
+          "I led and developed the frontend side of the project using the Angular framework, which allowed me to take on a significant role within the team and be involved in all aspects of the UI. I worked closely with the backend developers and the team's data scientists to incorporate all the necessary requirements for showcasing specific functionalities in the UI.\n\n When I joined these projects, they had already been in existence for a few years. One of the actions I took was restructuring the HTML code to use semantic HTML. This code restructuring not only served to apply better programming techniques in the frontend, but also led to an improvement in the UI design by, for example, enhancing the way text was displayed on the screen.\n\n In addition, I implemented essential features on the backend side, building REST API services with Flask using Python and a DB2 database. Additionally, I was also responsible for carrying out a paradigm shift that the product stakeholders were looking for by stopping offering the information through a web page and starting to send that information to users in personalized insights by email.",
+        skills: [
+          ANGULAR_SKILL,
+          CSS_SKILL,
+          HTML_SKILL,
+          TYPESCRIPT_SKILL,
+          PYTHON_SKILL,
+        ],
       },
     ],
   },

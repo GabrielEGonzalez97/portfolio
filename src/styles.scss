@@ -59,6 +59,7 @@ body {
   --theme-profile-image-border-color: #000000;
   --theme-profile-image-box-shadow-color: #000000;
   --theme-header-button-background-color: #f4f4f4;
+  --theme-border-color: #d1d1d1;
 }
 
 [data-theme="dark"] {
@@ -74,4 +75,5 @@ body {
   --theme-profile-image-border-color: #ffffff;
   --theme-profile-image-box-shadow-color: #ffffff;
   --theme-header-button-background-color: var(--primary-button-color);
+  --theme-border-color: #2a2f3a;
 }
