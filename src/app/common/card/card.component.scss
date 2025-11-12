@@ -4,7 +4,7 @@
   justify-content: center;
   position: relative;
   padding: 48px;
-  border: 1px solid rgba(211, 211, 211, 0.397);
+  border: 1px solid var(--theme-border-color);
   box-shadow: var(--theme-card-box-shadow-color) 0px 10px 30px -15px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -27,15 +27,15 @@
 }
 
 .card-title {
-  margin: 15px 0 12px 0;
   color: var(--theme-primary-text-color);
   font-size: 22px;
   font-weight: 700;
   line-height: 24px;
+  margin: 15px 0 12px 0;
 }
 
 .card-subtitle {
-  color: var(--theme-card-description-text-color);
+  color: var(--theme-secondary-text-color);
   font-size: 17px;
   line-height: 1.5rem;
 }

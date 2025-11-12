@@ -37,7 +37,7 @@
 }
 
 .experience-detail-duration {
-  color: var(--theme-secondary-text-color);
+  color: var(--theme-tertiary-text-color);
   font-weight: 300;
   font-size: 1.25rem;
 }
@@ -52,13 +52,14 @@
 }
 
 .project-name {
+  color: var(--theme-secondary-text-color);
   font-weight: 600;
   font-size: 1.2rem;
 }
 
 .project-description {
+  color: var(--theme-secondary-text-color);
   font-size: 1rem;
-  color: #444;
   margin: 0.25rem 0 0.5rem 0;
 }
 

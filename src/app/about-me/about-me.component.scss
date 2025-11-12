@@ -3,9 +3,9 @@
   flex-direction: column;
 
   .greeting-title {
+    color: var(--theme-primary-text-color);
     font-size: 70px;
     line-height: 1.1;
-    color: var(--theme-primary-text-color);
 
     .wave-emoji {
       animation-duration: 1.8s;
@@ -32,9 +32,9 @@
     margin-bottom: 2rem;
 
     .greeting-text {
+      color: var(--theme-secondary-text-color);
       font-size: 1.5rem;
       line-height: 1.66;
-      color: var(--theme-secondary-text-color);
       padding-right: 3rem;
     }
 
