@@ -32,6 +32,11 @@ export const UDEMY_COMPANY: IIssuingCompany = {
 };
 
 // ---------- SKILLS ----------
+export const AI_AGENTS_SKILL: ISkill = {
+  skillName: 'AI Agents',
+  skillLogoPath: 'assets/icons/ai-agent-icon.svg',
+};
+
 export const ANGULAR_SKILL: ISkill = {
   skillName: 'Angular',
   skillLogoPath: 'assets/icons/angular-icon.svg',

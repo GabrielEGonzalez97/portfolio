@@ -1,4 +1,5 @@
 import {
+  AI_AGENTS_SKILL,
   ANGULAR_SKILL,
   CARBON_SKILL,
   CLOUDANT_SKILL,
@@ -38,6 +39,65 @@ export const EXPERIENCES: IExperienceInfo[] = [
       'I work as a software engineer in Human-Centered AI (HCAI) research, focusing on the interaction between humans and AI agents in areas such as collaborative AI, mutual theory of mind, and group ideation with AI tools. I lead frontend development tasks and am responsible for implementing key features in that area, while also contributing to backend functionalities.',
     descriptionBullets: [],
     experienceDetails: [
+      {
+        role: 'Software Engineer',
+        duration: 'IBM Research | Jan 2025 - Nov 2025',
+        isPrivateProject: false,
+        projectName: 'Agentic Code Explorer',
+        projectDescription: `
+ACE - the Agentic Code Explorer - is a prototype agentic system designed to help software developers conduct sensemaking tasks within large code repositories. The design of this system was motivated by the observation that software developers often use AI coding assistants to help understand and ask questions about source code prior to planning and implementing code changes. Using ACE as a testbed, we present initial steps to explore whether a large language model (LLM)-based agent that is capable of invoking external tools and iteratively refining its own outputs (per the agentic design pattern) might be able to robustly support such a code discovery process. In this way, we use ACE as a means to explore more generally how generative models need not solely focus on the artifact production aspects of co-creative tasks; instead they might focus on the co-investigative activities where initial understanding and plans are formed.
+
+Our initial prototype was built as a standalone web application, rather than as a plugin for existing developer IDEs, to allow us the freedom to control all aspects of interaction design, model prompting, agentic tool design, interaction design, and usage data collection during the early stages of our research.
+
+ACE's front end (Figure 1) was built using the Svelte framework and its back end was implemented in Python using FastAPI.
+
+<figure id="ace_user_interface">
+  <img class="project-description-image" src="assets/images/ace/ace_user_interface.png" alt="ACE User Interface"/>
+  <figcaption class="project-description-image-caption">
+    <strong>Figure 1: ACE User Interface.</strong> Three interface panels allow the user to (A) browse all files in a GitHub code repository, (B) view either the raw source code or an AI-generated summary of a selected code file (shown above), and (C) converse with an LLM-based agent that has access to the full code repository and can answer general programming questions and targeted questions about a file, a code summary, or selected lines of code.
+  </figcaption>
+</figure>
+
+ACE presents a code repository's files in a tree structure (Figure 1A), mirroring how they are typically presented in developer IDEs. When a file is selected, ACE generates a natural language overview of the file in the central panel (Figure 1B). The overview provides a high-level description of the file's functionality, summarizing the purpose of the code and all of the classes and methods defined in it. Within the same panel, the user can switch to the “Code” view to see the raw source code.
+
+Users can converse with ACE in the right sidebar (Figure 1C). ACE uses the user's current context - which file they have open and any text they have selected in the interface - to answer questions. Users can also select text in the interface and press a keyboard shortcut to open a chat input, allowing them to ask ACE a question about anything they see on the screen.
+
+As ACE uses an agentic workflow, the latency of its responses may be high. Therefore, ACE delivers its responses to the chat UI via a streaming API, enabling the user to follow its progress as it processes the query. Users can view or hide ACE's processing steps, which show information about ACE's reasoning, observations, tool invocations and outputs.
+
+We equipped ACE with tools tailored for summarizing and explaining code (Figure 1B), understanding code dependencies and querying the repository. Since
+these features operate at the level of a code repository, ACE first performs a preprocessing stage that divides the repository into manageable chunks, embeds them using an embedding model, and stores the resulting vectors in an ElasticSearch database. This setup enables ACE to perform retrieval-augmented generation (RAG) in response to a user's query.
+
+For code summarization, the agent pre-generates natural language summaries at multiple granularities: one for each function or method within the repository, one for each class, and one for each source file.
+
+As an initial step toward operationalizing mutual theory of mind, our ACE prototype modifies agent responses with prompts derived from an editable profile representing the user's expertise (Figure 2).
+
+<figure id="ace_user_profile">
+  <img class="project-description-image" src="assets/images/ace/ace_user_profile.png" alt="User Profile"/>
+  <figcaption class="project-description-image-caption">
+    <strong>Figure 2: User Profile.</strong> Information in this profile is used by ACE to adapt its responses to the user. For this user, ACE will provide more direct and succinct responses to questions about Python, and longer and more explanatory responses to questions about CSS.
+  </figcaption>
+</figure>
+        `,
+        contribution: `In this research project, I was deeply involved in the implementation of ACE, contributing both to the frontend (which I fully implemented) and to several areas of the backend. My backend work included developing user profile generation based on their GitHub activity as well as their professional information available on the company's platform.
+
+I also implemented the functionality for summarizing repository code—both at the file and function levels—enabling retrieval-augmented generation (RAG) based on these code summaries. Additionally, I participated in developing a Slack bot that allowed users to interact with ACE within group environments.
+
+Part of the research conducted through this project was presented at the ACM International Conference on Intelligent User Interfaces 2025: 6th Workshop on Human-AI Co-Creation with Generative Models, in the paper “ACE: Moving Toward Co-Investigation with the Agentic Code Explorer,” which I presented in person at the IUI 2025 conference held in Cagliari 🇮🇹.`,
+        skills: [
+          SVELTE_SKILL,
+          SASS_SKILL,
+          HTML_SKILL,
+          TYPESCRIPT_SKILL,
+          CARBON_SKILL,
+          FASTAPI_SKILL,
+          PYTHON_SKILL,
+          SLACK_SKILL,
+          CLOUDANT_SKILL,
+          AI_AGENTS_SKILL,
+          LLM_SKILL,
+          OPENSHIFT_SKILL,
+        ],
+      },
       {
         role: 'Software Engineer',
         duration: 'IBM Research | Jan 2024 - Dec 2024',
@@ -181,7 +241,7 @@ We implemented the Collaborativon Canvas using the Svelte framework for the fron
 `,
         contribution: `In this research project, I was the lead developer contributing to the project, both on the frontend (100% implemented) and the backend. The implementation of the canvas allowed us to conduct user studies where we evaluated Group Brainstorming with an AI Agent. The results were presented in two papers:
 - "AI and the Future of Collaborative Work: Group Ideation with an LLM in a Virtual Canvas" presented at CHIWORK '24: Annual Symposium on Human-Computer Interaction for Work. The paper received an honorable mention.
-- "Collaborative Canvas: A Tool for Exploring LLM Use in Group Ideation Tasks" presented at the ACM International Conference on Intelligent User Interfaces 2024: 5th Workshop on Human-AI Co-Creation with Generative Models. I had the opportunity to be the first author of this paper and present it at the IUI conference held in Greenville, South Carolina, 🇺🇸.
+- "Collaborative Canvas: A Tool for Exploring LLM Use in Group Ideation Tasks" presented at the ACM International Conference on Intelligent User Interfaces 2024: 5th Workshop on Human-AI Co-Creation with Generative Models. I had the opportunity to be the first author of this paper and to present it in person at the IUI 2024 conference held in Greenville, South Carolina 🇺🇸.
 `,
         skills: [
           SVELTE_SKILL,
