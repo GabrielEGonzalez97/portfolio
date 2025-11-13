@@ -37,6 +37,11 @@ export const ANGULAR_SKILL: ISkill = {
   skillLogoPath: 'assets/icons/angular-icon.svg',
 };
 
+export const CARBON_SKILL: ISkill = {
+  skillName: 'Carbon Design System',
+  skillLogoPath: 'assets/icons/carbon-design-system-logo.png',
+};
+
 export const CLOUDANT_SKILL: ISkill = {
   skillName: 'IBM Cloudant',
   skillLogoPath: 'assets/icons/database-line-icon.svg',
@@ -97,6 +102,16 @@ export const LEADERSHIP: ISkill = {
   skillLogoPath: 'assets/icons/leadership-icon.svg',
 };
 
+export const LLM_SKILL: ISkill = {
+  skillName: 'LLMs',
+  skillLogoPath: 'assets/icons/llm-icon.svg',
+};
+
+export const OPENSHIFT_SKILL: ISkill = {
+  skillName: 'OpenShift',
+  skillLogoPath: 'assets/icons/openshift-icon.svg',
+};
+
 export const PYTHON_SKILL: ISkill = {
   skillName: 'Python',
   skillLogoPath: 'assets/icons/python-programming-language-icon.svg',
@@ -105,6 +120,11 @@ export const PYTHON_SKILL: ISkill = {
 export const R_SKILL: ISkill = {
   skillName: 'R',
   skillLogoPath: 'assets/icons/r-programming-language-icon.svg',
+};
+
+export const SASS_SKILL: ISkill = {
+  skillName: 'Sass',
+  skillLogoPath: 'assets/icons/sass-icon.svg',
 };
 
 export const SQL_SKILL: ISkill = {
