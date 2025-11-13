@@ -40,6 +40,33 @@ export const EXPERIENCES: IExperienceInfo[] = [
     experienceDetails: [
       {
         role: 'Software Engineer',
+        duration: 'IBM Research | Jan 2024 - Dec 2024',
+        isPrivateProject: true,
+        contribution: `My research contributions focused on advancing human-AI collaboration across domains such as generative AI, group brainstorming, cooperative games, and mutual theory of mind.
+
+My work involved developing technological prototypes, conducting user studies, and co-authoring papers that explored these areas. In each project, I sought innovative solutions to emerging challenges, effectively collaborating with interdisciplinary teams and adapting to the evolving needs of the research process.
+
+Over the year, I contributed to multiple publications submitted to leading research conferences (e.g., CHIWORK, IUI, ICCC, IJCAI).
+
+During the summer, I played a proactive role in supporting research interns. I developed a prototype that was central to a user study on mutual theory of mind in cooperative games, which later became the basis for a co-authored paper. Additionally, I provided guidance on a project within the mutual theory of mind in code understanding research stream.
+
+I also collaborated on a master's thesis project investigating human-AI co-creativity with generative AI, providing research and technical support throughout the study.
+          `,
+        skills: [
+          SVELTE_SKILL,
+          SASS_SKILL,
+          HTML_SKILL,
+          TYPESCRIPT_SKILL,
+          CARBON_SKILL,
+          FASTAPI_SKILL,
+          PYTHON_SKILL,
+          CLOUDANT_SKILL,
+          LLM_SKILL,
+          OPENSHIFT_SKILL,
+        ],
+      },
+      {
+        role: 'Software Engineer',
         duration: 'IBM Research | Jul 2023 - Dec 2023',
         isPrivateProject: false,
         projectName: 'Koala',
