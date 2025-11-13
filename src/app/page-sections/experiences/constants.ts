@@ -11,6 +11,7 @@ import {
   OPENSHIFT_SKILL,
   PYTHON_SKILL,
   SASS_SKILL,
+  SLACK_SKILL,
   SVELTE_SKILL,
   TYPESCRIPT_SKILL,
 } from '../education-and-courses/courses/constants';
@@ -37,6 +38,47 @@ export const EXPERIENCES: IExperienceInfo[] = [
       'I work as a software engineer in Human-Centered AI (HCAI) research, focusing on the interaction between humans and AI agents in areas such as collaborative AI, mutual theory of mind, and group ideation with AI tools. I lead frontend development tasks and am responsible for implementing key features in that area, while also contributing to backend functionalities.',
     descriptionBullets: [],
     experienceDetails: [
+      {
+        role: 'Software Engineer',
+        duration: 'IBM Research | Jul 2023 - Dec 2023',
+        isPrivateProject: false,
+        projectName: 'Koala',
+        projectDescription: `
+To understand the challenges of designing an agent that “fts in” to a group setting, we built an LLM-based conversational agent prototype called “Koala.” Koala is an AI-based group discussion participant, situated in Slack and implemented as a bot application. Given our desire to experiment with proactive ways of participating, we developed two confgurable variants of Koala (Figure 1): a reactive variant that only responds when directly addressed (by either “@Koala” or “Koala”), and a proactive variant that responds when it determines that it has something valuable to say. Koala can contribute to the conversation in the same manner as other human users, by sending textual messages as well as emoji-based reactions to existing messages.
+
+<figure id="koala_proactive_variants">
+  <img class="project-description-image" src="assets/images/koala/reactive_and_proactive_koala.png" alt="Koala as an AI participant in Slack"/>
+  <figcaption class="project-description-image-caption">
+    <strong>Figure 1: Koala as an AI participant in Slack.</strong> These screenshots (with human participant names redacted) show examples of Koala participating in a Slack channel. (A) The reactive variant of Koala replies to a user's question addressed to “Koala” (A.1) or to “@Koala” (A.2). (B) The proactive variant of Koala generates a proactive reply (B.1) to the conversation and a reactive reply (B.2) in response to a direct request.”
+  </figcaption>
+</figure>
+
+In developing the proactive variant of Koala, we knew that writing imperative decision logic to determine what constitutes a valuable contribution would prove impossible; therefore, we relied on
+the underlying LLM to not only produce conversational responses in response to users' messages, but also to score those responses for the extent to which they made a valuable contribution to the
+conversation. We outline this process in Figure 2; at a high level, Koala is instructed to not reply to messages where it is clearly not the intended recipient, and to reply to messages when it estimates that the response it generated makes a valuable contribution to the conversation. We note that our proactive variant of Koala represents a limited form of proactivity as it’s process is triggered by the receipt of a message from a human user; a truly proactive variant of Koala would also be able to send messages to the group even when the human participants remain silent.
+
+During Koala's development, we noticed that the underlying LLM was unreliable in identifying the intended target for a chat utterance. Thus, we incorporated additional, external control logic to force Koala to reply if it's name was detected in a user's message, and suppress Koala from replying under other circumstances, such as when the names of one of the other participants were mentioned, regardless of how the LLM scored the value of the reply's content.
+
+<figure id="koala_operational_logic">
+  <img class="project-description-image" src="assets/images/koala/koala_operational_logic.png" alt="Koala operational logic"/>
+  <figcaption class="project-description-image-caption">
+    <strong>Figure 2: Koala operational logic.</strong> When users post a message in a Slack (A), the post triggers an event that is handled by the Koala backend (B) where control logic determines whether Koala should either immediately pass on replying or hand of for further evaluation in the autonomy control logic (C) where the LLM (D) generates a response that is further evaluated for potential posting in the channel.”
+  </figcaption>
+</figure>
+        `,
+        contribution: `In this research project, in addition to contributing to the implementation of Koala, I also participated as a note-taker during the user studies we conducted to understand Koala's impact on the dynamics of an ideation activity and to explore the design space for its interactive behaviors. The results were presented in two papers:
+- "Group Brainstorming with an AI Agent: Creating and Selecting Ideas," presented at the International Conference on Computational Creativity (ICCC'24).
+- "Controlling AI Agent Participation in Group Conversations: A Human-Centered Approach," presented at the ACM International Conference on Intelligent User Interfaces 2025.
+        `,
+        skills: [
+          FASTAPI_SKILL,
+          PYTHON_SKILL,
+          SLACK_SKILL,
+          CLOUDANT_SKILL,
+          LLM_SKILL,
+          OPENSHIFT_SKILL,
+        ],
+      },
       {
         role: 'Software Engineer',
         duration: 'IBM Research | Jul 2023 - Dec 2023',
@@ -110,7 +152,7 @@ We implemented the Collaborativon Canvas using the Svelte framework for the fron
   </figcaption>
 </figure>
 `,
-        contribution: `In this project, I was the lead developer contributing to the project, both on the frontend (100% implemented) and the backend. The implementation of the canvas allowed us to conduct user studies where we evaluated Group Brainstorming with an AI Agent. The results were presented in two papers:
+        contribution: `In this research project, I was the lead developer contributing to the project, both on the frontend (100% implemented) and the backend. The implementation of the canvas allowed us to conduct user studies where we evaluated Group Brainstorming with an AI Agent. The results were presented in two papers:
 - "AI and the Future of Collaborative Work: Group Ideation with an LLM in a Virtual Canvas" presented at CHIWORK '24: Annual Symposium on Human-Computer Interaction for Work. The paper received an honorable mention.
 - "Collaborative Canvas: A Tool for Exploring LLM Use in Group Ideation Tasks" presented at the ACM International Conference on Intelligent User Interfaces 2024: 5th Workshop on Human-AI Co-Creation with Generative Models. I had the opportunity to be the first author of this paper and present it at the IUI conference held in Greenville, South Carolina, 🇺🇸.
 `,

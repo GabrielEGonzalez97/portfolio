@@ -127,6 +127,11 @@ export const SASS_SKILL: ISkill = {
   skillLogoPath: 'assets/icons/sass-icon.svg',
 };
 
+export const SLACK_SKILL: ISkill = {
+  skillName: 'Slack',
+  skillLogoPath: 'assets/icons/slack-icon.svg',
+};
+
 export const SQL_SKILL: ISkill = {
   skillName: 'SQL',
   skillLogoPath: 'assets/icons/sql-icon.svg',
