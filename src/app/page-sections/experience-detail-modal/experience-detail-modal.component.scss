@@ -138,6 +138,10 @@
 }
 
 @media (max-width: 768px) {
+  .dialog-content {
+    max-height: 90vh;
+  }
+
   .experience-detail-external-container {
     gap: 0.5rem;
   }
@@ -151,8 +155,22 @@
     font-size: 1rem;
   }
 
-  .project-description {
+  .project-description,
+  .experience-detail-contribution-text {
     font-size: 14px;
+  }
+
+  .skill-item {
+    padding: 0.15rem 0.3rem;
+  }
+
+  .skill-logo {
+    width: 16px;
+    height: 16px;
+  }
+
+  .skill-name {
+    font-size: 12px;
   }
 }
 
