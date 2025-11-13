@@ -126,6 +126,36 @@
   font-size: 0.9rem;
 }
 
+@media (max-width: 1380px) {
+  .experience-detail-internal-container {
+    flex-direction: column;
+  }
+
+  .experience-detail,
+  .skills-container {
+    width: unset !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-detail-external-container {
+    gap: 0.5rem;
+  }
+
+  .experience-detail-role {
+    font-size: 1.25rem;
+  }
+
+  .experience-detail-duration,
+  .project-name {
+    font-size: 1rem;
+  }
+
+  .project-description {
+    font-size: 14px;
+  }
+}
+
 :host ::ng-deep {
   .project-description-image {
     width: 100%;
@@ -138,5 +168,31 @@
   .project-description-image-caption {
     font-size: 14px;
     line-height: 1.25rem;
+  }
+
+  @media (max-width: 1046px) {
+    .full-proactivity-description-image {
+      width: 300px;
+    }
+  }
+
+  @media (max-width: 791px) {
+    .full-proactivity-description-image {
+      width: 200px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .experience-details-container {
+      margin-top: 1rem;
+    }
+
+    .project-description p {
+      margin: 7px 0;
+    }
+
+    .project-description-image-caption {
+      font-size: 12px;
+    }
   }
 }

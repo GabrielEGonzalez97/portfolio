@@ -7,7 +7,7 @@
                 <h5 class="experience-text-role">{{ experience.role }}</h5>
                 <h5 class="experience-text-date">{{ experience.date }}</h5>
                 <p class="experience-text-description">{{ experience.description }}</p>
-                <div class="view-details-button-container">
+                <div class="view-details-button-container" *ngIf="experience.experienceDetails.length > 0">
                     <app-main-button buttonName="View details" (buttonClicked)="openExperienceModal(experience)" />
                 </div>
                 <ng-container *ngIf="experience.descriptionBullets">
