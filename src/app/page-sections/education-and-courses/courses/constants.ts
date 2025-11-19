@@ -62,6 +62,11 @@ export const CSS_SKILL: ISkill = {
   skillLogoPath: 'assets/icons/css-icon.svg',
 };
 
+export const CYPRESS_SKILL: ISkill = {
+  skillName: 'Cypress',
+  skillLogoPath: 'assets/icons/cypress-icon.svg',
+};
+
 export const DB2_SKILL: ISkill = {
   skillName: 'DB2',
   skillLogoPath: 'assets/icons/database-line-icon.svg',
@@ -158,6 +163,15 @@ export const VUE_JS_SKILL: ISkill = {
 };
 
 export const COURSE_INFO_ELEMENTS: ICourseInfo[] = [
+  {
+    courseName: 'Cypress End-to-End Testing - Getting Started',
+    issuingCompany: UDEMY_COMPANY,
+    expeditionDate: 'November 2025',
+    durationHours: '6',
+    credentialUrl:
+      'https://www.udemy.com/certificate/UC-02ae79f4-5ea5-49d1-99e3-d2507bcbc122/',
+    skills: [CYPRESS_SKILL],
+  },
   {
     courseName: 'The Most Common Mistakes in English',
     issuingCompany: UDEMY_COMPANY,
