@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.0.0",
+  "description": "Personal portfolio showcasing software engineering experience and human-centered AI research",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
