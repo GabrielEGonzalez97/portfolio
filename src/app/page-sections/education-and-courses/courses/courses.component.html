@@ -14,10 +14,10 @@
         <mat-label>Filter by Skill</mat-label>
         <mat-select multiple [(value)]="selectedSkills" (selectionChange)="onFilterBySkill($event.value)">
             <ng-container *ngFor="let skill of skills">
-                <mat-option [value]="skill.skillName">
+                <mat-option [value]="skill.name">
                     <span class="dropdown-option-container">
-                        <img [src]="skill.skillLogoPath" [alt]="skill.skillName">
-                        <span class="filter-option-text">{{skill.skillName}}</span>
+                        <img [src]="skill.logoPath" [alt]="skill.name">
+                        <span class="filter-option-text">{{skill.name}}</span>
                     </span>
                 </mat-option>
             </ng-container>
@@ -82,9 +82,9 @@
                         <ng-container *ngFor="let courseInfoSkill of courseInfo.skills">
                             <li class="education-text-bullet-item">
                                 <span>
-                                    <img class="skill-logo" [src]="courseInfoSkill.skillLogoPath"
-                                        [alt]="courseInfoSkill.skillName">
-                                    {{ courseInfoSkill.skillName }}
+                                    <img class="skill-logo" [src]="courseInfoSkill.logoPath"
+                                        [alt]="courseInfoSkill.name">
+                                    {{ courseInfoSkill.name }}
                                 </span>
                             </li>
                         </ng-container>

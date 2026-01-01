@@ -1,4 +1,5 @@
-import { ICourseInfo, IIssuingCompany, ISkill } from './interfaces';
+import { ISkill } from '@common/interfaces';
+import { ICourseInfo, IIssuingCompany } from './interfaces';
 
 // ---------- COMPANIES ----------
 export const DATACAMP_COMPANY: IIssuingCompany = {
@@ -33,133 +34,133 @@ export const UDEMY_COMPANY: IIssuingCompany = {
 
 // ---------- SKILLS ----------
 export const AI_AGENTS_SKILL: ISkill = {
-  skillName: 'AI Agents',
-  skillLogoPath: 'assets/icons/ai-agent-icon.svg',
+  name: 'AI Agents',
+  logoPath: 'assets/icons/ai-agent-icon.svg',
 };
 
 export const ANGULAR_SKILL: ISkill = {
-  skillName: 'Angular',
-  skillLogoPath: 'assets/icons/angular-icon.svg',
+  name: 'Angular',
+  logoPath: 'assets/icons/angular-icon.svg',
 };
 
 export const CARBON_SKILL: ISkill = {
-  skillName: 'Carbon Design System',
-  skillLogoPath: 'assets/icons/carbon-design-system-logo.png',
+  name: 'Carbon Design System',
+  logoPath: 'assets/icons/carbon-design-system-logo.png',
 };
 
 export const CLOUDANT_SKILL: ISkill = {
-  skillName: 'IBM Cloudant',
-  skillLogoPath: 'assets/icons/database-line-icon.svg',
+  name: 'IBM Cloudant',
+  logoPath: 'assets/icons/database-line-icon.svg',
 };
 
 export const COMMUNICATION: ISkill = {
-  skillName: 'Communication',
-  skillLogoPath: 'assets/icons/communication-icon.svg',
+  name: 'Communication',
+  logoPath: 'assets/icons/communication-icon.svg',
 };
 
 export const CSS_SKILL: ISkill = {
-  skillName: 'CSS',
-  skillLogoPath: 'assets/icons/css-icon.svg',
+  name: 'CSS',
+  logoPath: 'assets/icons/css-icon.svg',
 };
 
 export const CYPRESS_SKILL: ISkill = {
-  skillName: 'Cypress',
-  skillLogoPath: 'assets/icons/cypress-icon.svg',
+  name: 'Cypress',
+  logoPath: 'assets/icons/cypress-icon.svg',
 };
 
 export const DB2_SKILL: ISkill = {
-  skillName: 'DB2',
-  skillLogoPath: 'assets/icons/database-line-icon.svg',
+  name: 'DB2',
+  logoPath: 'assets/icons/database-line-icon.svg',
 };
 
 export const DOCKER_SKILL: ISkill = {
-  skillName: 'Docker',
-  skillLogoPath: 'assets/icons/docker-icon.svg',
+  name: 'Docker',
+  logoPath: 'assets/icons/docker-icon.svg',
 };
 
 export const ENGLISH_SKILL: ISkill = {
-  skillName: 'English',
-  skillLogoPath: 'assets/icons/united-kingdom-flag-icon.svg',
+  name: 'English',
+  logoPath: 'assets/icons/united-kingdom-flag-icon.svg',
 };
 
 export const FASTAPI_SKILL: ISkill = {
-  skillName: 'FastAPI',
-  skillLogoPath: 'assets/icons/fastapi-icon.png',
+  name: 'FastAPI',
+  logoPath: 'assets/icons/fastapi-icon.png',
 };
 
 export const FLASK_SKILL: ISkill = {
-  skillName: 'Flask',
-  skillLogoPath: 'assets/icons/flask-logo-icon.svg',
+  name: 'Flask',
+  logoPath: 'assets/icons/flask-logo-icon.svg',
 };
 
 export const HTML_SKILL: ISkill = {
-  skillName: 'HTML',
-  skillLogoPath: 'assets/icons/html-icon.svg',
+  name: 'HTML',
+  logoPath: 'assets/icons/html-icon.svg',
 };
 
 export const JAVA_SKILL: ISkill = {
-  skillName: 'Java',
-  skillLogoPath: 'assets/icons/java-programming-language-icon.svg',
+  name: 'Java',
+  logoPath: 'assets/icons/java-programming-language-icon.svg',
 };
 
 export const JAVASCRIPT_SKILL: ISkill = {
-  skillName: 'JavaScript',
-  skillLogoPath: 'assets/icons/javascript-programming-language-icon.svg',
+  name: 'JavaScript',
+  logoPath: 'assets/icons/javascript-programming-language-icon.svg',
 };
 
 export const LEADERSHIP: ISkill = {
-  skillName: 'Leadership',
-  skillLogoPath: 'assets/icons/leadership-icon.svg',
+  name: 'Leadership',
+  logoPath: 'assets/icons/leadership-icon.svg',
 };
 
 export const LLM_SKILL: ISkill = {
-  skillName: 'LLMs',
-  skillLogoPath: 'assets/icons/llm-icon.svg',
+  name: 'LLMs',
+  logoPath: 'assets/icons/llm-icon.svg',
 };
 
 export const OPENSHIFT_SKILL: ISkill = {
-  skillName: 'OpenShift',
-  skillLogoPath: 'assets/icons/openshift-icon.svg',
+  name: 'OpenShift',
+  logoPath: 'assets/icons/openshift-icon.svg',
 };
 
 export const PYTHON_SKILL: ISkill = {
-  skillName: 'Python',
-  skillLogoPath: 'assets/icons/python-programming-language-icon.svg',
+  name: 'Python',
+  logoPath: 'assets/icons/python-programming-language-icon.svg',
 };
 
 export const R_SKILL: ISkill = {
-  skillName: 'R',
-  skillLogoPath: 'assets/icons/r-programming-language-icon.svg',
+  name: 'R',
+  logoPath: 'assets/icons/r-programming-language-icon.svg',
 };
 
 export const SASS_SKILL: ISkill = {
-  skillName: 'Sass',
-  skillLogoPath: 'assets/icons/sass-icon.svg',
+  name: 'Sass',
+  logoPath: 'assets/icons/sass-icon.svg',
 };
 
 export const SLACK_SKILL: ISkill = {
-  skillName: 'Slack',
-  skillLogoPath: 'assets/icons/slack-icon.svg',
+  name: 'Slack',
+  logoPath: 'assets/icons/slack-icon.svg',
 };
 
 export const SQL_SKILL: ISkill = {
-  skillName: 'SQL',
-  skillLogoPath: 'assets/icons/sql-icon.svg',
+  name: 'SQL',
+  logoPath: 'assets/icons/sql-icon.svg',
 };
 
 export const SVELTE_SKILL: ISkill = {
-  skillName: 'Svelte',
-  skillLogoPath: 'assets/icons/svelte-icon.svg',
+  name: 'Svelte',
+  logoPath: 'assets/icons/svelte-icon.svg',
 };
 
 export const TYPESCRIPT_SKILL: ISkill = {
-  skillName: 'TypeScript',
-  skillLogoPath: 'assets/icons/typescript-programming-language-icon.svg',
+  name: 'TypeScript',
+  logoPath: 'assets/icons/typescript-programming-language-icon.svg',
 };
 
 export const VUE_JS_SKILL: ISkill = {
-  skillName: 'Vue JS',
-  skillLogoPath: 'assets/icons/vue-js-icon.svg',
+  name: 'Vue JS',
+  logoPath: 'assets/icons/vue-js-icon.svg',
 };
 
 export const COURSE_INFO_ELEMENTS: ICourseInfo[] = [

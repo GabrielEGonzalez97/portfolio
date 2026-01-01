@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { IExperienceInfo } from '@common/interfaces';
 import { marked } from 'marked';
-import { IExperienceInfo } from '../experiences/interfaces';
 
 @Component({
   selector: 'app-experience-detail-modal',

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { COURSE_INFO_ELEMENTS } from './constants';
-import { ICourseInfo, IIssuingCompany, ISkill } from './interfaces';
+import { ICourseInfo, IIssuingCompany } from './interfaces';
+import { ISkill } from '@common/interfaces';
 
 @Component({
   selector: 'app-courses',
@@ -100,7 +101,7 @@ export class CoursesComponent implements OnInit {
       uniqueYearsMap.set(expeditionDateYear, expeditionDateYear);
 
       course.skills.forEach((skill: ISkill) => {
-        uniqueSkillsMap.set(skill.skillName, skill);
+        uniqueSkillsMap.set(skill.name, skill);
       });
 
       uniqueIssuingCompaniesMap.set(
@@ -115,9 +116,9 @@ export class CoursesComponent implements OnInit {
 
     const uniqueSkillsArray: ISkill[] = Array.from(uniqueSkillsMap.values());
     uniqueSkillsArray.sort((a: ISkill, b: ISkill) => {
-      if (a.skillName < b.skillName) {
+      if (a.name < b.name) {
         return -1;
-      } else if (a.skillName > b.skillName) {
+      } else if (a.name > b.name) {
         return 1;
       }
       return 0;
@@ -156,7 +157,7 @@ export class CoursesComponent implements OnInit {
 
         if (this.selectedSkills.length > 0) {
           filterSkill = courseInfo.skills.some((skill: ISkill) =>
-            this.selectedSkills.includes(skill.skillName)
+            this.selectedSkills.includes(skill.name)
           );
         }
 

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IExperienceInfo } from '../../page-sections/experiences/interfaces';
+import { IExperienceInfo } from '@common/interfaces';
 
 @Component({
   selector: 'app-experience-banner',

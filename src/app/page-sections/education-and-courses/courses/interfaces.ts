@@ -1,11 +1,8 @@
+import { ISkill } from "@common/interfaces";
+
 export interface IIssuingCompany {
   companyName: string;
   companyLogoPath: string;
-}
-
-export interface ISkill {
-  skillName: string;
-  skillLogoPath: string;
 }
 
 export interface ICourseInfo {

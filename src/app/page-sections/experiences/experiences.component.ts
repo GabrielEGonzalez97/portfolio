@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ExperienceDetailModalComponent } from '../experience-detail-modal/experience-detail-modal.component';
 import { EXPERIENCES } from './constants';
-import { IExperienceInfo } from './interfaces';
+import { IExperienceInfo } from '@common/interfaces';
 
 @Component({
   selector: 'app-experiences',

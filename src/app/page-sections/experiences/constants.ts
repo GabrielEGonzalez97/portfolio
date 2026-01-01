@@ -17,7 +17,7 @@ import {
   SVELTE_SKILL,
   TYPESCRIPT_SKILL,
 } from '../education-and-courses/courses/constants';
-import { IExperienceInfo } from './interfaces';
+import { IExperienceInfo } from '@common/interfaces';
 
 
 export const EXPERIENCES: IExperienceInfo[] = [
