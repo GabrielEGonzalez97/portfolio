@@ -1,10 +1,5 @@
+import { ICompany } from '@common/interfaces';
 import { ISkill } from '../education-and-courses/courses/interfaces';
-
-export interface ICompany {
-  name: string;
-  logoPath: string;
-  color: string;
-}
 
 export interface IExperienceDetail {
   role: string;
