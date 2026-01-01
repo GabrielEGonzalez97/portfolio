@@ -1,0 +1,66 @@
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+
+  .about-me-title {
+    color: var(--theme-primary-text-color);
+    font-size: 70px;
+    line-height: 1.1;
+  }
+
+  .about-me-text {
+    color: var(--theme-secondary-text-color);
+    font-size: 1.5rem;
+    line-height: 1.66;
+    padding-right: 3rem;
+  }
+
+  .about-me-buttons-container {
+    display: flex;
+    gap: 3rem;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1380px) {
+  .about-me-container {
+    display: block;
+
+    .about-me-title {
+      font-size: 50px !important;
+    }
+
+    .about-me-text {
+      font-size: 20px !important;
+      padding-right: 0rem !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about-me-container {
+    display: block;
+
+    .about-me-title {
+      font-size: 30px !important;
+    }
+
+    .about-me-text {
+      font-size: 16px !important;
+      line-height: normal;
+      padding-right: 0rem !important;
+    }
+
+    .about-me-buttons-container {
+      justify-content: space-around;
+      gap: 0rem !important;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .about-me-buttons-container {
+    flex-direction: column;
+    gap: 1rem !important;
+  }
+}
