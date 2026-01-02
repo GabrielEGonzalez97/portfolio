@@ -1,12 +1,10 @@
-<div class="experience-banner" [style.--company-color]="experience.company.color">
-    <div class="experience-blurred-div"></div>
-
-    <div class="experience-div-company">
-        <h5 class="experience-text-company">
+<div class="experience-banner-container" [style.--company-color]="experience.company.color">
+    <div class="experience-banner-company-name-container">
+        <h5 class="experience-banner-company-name">
             {{ experience.company.name }}
         </h5>
     </div>
 
-    <img crossorigin="anonymous" class="experience-image" [src]="experience.company.logoPath"
+    <img crossorigin="anonymous" class="experience-banner-image" [src]="experience.company.logoPath"
         [alt]="experience.company.name">
 </div>

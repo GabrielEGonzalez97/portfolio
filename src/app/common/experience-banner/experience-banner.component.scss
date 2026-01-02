@@ -1,107 +1,98 @@
-.experience-banner {
+@import 'src/mixins';
+
+.experience-banner-container {
+  position: relative;
   display: flex;
-  align-items: flex-end;
   justify-content: center;
+  height: 11rem;
+  @include filter(blur(0px));
+}
+
+.experience-banner-container::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  @include filter(blur(5px));
+}
+
+.experience-banner-container,
+.experience-banner-container::before {
+  width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)),
     var(--company-color);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 150%;
-  filter: blur(0px);
-  -webkit-filter: blur(0px);
-  -moz-filter: blur(0px);
-  -o-filter: blur(0px);
-  -ms-filter: blur(0px);
+  @include border-radius(10px 10px 0px 0px);
 }
 
-.experience-blurred-div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-}
-
-.experience-banner,
-.experience-blurred-div {
-  height: 11rem;
-  border-radius: 10px 10px 0px 0px;
-  -webkit-border-radius: 10px 10px 0px 0px;
-  -moz-border-radius: 10px 10px 0px 0px;
-  -ms-border-radius: 10px 10px 0px 0px;
-  -o-border-radius: 10px 10px 0px 0px;
-}
-
-.experience-div-company {
+.experience-banner-company-name-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 9rem;
-  background: transparent;
+  z-index: 1;
 }
 
-.experience-text-company {
+.experience-banner-company-name {
   padding: 1.5rem;
   margin: 0;
   color: white;
-  font-size: 25px;
+  font-size: 1.75rem;
   font-weight: 700;
   text-align: center;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
 }
 
-.experience-image {
+.experience-banner-image {
   position: absolute;
-  left: 0;
-  right: 0;
   top: 7rem;
   width: 8rem;
   height: 8rem;
   background-color: white;
-  margin-left: auto;
-  margin-right: auto;
+  @include border-radius(50%);
   box-shadow: 0 0.5rem 1rem var(--theme-experience-image-box-shadow-color);
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
 }
 
 @media (max-width: 1380px) {
-  .experience-text-company {
-    font-size: 22px;
+  .experience-banner-container {
+    height: 9rem;
   }
 
-  .experience-image {
-    width: 6.5rem;
-    height: 6.5rem;
+  .experience-banner-company-name-container {
+    height: 7rem;
+  }
+
+  .experience-banner-company-name {
+    font-size: 1.5rem;
+  }
+
+  .experience-banner-image {
+    top: 6rem;
+    width: 6rem;
+    height: 6rem;
   }
 }
 
 @media (max-width: 768px) {
-  .experience-text-company {
-    font-size: 22px;
+  .experience-banner-container {
+    height: 7rem;
   }
 
-  .experience-banner,
-  .experience-blurred-div {
-    height: 9rem;
+  .experience-banner-company-name-container {
+    height: 5rem;
   }
 
-  .experience-image {
+  .experience-banner-company-name {
+    font-size: 1.25rem;
+  }
+
+  .experience-banner-image {
+    top: 5rem;
     width: 4rem;
     height: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-banner-company-name {
+    font-size: 1rem;
   }
 }
