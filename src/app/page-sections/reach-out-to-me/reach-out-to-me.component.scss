@@ -50,11 +50,7 @@
       box-shadow: 0 30px 30px -30px var(--theme-profile-image-box-shadow-color);
       border: 0.25rem solid var(--theme-profile-image-border-color);
       @include border-radius(50%);
-      transition: all 0.3s ease-out;
-      -webkit-transition: all 0.3s ease-out;
-      -moz-transition: all 0.3s ease-out;
-      -ms-transition: all 0.3s ease-out;
-      -o-transition: all 0.3s ease-out;
+      @include transition(all 0.3s ease-out);
     }
   }
 }

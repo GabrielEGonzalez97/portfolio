@@ -1,3 +1,5 @@
+@import 'src/mixins';
+
 .header {
   display: flex;
   align-items: center;
@@ -20,11 +22,7 @@
     list-style: none;
     overflow: hidden;
     clear: both;
-    transition: max-height 0.2s ease-out;
-    -webkit-transition: max-height 0.2s ease-out;
-    -moz-transition: max-height 0.2s ease-out;
-    -ms-transition: max-height 0.2s ease-out;
-    -o-transition: max-height 0.2s ease-out;
+    @include transition(max-height 0.2s ease-out);
 
     li {
       float: left;

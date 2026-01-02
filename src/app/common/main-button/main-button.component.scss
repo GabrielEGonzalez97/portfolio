@@ -6,13 +6,13 @@
   font-family: "Inter", sans-serif;
   padding: 18px 24px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out 0s;
   @include border-radius(6px);
+  @include transition(all 0.3s ease-in-out 0s);
 }
 
 .main-button:hover {
-  transition: all 0.3s ease 0s;
   transform: translateY(-3px);
+  @include transition(all 0.3s ease 0s);
 }
 
 .primary-button {
