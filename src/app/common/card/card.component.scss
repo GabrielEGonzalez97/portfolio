@@ -1,3 +1,5 @@
+@import 'src/mixins';
+
 .card-container {
   display: flex;
   flex-direction: column;
@@ -5,12 +7,8 @@
   position: relative;
   padding: 48px;
   border: 1px solid var(--theme-border-color);
+  @include border-radius(10px);
   box-shadow: var(--theme-card-box-shadow-color) 0px 10px 30px -15px;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;

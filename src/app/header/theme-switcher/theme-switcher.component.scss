@@ -1,3 +1,5 @@
+@import 'src/mixins';
+
 $hue: 223;
 $primary: hsl($hue, 90%, 55%);
 $primaryT: hsla($hue, 90%, 55%, 0);
@@ -71,7 +73,7 @@ $transition-duration: 0.3s;
 }
 
 .theme__icon-part {
-  border-radius: 50%;
+  @include border-radius(50%);
   box-shadow: 0.4em -0.4em 0 0.5em hsl(0, 0%, 100%) inset;
   top: calc(50% - 0.5em);
   left: calc(50% - 0.5em);
@@ -101,7 +103,7 @@ $transition-duration: 0.3s;
 
 .theme__icon-part ~ .theme__icon-part {
   background-color: hsl(0, 0%, 100%);
-  border-radius: 0.05em;
+  @include border-radius(0.05em);
   box-shadow: none;
   top: 50%;
   left: calc(50% - 0.05em);
@@ -134,7 +136,7 @@ $transition-duration: 0.3s;
 
 .theme__toggle {
   background-color: hsl(48, 90%, 85%);
-  border-radius: 25% / 50%;
+  @include border-radius(25% 50%);
   box-shadow: 0 0 0 0.125em $primaryT;
   padding: 0.25em;
   width: 6em;
@@ -155,9 +157,9 @@ $transition-duration: 0.3s;
 }
 
 .theme__toggle::before {
-  background-color: hsl(48, 90%, 55%);
-  border-radius: 50%;
   content: "";
+  background-color: hsl(48, 90%, 55%);
+  @include border-radius(50%);
   width: 2.5em;
   height: 2.5em;
   transition: background-color $transition-duration ease-in-out,

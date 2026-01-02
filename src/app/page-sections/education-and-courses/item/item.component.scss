@@ -1,3 +1,5 @@
+@import 'src/mixins';
+
 .item {
   display: flex;
   flex-direction: row;
@@ -10,11 +12,7 @@
   height: 6rem;
   box-shadow: 0 0.5rem 1rem var(--theme-item-logo-box-shadow-color);
   background-color: white;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  @include border-radius(50%);
 }
 
 .item-right {

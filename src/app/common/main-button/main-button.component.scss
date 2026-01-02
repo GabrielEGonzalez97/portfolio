@@ -1,3 +1,5 @@
+@import 'src/mixins';
+
 .main-button {
   display: block;
   width: max-content;
@@ -5,11 +7,7 @@
   padding: 18px 24px;
   cursor: pointer;
   transition: all 0.3s ease-in-out 0s;
-  border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
+  @include border-radius(6px);
 }
 
 .main-button:hover {
