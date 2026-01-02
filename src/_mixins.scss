@@ -6,6 +6,14 @@
     -o-border-radius: $radius;
 }
 
+@mixin filter($filter) {
+    filter: $filter;
+    -webkit-filter: $filter;
+    -moz-filter: $filter;
+    -ms-filter: $filter;
+    -o-filter: $filter;
+}
+
 @mixin transition($transition) {
     transition: $transition;
     -webkit-transition: $transition;

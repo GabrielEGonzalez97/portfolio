@@ -1,3 +1,5 @@
+@import 'src/mixins';
+
 .filters-container {
   display: flex;
   justify-content: space-between;
@@ -50,8 +52,7 @@
   img {
     width: 10rem;
     height: 10rem;
-    filter: invert(11%) sepia(55%) saturate(5751%) hue-rotate(269deg)
-      brightness(95%) contrast(96%);
+    @include filter(invert(11%) sepia(55%) saturate(5751%) hue-rotate(269deg) brightness(95%) contrast(96%));
   }
 
   h5 {
