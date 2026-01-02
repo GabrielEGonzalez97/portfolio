@@ -1,25 +1,27 @@
-<app-section sectionId="work-experiences" sectionTitle="Work Experiences" [includeCardsContainer]="true">
-    <ng-container *ngFor="let experience of experiences">
-        <div class="experience-card">
-            <app-experience-banner [experience]="experience" />
+<app-section sectionId="work-experiences" sectionTitle="Work Experiences">
+    <app-cards-container>
+        <ng-container *ngFor="let experience of experiences">
+            <div class="experience-card">
+                <app-experience-banner [experience]="experience" />
 
-            <div class="experience-text-details">
-                <h5 class="experience-text-role">{{ experience.role }}</h5>
-                <h5 class="experience-text-date">{{ experience.date }}</h5>
-                <p class="experience-text-description">{{ experience.description }}</p>
-                <div class="view-details-button-container" *ngIf="experience.experienceDetails.length > 0">
-                    <app-main-button buttonName="View details" (buttonClicked)="openExperienceModal(experience)" />
-                </div>
-                <ng-container *ngIf="experience.descriptionBullets">
-                    <div class="experience-text-bullets">
-                        <ul>
-                            <ng-container *ngFor="let experienceInfoDescBullet of experience.descriptionBullets">
-                                <li class="experience-text-bullet-item">{{ experienceInfoDescBullet }}</li>
-                            </ng-container>
-                        </ul>
+                <div class="experience-text-details">
+                    <h5 class="experience-text-role">{{ experience.role }}</h5>
+                    <h5 class="experience-text-date">{{ experience.date }}</h5>
+                    <p class="experience-text-description">{{ experience.description }}</p>
+                    <div class="view-details-button-container" *ngIf="experience.experienceDetails.length > 0">
+                        <app-main-button buttonName="View details" (buttonClicked)="openExperienceModal(experience)" />
                     </div>
-                </ng-container>
+                    <ng-container *ngIf="experience.descriptionBullets">
+                        <div class="experience-text-bullets">
+                            <ul>
+                                <ng-container *ngFor="let experienceInfoDescBullet of experience.descriptionBullets">
+                                    <li class="experience-text-bullet-item">{{ experienceInfoDescBullet }}</li>
+                                </ng-container>
+                            </ul>
+                        </div>
+                    </ng-container>
+                </div>
             </div>
-        </div>
-    </ng-container>
+        </ng-container>
+    </app-cards-container>
 </app-section>

@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardComponent } from './common/card/card.component';
+import { CardsContainerComponent } from './common/cards-container/cards-container.component';
 import { ExperienceBannerComponent } from './common/experience-banner/experience-banner.component';
 import { MainButtonComponent } from './common/main-button/main-button.component';
 import { SectionTitleComponent } from './common/section-title/section-title.component';
@@ -41,6 +42,7 @@ import { SocialMediaComponent } from './social-media/social-media.component';
     AngleTopIconComponent,
     AppComponent,
     CardComponent,
+    CardsContainerComponent,
     CoursesComponent,
     EducationAndCoursesComponent,
     EducationComponent,
@@ -76,4 +78,4 @@ import { SocialMediaComponent } from './social-media/social-media.component';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
