@@ -64,7 +64,7 @@
         </mat-chip>
     </mat-chip-set>
 
-    <app-main-button buttonName="Clear Filters" [isPrimaryButton]="false" (buttonClicked)="clearFilters()" />
+    <app-button buttonName="Clear Filters" [isPrimaryButton]="false" (buttonClicked)="clearFilters()" />
 </div>
 
 <div class="item-container">
@@ -91,7 +91,7 @@
                     </ul>
                 </div>
             </ng-container>
-            <app-main-button buttonName="Show credential" [href]="courseInfo.credentialUrl" />
+            <app-button buttonName="Show credential" [href]="courseInfo.credentialUrl" />
         </app-item>
     </ng-container>
 

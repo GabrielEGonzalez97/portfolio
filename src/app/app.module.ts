@@ -10,10 +10,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ButtonComponent } from './common/button/button.component';
 import { CardComponent } from './common/card/card.component';
 import { CardsContainerComponent } from './common/cards-container/cards-container.component';
 import { ExperienceBannerComponent } from './common/experience-banner/experience-banner.component';
-import { MainButtonComponent } from './common/main-button/main-button.component';
 import { SectionTitleComponent } from './common/section-title/section-title.component';
 import { SectionComponent } from './common/section/section.component';
 import { FooterComponent } from './footer/footer.component';
@@ -41,6 +41,7 @@ import { SocialMediaComponent } from './social-media/social-media.component';
     AngleBottomIconComponent,
     AngleTopIconComponent,
     AppComponent,
+    ButtonComponent,
     CardComponent,
     CardsContainerComponent,
     CoursesComponent,
@@ -53,7 +54,6 @@ import { SocialMediaComponent } from './social-media/social-media.component';
     HeaderComponent,
     ItemComponent,
     LocationIconComponent,
-    MainButtonComponent,
     PaginationComponent,
     ProjectsComponent,
     ReachOutToMeComponent,

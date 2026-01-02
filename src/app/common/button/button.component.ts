@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-main-button',
-  templateUrl: './main-button.component.html',
-  styleUrls: ['./main-button.component.scss'],
+  selector: 'app-button',
+  templateUrl: './button.component.html',
+  styleUrls: ['./button.component.scss'],
 })
-export class MainButtonComponent {
+export class ButtonComponent {
   @Input() buttonName: string = '';
   @Input() isPrimaryButton: boolean = true;
   @Input() href?: string = '';
