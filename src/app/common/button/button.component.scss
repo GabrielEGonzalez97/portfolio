@@ -11,8 +11,8 @@
 }
 
 .app-button:hover {
-  transform: translateY(-3px);
   @include transition(all 0.3s ease 0s);
+  @include transform-y-translation(-3px);
 }
 
 .primary-button {

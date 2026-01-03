@@ -1,23 +1,63 @@
 @mixin border-radius($radius) {
-    border-radius: $radius;
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    -ms-border-radius: $radius;
-    -o-border-radius: $radius;
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
 }
 
 @mixin filter($filter) {
-    filter: $filter;
-    -webkit-filter: $filter;
-    -moz-filter: $filter;
-    -ms-filter: $filter;
-    -o-filter: $filter;
+  filter: $filter;
+  -webkit-filter: $filter;
+  -moz-filter: $filter;
+  -ms-filter: $filter;
+  -o-filter: $filter;
+}
+
+@mixin transform-rotation-and-y-translation($angle, $translation) {
+  transform: rotate($angle) translateY($translation);
+  -webkit-transform: rotate($angle) translateY($translation);
+  -moz-transform: rotate($angle) translateY($translation);
+  -ms-transform: rotate($angle) translateY($translation);
+  -o-transform: rotate($angle) translateY($translation);
+}
+
+@mixin transform-rotation-and-y-translation-important($angle, $translation) {
+  transform: rotate($angle) translateY($translation) !important;
+  -webkit-transform: rotate($angle) translateY($translation) !important;
+  -moz-transform: rotate($angle) translateY($translation) !important;
+  -ms-transform: rotate($angle) translateY($translation) !important;
+  -o-transform: rotate($angle) translateY($translation) !important;
+}
+
+@mixin transform-scale($scale) {
+  transform: scale($scale);
+  -webkit-transform: scale($scale);
+  -moz-transform: scale($scale);
+  -ms-transform: scale($scale);
+  -o-transform: scale($scale);
+}
+
+@mixin transform-x-translation($translation) {
+  transform: translateX($translation);
+  -webkit-transform: translateX($translation);
+  -moz-transform: translateX($translation);
+  -ms-transform: translateX($translation);
+  -o-transform: translateX($translation);
+}
+
+@mixin transform-y-translation($translation) {
+  transform: translateY($translation);
+  -webkit-transform: translateY($translation);
+  -moz-transform: translateY($translation);
+  -ms-transform: translateY($translation);
+  -o-transform: translateY($translation);
 }
 
 @mixin transition($transition) {
-    transition: $transition;
-    -webkit-transition: $transition;
-    -moz-transition: $transition;
-    -ms-transition: $transition;
-    -o-transition: $transition;
+  transition: $transition;
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
 }

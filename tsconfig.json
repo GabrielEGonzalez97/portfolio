@@ -6,6 +6,9 @@
     "paths": {
       "@common/*": [
         "src/app/common/*"
+      ],
+      "@services/*": [
+        "src/app/services/*"
       ]
     },
     "outDir": "./dist/out-tsc",

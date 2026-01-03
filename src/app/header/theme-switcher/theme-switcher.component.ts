@@ -1,5 +1,5 @@
 import { AfterViewInit, Component } from '@angular/core';
-import { ThemeService } from 'src/app/services/theme.service';
+import { ThemeService } from '@services/theme.service';
 
 @Component({
   selector: 'app-theme-switcher',

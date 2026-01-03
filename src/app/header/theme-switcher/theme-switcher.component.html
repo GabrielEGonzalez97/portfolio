@@ -1,7 +1,14 @@
 <label for="theme" class="theme no-transition">
     <span class="theme__toggle-wrap">
-        <input [(ngModel)]="isDarkTheme" type="checkbox" class="theme__toggle" id="theme" role="switch" name="theme"
-            (click)="toggleTheme()" />
+        <input
+            [(ngModel)]="isDarkTheme"
+            id="theme"
+            class="theme__toggle"
+            type="checkbox"
+            role="switch"
+            name="theme"
+            (click)="toggleTheme()"
+        />
         <span class="theme__fill"></span>
         <span class="theme__icon">
             <span class="theme__icon-part" [ngClass]="{'theme__icon-part-dark': isDarkTheme}"></span>
