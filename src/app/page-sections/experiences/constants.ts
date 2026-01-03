@@ -1,4 +1,3 @@
-import { IBM_COMPANY, UNICEN_COMPANY } from '@common/constants';
 import {
   AI_AGENTS_SKILL,
   ANGULAR_SKILL,
@@ -9,6 +8,7 @@ import {
   FASTAPI_SKILL,
   FLASK_SKILL,
   HTML_SKILL,
+  IBM_COMPANY,
   LLM_SKILL,
   OPENSHIFT_SKILL,
   PYTHON_SKILL,
@@ -16,7 +16,8 @@ import {
   SLACK_SKILL,
   SVELTE_SKILL,
   TYPESCRIPT_SKILL,
-} from '../education-and-courses/courses/constants';
+  UNICEN_COMPANY,
+} from '@common/constants';
 import { IExperienceInfo } from '@common/interfaces';
 
 

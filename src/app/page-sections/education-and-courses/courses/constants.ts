@@ -1,4 +1,21 @@
-import { ISkill } from '@common/interfaces';
+import {
+  ANGULAR_SKILL,
+  COMMUNICATION_SKILL,
+  CSS_SKILL,
+  CYPRESS_SKILL,
+  DOCKER_SKILL,
+  ENGLISH_SKILL,
+  HTML_SKILL,
+  JAVA_SKILL,
+  JAVASCRIPT_SKILL,
+  LEADERSHIP_SKILL,
+  PYTHON_SKILL,
+  R_SKILL,
+  SQL_SKILL,
+  SVELTE_SKILL,
+  TYPESCRIPT_SKILL,
+  VUE_JS_SKILL
+} from '@common/constants';
 import { ICourseInfo, IIssuingCompany } from './interfaces';
 
 // ---------- COMPANIES ----------
@@ -32,137 +49,6 @@ export const UDEMY_COMPANY: IIssuingCompany = {
   companyLogoPath: 'assets/images/Udemy_Logo.png',
 };
 
-// ---------- SKILLS ----------
-export const AI_AGENTS_SKILL: ISkill = {
-  name: 'AI Agents',
-  logoPath: 'assets/icons/ai-agent-icon.svg',
-};
-
-export const ANGULAR_SKILL: ISkill = {
-  name: 'Angular',
-  logoPath: 'assets/icons/angular-icon.svg',
-};
-
-export const CARBON_SKILL: ISkill = {
-  name: 'Carbon Design System',
-  logoPath: 'assets/icons/carbon-design-system-logo.png',
-};
-
-export const CLOUDANT_SKILL: ISkill = {
-  name: 'IBM Cloudant',
-  logoPath: 'assets/icons/database-line-icon.svg',
-};
-
-export const COMMUNICATION: ISkill = {
-  name: 'Communication',
-  logoPath: 'assets/icons/communication-icon.svg',
-};
-
-export const CSS_SKILL: ISkill = {
-  name: 'CSS',
-  logoPath: 'assets/icons/css-icon.svg',
-};
-
-export const CYPRESS_SKILL: ISkill = {
-  name: 'Cypress',
-  logoPath: 'assets/icons/cypress-icon.svg',
-};
-
-export const DB2_SKILL: ISkill = {
-  name: 'DB2',
-  logoPath: 'assets/icons/database-line-icon.svg',
-};
-
-export const DOCKER_SKILL: ISkill = {
-  name: 'Docker',
-  logoPath: 'assets/icons/docker-icon.svg',
-};
-
-export const ENGLISH_SKILL: ISkill = {
-  name: 'English',
-  logoPath: 'assets/icons/united-kingdom-flag-icon.svg',
-};
-
-export const FASTAPI_SKILL: ISkill = {
-  name: 'FastAPI',
-  logoPath: 'assets/icons/fastapi-icon.png',
-};
-
-export const FLASK_SKILL: ISkill = {
-  name: 'Flask',
-  logoPath: 'assets/icons/flask-logo-icon.svg',
-};
-
-export const HTML_SKILL: ISkill = {
-  name: 'HTML',
-  logoPath: 'assets/icons/html-icon.svg',
-};
-
-export const JAVA_SKILL: ISkill = {
-  name: 'Java',
-  logoPath: 'assets/icons/java-programming-language-icon.svg',
-};
-
-export const JAVASCRIPT_SKILL: ISkill = {
-  name: 'JavaScript',
-  logoPath: 'assets/icons/javascript-programming-language-icon.svg',
-};
-
-export const LEADERSHIP: ISkill = {
-  name: 'Leadership',
-  logoPath: 'assets/icons/leadership-icon.svg',
-};
-
-export const LLM_SKILL: ISkill = {
-  name: 'LLMs',
-  logoPath: 'assets/icons/llm-icon.svg',
-};
-
-export const OPENSHIFT_SKILL: ISkill = {
-  name: 'OpenShift',
-  logoPath: 'assets/icons/openshift-icon.svg',
-};
-
-export const PYTHON_SKILL: ISkill = {
-  name: 'Python',
-  logoPath: 'assets/icons/python-programming-language-icon.svg',
-};
-
-export const R_SKILL: ISkill = {
-  name: 'R',
-  logoPath: 'assets/icons/r-programming-language-icon.svg',
-};
-
-export const SASS_SKILL: ISkill = {
-  name: 'Sass',
-  logoPath: 'assets/icons/sass-icon.svg',
-};
-
-export const SLACK_SKILL: ISkill = {
-  name: 'Slack',
-  logoPath: 'assets/icons/slack-icon.svg',
-};
-
-export const SQL_SKILL: ISkill = {
-  name: 'SQL',
-  logoPath: 'assets/icons/sql-icon.svg',
-};
-
-export const SVELTE_SKILL: ISkill = {
-  name: 'Svelte',
-  logoPath: 'assets/icons/svelte-icon.svg',
-};
-
-export const TYPESCRIPT_SKILL: ISkill = {
-  name: 'TypeScript',
-  logoPath: 'assets/icons/typescript-programming-language-icon.svg',
-};
-
-export const VUE_JS_SKILL: ISkill = {
-  name: 'Vue JS',
-  logoPath: 'assets/icons/vue-js-icon.svg',
-};
-
 export const COURSE_INFO_ELEMENTS: ICourseInfo[] = [
   {
     courseName: 'Cypress End-to-End Testing - Getting Started',
@@ -189,7 +75,7 @@ export const COURSE_INFO_ELEMENTS: ICourseInfo[] = [
     durationHours: '4',
     credentialUrl:
       'https://www.udemy.com/certificate/UC-857562c6-5c13-406c-b592-27213045f1de/',
-    skills: [COMMUNICATION],
+    skills: [COMMUNICATION_SKILL],
   },
   {
     courseName: 'Comprehensive Guide to Public Speaking',
@@ -198,7 +84,7 @@ export const COURSE_INFO_ELEMENTS: ICourseInfo[] = [
     durationHours: '5.5',
     credentialUrl:
       'https://www.udemy.com/certificate/UC-1fe95d5b-3eca-43c8-988f-9fe65141d7ca/',
-    skills: [COMMUNICATION],
+    skills: [COMMUNICATION_SKILL],
   },
   {
     courseName:
@@ -208,7 +94,7 @@ export const COURSE_INFO_ELEMENTS: ICourseInfo[] = [
     durationHours: '6.5',
     credentialUrl:
       'https://www.udemy.com/certificate/UC-03355166-5290-49ca-b00f-3d11e52efc9b/',
-    skills: [COMMUNICATION],
+    skills: [COMMUNICATION_SKILL],
   },
   {
     courseName: 'Master in Leadership',
@@ -217,7 +103,7 @@ export const COURSE_INFO_ELEMENTS: ICourseInfo[] = [
     durationHours: '3',
     credentialUrl:
       'https://www.udemy.com/certificate/UC-01881674-3aa7-4cb3-9c3f-424404444626/',
-    skills: [LEADERSHIP],
+    skills: [LEADERSHIP_SKILL],
   },
   {
     courseName: 'Leadership: Technology/Engineering Management',
@@ -226,7 +112,7 @@ export const COURSE_INFO_ELEMENTS: ICourseInfo[] = [
     durationHours: '3',
     credentialUrl:
       'https://www.udemy.com/certificate/UC-fae970cf-2907-428a-8861-cce5b701e459/',
-    skills: [LEADERSHIP],
+    skills: [LEADERSHIP_SKILL],
   },
   {
     courseName: 'EFSET English Certificate 66/100 (C1 Advanced)',
@@ -315,7 +201,7 @@ export const COURSE_INFO_ELEMENTS: ICourseInfo[] = [
     durationHours: '3',
     credentialUrl:
       'https://www.udemy.com/certificate/UC-165711ae-0d8a-45ff-9795-d319bf3c4823/',
-    skills: [COMMUNICATION],
+    skills: [COMMUNICATION_SKILL],
   },
   {
     courseName: 'Angular: Unit Testing with Jasmine and Karma',
