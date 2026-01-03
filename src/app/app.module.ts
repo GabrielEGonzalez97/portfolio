@@ -22,8 +22,6 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ThemeSwitcherComponent } from './header/theme-switcher/theme-switcher.component';
 import { AboutMeComponent } from './page-sections/about-me/about-me.component';
-import { AngleBottomIconComponent } from './page-sections/education-and-courses/courses/angle-bottom-icon/angle-bottom-icon.component';
-import { AngleTopIconComponent } from './page-sections/education-and-courses/courses/angle-top-icon/angle-top-icon.component';
 import { CoursesComponent } from './page-sections/education-and-courses/courses/courses.component';
 import { EducationAndCoursesComponent } from './page-sections/education-and-courses/education-and-courses.component';
 import { EducationComponent } from './page-sections/education-and-courses/education/education.component';
@@ -38,8 +36,6 @@ import { ResearchComponent } from './page-sections/research/research.component';
 @NgModule({
   declarations: [
     AboutMeComponent,
-    AngleBottomIconComponent,
-    AngleTopIconComponent,
     AppComponent,
     ButtonComponent,
     CardComponent,
