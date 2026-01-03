@@ -25,7 +25,7 @@ export const EXPERIENCES: IExperienceInfo[] = [
   {
     company: IBM_COMPANY,
     role: 'Software Engineer',
-    date: 'November 2021 - Present',
+    date: 'November 2021 - December 2025',
     description:
       'I work as a software engineer in Human-Centered AI (HCAI) research, focusing on the interaction between humans and AI agents in areas such as collaborative AI, mutual theory of mind, and group ideation with AI tools. I lead frontend development tasks and am responsible for implementing key features in that area, while also contributing to backend functionalities.',
     descriptionBullets: [],
@@ -283,7 +283,7 @@ We implemented the Collaborativon Canvas using the Svelte framework for the fron
   },
   {
     company: UNICEN_COMPANY,
-    role: 'Assistant Professor',
+    role: 'Undergraduate Teaching Assistant',
     date: 'April 2021 - September 2021',
     description:
       "I assisted the principal professor of the subject, being in charge of answering the student's questions, teaching them how to carry out practical exercises to apply the knowledge learned in theory, and correcting the students' practical work.",
