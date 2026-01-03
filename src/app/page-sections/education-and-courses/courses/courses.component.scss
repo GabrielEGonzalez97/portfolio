@@ -56,12 +56,14 @@
   }
 
   h5 {
+    color: var(--theme-primary-text-color);
     font-size: 36px;
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
 
   p {
+    color: var(--theme-secondary-text-color);
     font-size: 24px;
   }
 }

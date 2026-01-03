@@ -1,7 +1,8 @@
 :host ::ng-deep {
-  .item-container {
+  .items-container {
     display: flex;
     flex-direction: column;
+    gap: 3rem;
   }
 
   .education-text-bullet-item {

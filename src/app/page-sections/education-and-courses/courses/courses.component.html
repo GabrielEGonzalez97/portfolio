@@ -1,11 +1,24 @@
 <app-section-title title="Courses ({{ courseInfoElements.length }})" />
+
 <div class="filters-container">
+    <ng-template #filterOption let-img="img" let-text="text">
+        <span class="dropdown-option-container">
+            <ng-container *ngIf="img">
+                <img [src]="img" [alt]="text">
+            </ng-container>
+            <span class="filter-option-text">{{ text }}</span>
+        </span>
+    </ng-template>
+
     <mat-form-field>
         <mat-label>Filter by Year</mat-label>
         <mat-select multiple [(value)]="selectedYears" (selectionChange)="onFilterByYear($event.value)">
             <ng-container *ngFor="let year of years">
                 <mat-option [value]="year">
-                    <span class="filter-option-text">{{year}}</span>
+                    <ng-container
+                        *ngTemplateOutlet="filterOption;
+                        context: { img: null, text: year }">
+                    </ng-container>
                 </mat-option>
             </ng-container>
         </mat-select>
@@ -15,10 +28,10 @@
         <mat-select multiple [(value)]="selectedSkills" (selectionChange)="onFilterBySkill($event.value)">
             <ng-container *ngFor="let skill of skills">
                 <mat-option [value]="skill.name">
-                    <span class="dropdown-option-container">
-                        <img [src]="skill.logoPath" [alt]="skill.name">
-                        <span class="filter-option-text">{{skill.name}}</span>
-                    </span>
+                    <ng-container
+                        *ngTemplateOutlet="filterOption;
+                        context: { img: skill.logoPath, text: skill.name }">
+                    </ng-container>
                 </mat-option>
             </ng-container>
         </mat-select>
@@ -29,10 +42,10 @@
             (selectionChange)="onFilterByIssuingCompany($event.value)">
             <ng-container *ngFor="let issuingCompany of issuingCompanies">
                 <mat-option [value]="issuingCompany.companyName">
-                    <span class="dropdown-option-container">
-                        <img [src]="issuingCompany.companyLogoPath" [alt]="issuingCompany.companyName">
-                        <span class="filter-option-text">{{issuingCompany.companyName}}</span>
-                    </span>
+                    <ng-container
+                        *ngTemplateOutlet="filterOption;
+                        context: { img: issuingCompany.companyLogoPath, text: issuingCompany.companyName }">
+                    </ng-container>
                 </mat-option>
             </ng-container>
         </mat-select>
@@ -67,23 +80,29 @@
     <app-button buttonName="Clear Filters" [isPrimaryButton]="false" (buttonClicked)="clearFilters()" />
 </div>
 
-<div class="item-container">
+<div class="items-container">
     <app-pagination [currentPage]="currentPage" [totalPages]="totalPages" [onPageChange]="changePage.bind(this)">
     </app-pagination>
 
     <ng-container *ngFor="let courseInfo of currentPageCourses; trackBy: trackByCourseName">
-        <app-item [logoPath]="courseInfo.issuingCompany.companyLogoPath"
-            [logoDescription]="courseInfo.issuingCompany.companyName" [itemTitle]="courseInfo.courseName"
+        <app-item
+            [logoPath]="courseInfo.issuingCompany.companyLogoPath"
+            [logoDescription]="courseInfo.issuingCompany.companyName"
+            [itemTitle]="courseInfo.courseName"
             [itemSubtitle]="courseInfo.issuingCompany.companyName"
-            [duration]="courseInfo.durationHours ? courseInfo.expeditionDate + ' (' + courseInfo.durationHours + ' hours)' : courseInfo.expeditionDate">
+            [duration]="courseInfo.durationHours ? courseInfo.expeditionDate + ' (' + courseInfo.durationHours + ' hours)' : courseInfo.expeditionDate"
+        >
             <ng-container *ngIf="courseInfo.skills">
                 <div class="skills">
                     <ul>
                         <ng-container *ngFor="let courseInfoSkill of courseInfo.skills">
                             <li class="education-text-bullet-item">
                                 <span>
-                                    <img class="skill-logo" [src]="courseInfoSkill.logoPath"
-                                        [alt]="courseInfoSkill.name">
+                                    <img 
+                                        class="skill-logo"
+                                        [src]="courseInfoSkill.logoPath"
+                                        [alt]="courseInfoSkill.name"
+                                    >
                                     {{ courseInfoSkill.name }}
                                 </span>
                             </li>

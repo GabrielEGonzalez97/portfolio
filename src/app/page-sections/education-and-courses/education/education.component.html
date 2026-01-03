@@ -1,8 +1,12 @@
-<div class="item-container">
+<div class="items-container">
     <ng-container *ngFor="let educationInfo of educationInfoElements">
-        <app-item [logoPath]="educationInfo.school.logoPath" [logoDescription]="educationInfo.school.name"
-            [itemTitle]="educationInfo.school.name" [itemSubtitle]="educationInfo.title"
-            [duration]="educationInfo.duration">
+        <app-item
+            [logoPath]="educationInfo.school.logoPath"
+            [logoDescription]="educationInfo.school.name"
+            [itemTitle]="educationInfo.school.name"
+            [itemSubtitle]="educationInfo.title"
+            [duration]="educationInfo.duration"
+        >
             <p class="education-text-description">{{ educationInfo.description }}</p>
             <ng-container *ngIf="educationInfo.descriptionBullets">
                 <div class="education-text-bullets">
