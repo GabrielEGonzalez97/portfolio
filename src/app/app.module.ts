@@ -14,8 +14,10 @@ import { ButtonComponent } from './common/button/button.component';
 import { CardComponent } from './common/card/card.component';
 import { CardsContainerComponent } from './common/cards-container/cards-container.component';
 import { ExperienceBannerComponent } from './common/experience-banner/experience-banner.component';
-import { SectionTitleComponent } from './common/section-title/section-title.component';
+import { PaginationComponent } from './common/pagination/pagination.component';
 import { SectionComponent } from './common/section/section.component';
+import { SectionTitleComponent } from './common/section-title/section-title.component';
+import { SocialMediaComponent } from './common/social-media/social-media.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ThemeSwitcherComponent } from './header/theme-switcher/theme-switcher.component';
@@ -32,8 +34,6 @@ import { ProjectsComponent } from './page-sections/projects/projects.component';
 import { LocationIconComponent } from './page-sections/reach-out-to-me/location-icon/location-icon.component';
 import { ReachOutToMeComponent } from './page-sections/reach-out-to-me/reach-out-to-me.component';
 import { ResearchComponent } from './page-sections/research/research.component';
-import { PaginationComponent } from './pagination/pagination.component';
-import { SocialMediaComponent } from './social-media/social-media.component';
 
 @NgModule({
   declarations: [

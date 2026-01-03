@@ -9,4 +9,6 @@ import { ISocialMedia } from './interfaces';
 })
 export class SocialMediaComponent {
   public socialLinks: ISocialMedia[] = SOCIAL_LINKS;
+
+  constructor() {}
 }

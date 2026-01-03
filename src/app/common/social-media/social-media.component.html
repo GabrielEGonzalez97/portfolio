@@ -1,0 +1,12 @@
+<div class="social-media-container">
+    <a
+        *ngFor="let link of socialLinks"
+        class="social-media-icon-button"
+        [href]="link.url"
+        target="_blank"
+        rel="noopener noreferrer"
+        [attr.aria-label]="link.name"
+    >
+        <img [src]="link.icon" [alt]="link.alt" />
+    </a>
+</div>

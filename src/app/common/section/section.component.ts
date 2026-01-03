@@ -9,6 +9,5 @@ export class SectionComponent {
   @Input() sectionId: string = '';
   @Input() sectionTitle: string = '';
 
-
   constructor() {}
 }
