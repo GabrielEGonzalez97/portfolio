@@ -8,16 +8,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { AppCommonModule } from './common/components/app-common.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ButtonComponent } from './common/button/button.component';
-import { CardComponent } from './common/card/card.component';
-import { CardsContainerComponent } from './common/cards-container/cards-container.component';
-import { ExperienceBannerComponent } from './common/experience-banner/experience-banner.component';
-import { PaginationComponent } from './common/pagination/pagination.component';
-import { SectionComponent } from './common/section/section.component';
-import { SectionTitleComponent } from './common/section-title/section-title.component';
-import { SocialMediaComponent } from './common/social-media/social-media.component';
+
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ThemeSwitcherComponent } from './header/theme-switcher/theme-switcher.component';
@@ -37,29 +31,22 @@ import { ResearchComponent } from './page-sections/research/research.component';
   declarations: [
     AboutMeComponent,
     AppComponent,
-    ButtonComponent,
-    CardComponent,
-    CardsContainerComponent,
     CoursesComponent,
     EducationAndCoursesComponent,
     EducationComponent,
-    ExperienceBannerComponent,
     ExperienceDetailModalComponent,
     ExperiencesComponent,
     FooterComponent,
     HeaderComponent,
     ItemComponent,
     LocationIconComponent,
-    PaginationComponent,
     ProjectsComponent,
     ReachOutToMeComponent,
     ResearchComponent,
-    SectionComponent,
-    SectionTitleComponent,
-    SocialMediaComponent,
     ThemeSwitcherComponent,
   ],
   imports: [
+    AppCommonModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
@@ -74,4 +61,4 @@ import { ResearchComponent } from './page-sections/research/research.component';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
