@@ -7,7 +7,9 @@
         <p class="card-subtitle">{{ subtitle }}</p>
         <ng-content select="#card-extra-details" />
         <div class="card-footer">
-            <app-button [buttonName]="fotterButtonText" [href]="fotterButtonLink" />
+            <ng-container *ngIf="fotterButtonText && fotterButtonLink">
+                <app-button [buttonName]="fotterButtonText" [href]="fotterButtonLink" />
+            </ng-container>
         </div>
     </div>
 </div>

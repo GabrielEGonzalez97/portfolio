@@ -2,17 +2,20 @@
     <app-experience-banner [experience]="data" />
 
     <div class="experience-details-container">
-        <ng-container *ngFor="let experienceDetail of data.experienceDetails">
+        <ng-container *ngFor="let experienceDetail of data.projects">
             <div class="experience-detail-external-container">
                 <span class="experience-detail-role">{{ experienceDetail.role }}</span>
                 <span class="experience-detail-duration">{{ experienceDetail.duration }}</span>
                 <div class="experience-detail-internal-container">
                     <div class="experience-detail">
                         <div *ngIf="!experienceDetail.isPrivateProject; else privateProjectBlock" class="project-info">
-                            <span class="project-name">{{ experienceDetail.projectName }}</span>
-                            <ng-container *ngIf="experienceDetail.projectDescription">
-                                <div class="project-description"
-                                    [innerHTML]="projectDescriptionAsHtml(experienceDetail.projectDescription)"></div>
+                            <span class="project-name">{{ experienceDetail.name }}</span>
+                            <ng-container *ngIf="experienceDetail.extendedDescription">
+                                <div 
+                                    class="project-description"
+                                    [innerHTML]="projectDescriptionAsHtml(experienceDetail.extendedDescription)"
+                                >
+                                </div>
                             </ng-container>
                         </div>
 
@@ -25,7 +28,7 @@
                         <span class="label">Contribution:</span>
                         <span class="experience-detail-contribution-text">{{ experienceDetail.contribution }}</span>
                     </div>
-                    <div class="skills-container" *ngIf="experienceDetail.skills?.length">
+                    <div class="skills-container" *ngIf="experienceDetail.skills.length">
                         <span class="label skills-label">Technologies used:</span>
                         <div class="skills-list">
                             <ng-container *ngFor="let skill of experienceDetail.skills">

@@ -1,7 +1,7 @@
 <app-section sectionId="projects" sectionTitle="Projects">
     <app-cards-container>
         <ng-container *ngFor="let project of projects">
-            <app-card [title]="project.name" [subtitle]="project.description" fotterButtonText="Visit Website"
+            <app-card [title]="project.name" [subtitle]="project.shortDescription" fotterButtonText="Visit Website"
                 [fotterButtonLink]="project.websiteLink">
                 <div id="card-company">
                     <ng-container *ngIf="project.isFreelanceProject; else nonFreelanceProject">
@@ -9,7 +9,7 @@
                         <span>Freelancer</span>
                     </ng-container>
                     <ng-template #nonFreelanceProject>
-                        <img [src]="project.companyLogoPath" alt="Company">
+                        <img [src]="project.company?.logoPath" alt="Company">
                     </ng-template>
                 </div>
                 <div id="card-image">

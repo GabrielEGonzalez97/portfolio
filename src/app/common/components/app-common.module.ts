@@ -37,4 +37,4 @@ import { SocialMediaComponent } from './social-media/social-media.component';
         SocialMediaComponent,
     ],
 })
-export class AppCommonModule { }
+export class AppCommonModule {}

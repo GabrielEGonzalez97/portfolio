@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { IPublicProject } from '@common/interfaces';
 import { PROJECTS } from './constants';
-import { IProject } from './interfaces';
 
 @Component({
   selector: 'app-projects',
@@ -8,7 +8,7 @@ import { IProject } from './interfaces';
   styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent {
-  public projects: IProject[] = PROJECTS;
+  public projects: IPublicProject[] = PROJECTS;
 
   constructor() {}
 }

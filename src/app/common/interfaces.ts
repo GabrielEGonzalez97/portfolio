@@ -9,15 +9,50 @@ export interface ISkill {
   logoPath: string;
 }
 
-export interface IExperienceDetail {
+interface IProjectBase {
+  contribution: string;
   role: string;
   duration: string;
-  isPrivateProject: boolean;
-  projectName?: string;
-  projectDescription?: string;
-  contribution: string;
+  logoPath?: string;
+  websiteLink?: string;
   skills: ISkill[];
 }
+
+interface IPublicProjectFields {
+  isPrivateProject: false;
+  name: string;
+  shortDescription: string;
+  extendedDescription: string;
+  githubRepoLink: string;
+}
+
+interface IPrivateProjectFields {
+  isPrivateProject: true;
+  name?: string;
+  shortDescription?: string;
+  extendedDescription?: string;
+  githubRepoLink?: string;
+}
+
+interface ICompanyProject {
+  isFreelanceProject: false;
+  company: ICompany;
+}
+
+interface IFreelanceProject {
+  isFreelanceProject: true;
+  company?: ICompany;
+}
+
+export type IProject =
+  IProjectBase &
+  (IPublicProjectFields | IPrivateProjectFields) &
+  (IFreelanceProject | ICompanyProject);
+
+export type IPublicProject =
+  IProjectBase &
+  IPublicProjectFields &
+  (IFreelanceProject | ICompanyProject);
 
 export interface IExperienceInfo {
   company: ICompany;
@@ -25,5 +60,5 @@ export interface IExperienceInfo {
   date: string;
   description: string;
   descriptionBullets: string[];
-  experienceDetails: IExperienceDetail[];
+  projects: IProject[];
 }

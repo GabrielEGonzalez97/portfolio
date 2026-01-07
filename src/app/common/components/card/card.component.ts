@@ -8,8 +8,8 @@ import { Component, Input } from '@angular/core';
 export class CardComponent {
   @Input() public title: string = '';
   @Input() public subtitle: string = '';
-  @Input() public fotterButtonText: string = '';
-  @Input() public fotterButtonLink: string = '';
+  @Input() public fotterButtonText?: string = '';
+  @Input() public fotterButtonLink?: string = '';
 
   constructor() {}
 }
