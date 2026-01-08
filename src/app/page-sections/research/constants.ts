@@ -1,3 +1,4 @@
+import { AUTHOR_NAME } from "@common/constants";
 import { IPublication } from "@common/interfaces";
 
 export const PUBLICATIONS: IPublication[] = [
@@ -37,7 +38,7 @@ export const PUBLICATIONS: IPublication[] = [
         highlightName: false,
       },
       {
-        name: 'Gabriel Enrique Gonzalez',
+        name: AUTHOR_NAME,
         highlightName: true,
       },
       {
@@ -93,7 +94,7 @@ export const PUBLICATIONS: IPublication[] = [
         highlightName: false,
       },
       {
-        name: 'Gabriel Enrique Gonzalez',
+        name: AUTHOR_NAME,
         highlightName: true,
       },
       {
@@ -129,7 +130,7 @@ export const PUBLICATIONS: IPublication[] = [
         highlightName: false,
       },
       {
-        name: 'Gabriel Enrique Gonzalez',
+        name: AUTHOR_NAME,
         highlightName: true,
       },
       {
@@ -173,7 +174,7 @@ export const PUBLICATIONS: IPublication[] = [
         highlightName: false,
       },
       {
-        name: 'Gabriel Enrique Gonzalez',
+        name: AUTHOR_NAME,
         highlightName: true,
       },
       {
@@ -207,7 +208,7 @@ export const PUBLICATIONS: IPublication[] = [
         highlightName: false,
       },
       {
-        name: 'Gabriel Enrique Gonzalez',
+        name: AUTHOR_NAME,
         highlightName: true,
       },
       {
@@ -249,7 +250,7 @@ export const PUBLICATIONS: IPublication[] = [
         highlightName: false,
       },
       {
-        name: 'Gabriel Enrique Gonzalez',
+        name: AUTHOR_NAME,
         highlightName: true,
       },
       {
@@ -282,7 +283,7 @@ export const PUBLICATIONS: IPublication[] = [
       'ACM International Conference on Intelligent User Interfaces 2024: 5th Workshop on Human-AI Co-Creation with Generative Models',
     authors: [
       {
-        name: 'Gabriel Enrique Gonzalez',
+        name: AUTHOR_NAME,
         highlightName: true,
       },
       {
@@ -328,7 +329,7 @@ export const PUBLICATIONS: IPublication[] = [
       '10mo Congreso Nacional de Ingeniería Informática y Sistemas de Información (CoNaIISI)',
     authors: [
       {
-        name: 'Gabriel Enrique Gonzalez',
+        name: AUTHOR_NAME,
         highlightName: true,
       },
       {
