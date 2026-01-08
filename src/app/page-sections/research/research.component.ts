@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { IPublication } from '@common/interfaces';
 import { PUBLICATIONS } from './constants';
-import { IPublication } from './interfaces';
 
 @Component({
   selector: 'app-research',
@@ -12,7 +12,5 @@ export class ResearchComponent {
 
   constructor() {}
 
-  public openLinkNewTab(link: string): void {
-    window.open(link, '_blank');
-  }
+
 }

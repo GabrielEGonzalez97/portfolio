@@ -1,4 +1,4 @@
-import { IPublication } from './interfaces';
+import { IPublication } from "@common/interfaces";
 
 export const PUBLICATIONS: IPublication[] = [
   {

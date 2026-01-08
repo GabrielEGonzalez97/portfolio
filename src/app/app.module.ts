@@ -10,8 +10,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppCommonModule } from './common/components/app-common.module';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { ProjectsModule } from './page-sections/projects/projects.module';
+import { ResearchModule } from './page-sections/research/research.module';
 
+import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ThemeSwitcherComponent } from './header/theme-switcher/theme-switcher.component';
@@ -22,10 +24,8 @@ import { EducationComponent } from './page-sections/education-and-courses/educat
 import { ItemComponent } from './page-sections/education-and-courses/item/item.component';
 import { ExperienceDetailModalComponent } from './page-sections/experience-detail-modal/experience-detail-modal.component';
 import { ExperiencesComponent } from './page-sections/experiences/experiences.component';
-import { ProjectsComponent } from './page-sections/projects/projects.component';
 import { LocationIconComponent } from './page-sections/reach-out-to-me/location-icon/location-icon.component';
 import { ReachOutToMeComponent } from './page-sections/reach-out-to-me/reach-out-to-me.component';
-import { ResearchComponent } from './page-sections/research/research.component';
 
 @NgModule({
   declarations: [
@@ -40,14 +40,14 @@ import { ResearchComponent } from './page-sections/research/research.component';
     HeaderComponent,
     ItemComponent,
     LocationIconComponent,
-    ProjectsComponent,
     ReachOutToMeComponent,
-    ResearchComponent,
     ThemeSwitcherComponent,
   ],
   imports: [
     AppCommonModule,
     AppRoutingModule,
+    ProjectsModule,
+    ResearchModule,
     BrowserAnimationsModule,
     BrowserModule,
     FormsModule,

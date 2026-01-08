@@ -1,40 +1,5 @@
-app-card {
+@import 'src/mixins';
+
+app-research-card {
   display: contents;
-}
-
-#awards {
-  .award-container {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    color: var(--theme-primary-text-color);
-    font-weight: 600;
-
-    .award-icon {
-      margin-left: 0.25rem;
-      width: 32px;
-      height: 32px;
-    }
-  }
-
-  .award-container:hover {
-    cursor: pointer;
-    opacity: 0.5;
-  }
-}
-
-#card-extra-details {
-  display: flex;
-  flex-direction: column;
-  color: var(--theme-primary-text-color);
-}
-
-.highlight-author {
-  color: #4e9ad0;
-  font-weight: 600;
-
-  .comma {
-    color: var(--theme-primary-text-color);
-    font-weight: 400;
-  }
 }

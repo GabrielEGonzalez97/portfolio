@@ -1,35 +1,7 @@
 <app-section sectionId="research" sectionTitle="Research">
     <app-cards-container>
         <ng-container *ngFor="let publication of publications">
-            <app-card [title]="publication.title" [subtitle]="publication.abstract" fotterButtonText="Link to paper"
-                [fotterButtonLink]="publication.publicationLink">
-                <div id="awards">
-                    <ng-container *ngFor="let bestPaperAward of publication.bestPaperAwards">
-                        <div class="award-container" (click)="openLinkNewTab(bestPaperAward.link)">
-                            {{ bestPaperAward.award }}
-                            <img class="award-icon" src="assets/icons/achievement-award-medal-icon.svg"
-                                alt="best paper award">
-                        </div>
-                    </ng-container>
-                </div>
-                <div id="card-extra-details">
-                    <p class="authors">
-                        <strong>Authors:</strong>
-                        <ng-container *ngFor="let author of publication.authors; let i = index">
-                            <span [ngClass]="{'highlight-author': author.highlightName}">
-                                {{ author.name }}<span class="comma" *ngIf="i < publication.authors.length - 1">,
-                                </span>
-                            </span>
-                        </ng-container>
-                    </p>
-                    <p class="publication-date">
-                        <strong>Publication date:</strong> {{ publication.publicationDate }}
-                    </p>
-                    <p class="presented-at">
-                        <strong>Presented at:</strong> {{ publication.presentedAt }}
-                    </p>
-                </div>
-            </app-card>
+            <app-research-card [publication]="publication" />
         </ng-container>
     </app-cards-container>
 </app-section>
