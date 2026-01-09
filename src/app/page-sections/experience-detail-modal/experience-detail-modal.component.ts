@@ -10,7 +10,7 @@ import { marked } from 'marked';
 })
 export class ExperienceDetailModalComponent {
   constructor(
-    @Inject(MAT_DIALOG_DATA) public data: IExperienceInfo,
+    @Inject(MAT_DIALOG_DATA) public experience: IExperienceInfo,
     private dialogRef: MatDialogRef<ExperienceDetailModalComponent>
   ) {}
 

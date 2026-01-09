@@ -14,11 +14,11 @@ export class ExperiencesComponent {
 
   constructor(private dialog: MatDialog) {}
 
-  public openExperienceModal(experience: IExperienceInfo): void {
+  public openExperienceModal(experienceData: IExperienceInfo): void {
     const isMobile: boolean = window.innerWidth <= 768;
 
     this.dialog.open(ExperienceDetailModalComponent, {
-      data: experience,
+      data: experienceData,
       width: isMobile ? '100%' : '70%',
       maxWidth: '100vw',
     });

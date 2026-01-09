@@ -1,8 +1,8 @@
 <mat-dialog-content class="dialog-content">
-    <app-experience-banner [experience]="data" />
+    <app-experience-banner [experience]="experience" />
 
     <div class="experience-details-container">
-        <ng-container *ngFor="let experienceDetail of data.projects">
+        <ng-container *ngFor="let experienceDetail of experience.projects">
             <div class="experience-detail-external-container">
                 <span class="experience-detail-role">{{ experienceDetail.role }}</span>
                 <span class="experience-detail-duration">{{ experienceDetail.duration }}</span>
