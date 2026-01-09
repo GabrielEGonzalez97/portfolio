@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -11,5 +11,11 @@ export class CardComponent {
   @Input() public fotterButtonText?: string = '';
   @Input() public fotterButtonLink?: string = '';
 
+  @Output() footerButtonClicked = new EventEmitter<void>();
+
   constructor() {}
+
+  public onFooterButtonClick(): void {
+    this.footerButtonClicked.emit();
+  }
 }

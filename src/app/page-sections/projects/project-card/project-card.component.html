@@ -2,8 +2,8 @@
     *ngIf="project"
     [title]="project.name"
     [subtitle]="project.shortDescription"
-    fotterButtonText="Visit Website"
-    [fotterButtonLink]="project.websiteLink"
+    fotterButtonText="View Details"
+    (footerButtonClicked)="openProjectModal()"
 >
     <div id="card-company">
         <ng-container *ngIf="project.isFreelanceProject; else nonFreelanceProject">
@@ -17,5 +17,47 @@
 
     <div id="card-image">
         <img [src]="project.logoPath" [alt]="project.name">
+    </div>
+
+    <div id="card-extra-details">
+        <div class="project-meta" *ngIf="project.role || project.duration">
+            <span class="duration" *ngIf="project.duration">{{ project.duration }}</span>
+        </div>
+
+        <div
+            class="project-skills"
+            *ngIf="project.skills && project.skills.length > 0"
+        >
+            <div
+                class="skill-item"
+                *ngFor="let skill of project.skills"
+                [title]="skill.name"
+            >
+                <img [src]="skill.logoPath" [alt]="skill.name">
+            </div>
+        </div>
+
+        <div class="card-actions">
+            <a
+                class="card-action-btn"
+                *ngIf="project.websiteLink"
+                [href]="project.websiteLink"
+                target="_blank"
+                rel="noopener noreferrer">
+                <img src="assets/icons/open-external-link-icon.svg" alt="Open external link icon">
+                <span>Visit Website</span>
+            </a>
+
+            <a
+                class="card-action-btn"
+                *ngIf="project.githubRepoLink"
+                [href]="project.githubRepoLink"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img src="assets/icons/github-icon.svg" alt="GitHub">
+                <span>View Code</span>
+            </a>
+        </div>
     </div>
 </app-card>

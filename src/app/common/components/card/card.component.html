@@ -7,8 +7,12 @@
         <p class="card-subtitle">{{ subtitle }}</p>
         <ng-content select="#card-extra-details" />
         <div class="card-footer">
-            <ng-container *ngIf="fotterButtonText && fotterButtonLink">
-                <app-button [buttonName]="fotterButtonText" [href]="fotterButtonLink" />
+            <ng-container *ngIf="fotterButtonText">
+                <app-button
+                    [buttonName]="fotterButtonText"
+                    [href]="fotterButtonLink"
+                    (buttonClicked)="onFooterButtonClick()"
+                />
             </ng-container>
         </div>
     </div>
