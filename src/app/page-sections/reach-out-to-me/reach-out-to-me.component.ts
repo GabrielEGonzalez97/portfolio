@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AUTHOR_NAME } from '@common/constants';
+import { PORTFOLIO_AUTHOR_NAME } from '@common/constants';
 
 @Component({
   selector: 'app-reach-out-to-me',
@@ -7,5 +7,5 @@ import { AUTHOR_NAME } from '@common/constants';
   styleUrls: ['./reach-out-to-me.component.scss'],
 })
 export class ReachOutToMeComponent {
-  public authorName: string = AUTHOR_NAME;
+  public portfolioAuthorName: string = PORTFOLIO_AUTHOR_NAME;
 }

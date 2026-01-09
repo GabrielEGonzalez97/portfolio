@@ -63,22 +63,21 @@ export interface IExperienceInfo {
   projects: IProject[];
 }
 
-export interface BestPaperAward {
+export interface IBestPaperAward {
   award: string;
   link: string;
 }
 
-export interface Author {
+export interface IAuthor {
   name: string;
-  highlightName: boolean;
 }
 
 export interface IPublication {
   title: string;
-  bestPaperAwards: BestPaperAward[];
+  bestPaperAwards: IBestPaperAward[];
   abstract: string;
   publicationLink: string;
   publicationDate: string;
   presentedAt: string;
-  authors: Author[];
+  authors: IAuthor[];
 }

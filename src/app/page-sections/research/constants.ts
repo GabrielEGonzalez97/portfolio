@@ -1,5 +1,93 @@
-import { AUTHOR_NAME } from "@common/constants";
-import { IPublication } from "@common/interfaces";
+import { PORTFOLIO_AUTHOR_NAME } from "@common/constants";
+import { IAuthor, IPublication } from "@common/interfaces";
+
+const PORTFOLIO_AUTHOR: IAuthor = {
+  name: PORTFOLIO_AUTHOR_NAME,
+};
+
+const ZAHRA_ASHKTORAB: IAuthor = {
+  name: 'Zahra Ashktorab',
+};
+
+const SEBASTIAN_BARBIERI: IAuthor = {
+  name: 'Sebastián Barbieri',
+};
+
+const RACHEL_BELLAMY: IAuthor = {
+  name: 'Rachel Bellamy',
+};
+
+const DJALLEL_BOUNEFFOUF: IAuthor = {
+  name: 'Djallel Bouneffouf',
+};
+
+const MICHELLE_BRACHMAN: IAuthor = {
+  name: 'Michelle Brachman',
+};
+
+const KRISTINA_BRIMIJOIN: IAuthor = {
+  name: 'Kristina Brimijoin',
+};
+
+const MURRAY_CAMPBELL: IAuthor = {
+  name: 'Murray Campbell',
+};
+
+const MORGAN_A_FOREMAN: IAuthor = {
+  name: 'Morgan A. Foreman',
+};
+
+const ARIELLE_GOLDBERG: IAuthor = {
+  name: 'Arielle Goldberg',
+};
+
+const JESSICA_HE: IAuthor = {
+  name: 'Jessica He',
+};
+
+const STEPHANIE_HOUDE: IAuthor = {
+  name: 'Stephanie Houde',
+};
+
+const SIYA_KUNDE: IAuthor = {
+  name: 'Siya Kunde',
+};
+
+const MIAO_LIU: IAuthor = {
+  name: 'Miao Liu',
+};
+
+const GASTON_MONTARULI: IAuthor = {
+  name: 'Gastón Montaruli',
+};
+
+const KATELYN_MORRISON: IAuthor = {
+  name: 'Katelyn Morrison',
+};
+
+const MICHAEL_MULLER: IAuthor = {
+  name: 'Michael Muller',
+};
+
+const MATT_RIEMER: IAuthor = {
+  name: 'Matt Riemer',
+};
+
+const STEVEN_I_ROSS: IAuthor = {
+  name: 'Steven I. Ross',
+};
+
+const DARIO_ANDRES_SILVA_MORAN: IAuthor = {
+  name: 'Darío Andrés Silva Moran',
+};
+
+const ELIAS_TODOROVICH: IAuthor = {
+  name: 'Elías Todorovich',
+};
+
+const JUSTIN_D_WEISZ: IAuthor = {
+  name: 'Justin D. Weisz',
+};
 
 export const PUBLICATIONS: IPublication[] = [
   {
@@ -13,54 +101,18 @@ export const PUBLICATIONS: IPublication[] = [
     presentedAt:
       'Workshop on Theory-of-Mind at International Joint Conference on Artificial Intelligence (IJCAI) 2025',
     authors: [
-      {
-        name: 'Zahra Ashktorab',
-        highlightName: false,
-      },
-      {
-        name: 'Djallel Bouneffouf',
-        highlightName: false,
-      },
-      {
-        name: 'Kristina Brimijoin',
-        highlightName: false,
-      },
-      {
-        name: 'Rachel Bellamy',
-        highlightName: false,
-      },
-      {
-        name: 'Murray Campbell',
-        highlightName: false,
-      },
-      {
-        name: 'Arielle Goldberg',
-        highlightName: false,
-      },
-      {
-        name: AUTHOR_NAME,
-        highlightName: true,
-      },
-      {
-        name: 'Stephanie Houde',
-        highlightName: false,
-      },
-      {
-        name: 'Miao Liu',
-        highlightName: false,
-      },
-      {
-        name: 'Darío Andrés Silva Moran',
-        highlightName: false,
-      },
-      {
-        name: 'Matt Riemer',
-        highlightName: false,
-      },
-      {
-        name: 'Justin D. Weisz',
-        highlightName: false,
-      },
+      ZAHRA_ASHKTORAB,
+      DJALLEL_BOUNEFFOUF,
+      KRISTINA_BRIMIJOIN,
+      RACHEL_BELLAMY,
+      MURRAY_CAMPBELL,
+      ARIELLE_GOLDBERG,
+      PORTFOLIO_AUTHOR,
+      STEPHANIE_HOUDE,
+      MIAO_LIU,
+      DARIO_ANDRES_SILVA_MORAN,
+      MATT_RIEMER,
+      JUSTIN_D_WEISZ,
     ],
   },
   {
@@ -73,42 +125,15 @@ export const PUBLICATIONS: IPublication[] = [
     presentedAt:
       'ACM International Conference on Intelligent User Interfaces 2025',
     authors: [
-      {
-        name: 'Stephanie Houde',
-        highlightName: false,
-      },
-      {
-        name: 'Kristina Brimijoin',
-        highlightName: false,
-      },
-      {
-        name: 'Michael Muller',
-        highlightName: false,
-      },
-      {
-        name: 'Steven I. Ross',
-        highlightName: false,
-      },
-      {
-        name: 'Darío Andrés Silva Moran',
-        highlightName: false,
-      },
-      {
-        name: AUTHOR_NAME,
-        highlightName: true,
-      },
-      {
-        name: 'Siya Kunde',
-        highlightName: false,
-      },
-      {
-        name: 'Morgan A. Foreman',
-        highlightName: false,
-      },
-      {
-        name: 'Justin D. Weisz',
-        highlightName: false,
-      },
+      STEPHANIE_HOUDE,
+      KRISTINA_BRIMIJOIN,
+      MICHAEL_MULLER,
+      STEVEN_I_ROSS,
+      DARIO_ANDRES_SILVA_MORAN,
+      PORTFOLIO_AUTHOR,
+      SIYA_KUNDE,
+      MORGAN_A_FOREMAN,
+      JUSTIN_D_WEISZ,
     ],
   },
   {
@@ -121,34 +146,13 @@ export const PUBLICATIONS: IPublication[] = [
     presentedAt:
       'ACM International Conference on Intelligent User Interfaces 2025: 6th Workshop on Human-AI Co-Creation with Generative Models',
     authors: [
-      {
-        name: 'Darío Andrés Silva Moran',
-        highlightName: false,
-      },
-      {
-        name: 'Kristina Brimijoin',
-        highlightName: false,
-      },
-      {
-        name: AUTHOR_NAME,
-        highlightName: true,
-      },
-      {
-        name: 'Stephanie Houde',
-        highlightName: false,
-      },
-      {
-        name: 'Michael Muller',
-        highlightName: false,
-      },
-      {
-        name: 'Michelle Brachman',
-        highlightName: false,
-      },
-      {
-        name: 'Justin D. Weisz',
-        highlightName: false,
-      },
+      DARIO_ANDRES_SILVA_MORAN,
+      KRISTINA_BRIMIJOIN,
+      PORTFOLIO_AUTHOR,
+      STEPHANIE_HOUDE,
+      MICHAEL_MULLER,
+      MICHELLE_BRACHMAN,
+      JUSTIN_D_WEISZ,
     ],
   },
   {
@@ -161,26 +165,11 @@ export const PUBLICATIONS: IPublication[] = [
     presentedAt:
       'AAAI 2025: Theory of Mind for Artificial Intelligence Workshop',
     authors: [
-      {
-        name: 'Katelyn Morrison',
-        highlightName: false,
-      },
-      {
-        name: 'Zahra Ashktorab',
-        highlightName: false,
-      },
-      {
-        name: 'Djallel Bouneffouf',
-        highlightName: false,
-      },
-      {
-        name: AUTHOR_NAME,
-        highlightName: true,
-      },
-      {
-        name: 'Justin D. Weisz',
-        highlightName: false,
-      },
+      KATELYN_MORRISON,
+      ZAHRA_ASHKTORAB,
+      DJALLEL_BOUNEFFOUF,
+      PORTFOLIO_AUTHOR,
+      JUSTIN_D_WEISZ,
     ],
   },
   {
@@ -199,34 +188,13 @@ export const PUBLICATIONS: IPublication[] = [
     presentedAt:
       "CHIWORK '24: Annual Symposium on Human-Computer Interaction for Work",
     authors: [
-      {
-        name: 'Jessica He',
-        highlightName: false,
-      },
-      {
-        name: 'Stephanie Houde',
-        highlightName: false,
-      },
-      {
-        name: AUTHOR_NAME,
-        highlightName: true,
-      },
-      {
-        name: 'Darío Andrés Silva Moran',
-        highlightName: false,
-      },
-      {
-        name: 'Steven I. Ross',
-        highlightName: false,
-      },
-      {
-        name: 'Michael Muller',
-        highlightName: false,
-      },
-      {
-        name: 'Justin D. Weisz',
-        highlightName: false,
-      },
+      JESSICA_HE,
+      STEPHANIE_HOUDE,
+      PORTFOLIO_AUTHOR,
+      DARIO_ANDRES_SILVA_MORAN,
+      STEVEN_I_ROSS,
+      MICHAEL_MULLER,
+      JUSTIN_D_WEISZ,
     ],
   },
   {
@@ -241,34 +209,13 @@ export const PUBLICATIONS: IPublication[] = [
     presentedAt:
       'International Conference on Computational Creativity, ICCC’24',
     authors: [
-      {
-        name: 'Michael Muller',
-        highlightName: false,
-      },
-      {
-        name: 'Stephanie Houde',
-        highlightName: false,
-      },
-      {
-        name: AUTHOR_NAME,
-        highlightName: true,
-      },
-      {
-        name: 'Kristina Brimijoin',
-        highlightName: false,
-      },
-      {
-        name: 'Steven I. Ross',
-        highlightName: false,
-      },
-      {
-        name: 'Darío Andrés Silva Moran',
-        highlightName: false,
-      },
-      {
-        name: 'Justin D. Weisz',
-        highlightName: false,
-      },
+      MICHAEL_MULLER,
+      STEPHANIE_HOUDE,
+      PORTFOLIO_AUTHOR,
+      KRISTINA_BRIMIJOIN,
+      STEVEN_I_ROSS,
+      DARIO_ANDRES_SILVA_MORAN,
+      JUSTIN_D_WEISZ,
     ],
   },
   {
@@ -282,38 +229,14 @@ export const PUBLICATIONS: IPublication[] = [
     presentedAt:
       'ACM International Conference on Intelligent User Interfaces 2024: 5th Workshop on Human-AI Co-Creation with Generative Models',
     authors: [
-      {
-        name: AUTHOR_NAME,
-        highlightName: true,
-      },
-      {
-        name: 'Darío Andrés Silva Moran',
-        highlightName: false,
-      },
-      {
-        name: 'Stephanie Houde',
-        highlightName: false,
-      },
-      {
-        name: 'Jessica He',
-        highlightName: false,
-      },
-      {
-        name: 'Steven I. Ross',
-        highlightName: false,
-      },
-      {
-        name: 'Michael Muller',
-        highlightName: false,
-      },
-      {
-        name: 'Siya Kunde',
-        highlightName: false,
-      },
-      {
-        name: 'Justin D. Weisz',
-        highlightName: false,
-      },
+      PORTFOLIO_AUTHOR,
+      DARIO_ANDRES_SILVA_MORAN,
+      STEPHANIE_HOUDE,
+      JESSICA_HE,
+      STEVEN_I_ROSS,
+      MICHAEL_MULLER,
+      SIYA_KUNDE,
+      JUSTIN_D_WEISZ,
     ],
   },
   {
@@ -328,22 +251,10 @@ export const PUBLICATIONS: IPublication[] = [
     presentedAt:
       '10mo Congreso Nacional de Ingeniería Informática y Sistemas de Información (CoNaIISI)',
     authors: [
-      {
-        name: AUTHOR_NAME,
-        highlightName: true,
-      },
-      {
-        name: 'Sebastián Barbieri',
-        highlightName: false,
-      },
-      {
-        name: 'Gastón Montaruli',
-        highlightName: false,
-      },
-      {
-        name: 'Elías Todorovich',
-        highlightName: false,
-      },
+      PORTFOLIO_AUTHOR,
+      SEBASTIAN_BARBIERI,
+      GASTON_MONTARULI,
+      ELIAS_TODOROVICH,
     ],
   },
 ];

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AUTHOR_NAME } from '@common/constants';
+import { PORTFOLIO_AUTHOR_NAME } from '@common/constants';
 import { ABOUT_ME_TEXT } from './constants';
 
 @Component({
@@ -9,7 +9,7 @@ import { ABOUT_ME_TEXT } from './constants';
 })
 export class AboutMeComponent {
   public aboutMeText: string = ABOUT_ME_TEXT;
-  public authorName: string = AUTHOR_NAME;
+  public portfolioAuthorName: string = PORTFOLIO_AUTHOR_NAME;
 
   constructor() {}
 
@@ -18,7 +18,7 @@ export class AboutMeComponent {
 
     const link: HTMLAnchorElement = document.createElement('a');
     link.href = pdfUrl;
-    link.download = `${this.authorName.replace(/ /g, '_')}_Resume.pdf`;
+    link.download = `${this.portfolioAuthorName.replace(/ /g, '_')}_Resume.pdf`;
     link.click();
   }
 }
