@@ -2,47 +2,58 @@
     <app-experience-banner [experience]="experience" />
 
     <div class="experience-details-container">
-        <ng-container *ngFor="let experienceDetail of experience.projects">
-            <div class="experience-detail-external-container">
-                <span class="experience-detail-role">{{ experienceDetail.role }}</span>
-                <span class="experience-detail-duration">{{ experienceDetail.duration }}</span>
-                <div class="experience-detail-internal-container">
-                    <div class="experience-detail">
-                        <div *ngIf="!experienceDetail.isPrivateProject; else privateProjectBlock" class="project-info">
-                            <span class="project-name">{{ experienceDetail.name }}</span>
-                            <ng-container *ngIf="experienceDetail.extendedDescription">
-                                <div 
-                                    class="project-description"
-                                    [innerHTML]="projectDescriptionAsHtml(experienceDetail.extendedDescription)"
-                                >
-                                </div>
-                            </ng-container>
-                        </div>
+        <mat-accordion multi="true">
+            <ng-container *ngFor="let experienceDetail of experience.projects">
+                <mat-expansion-panel [expanded]="experience.projects.length === 1">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <span class="project-name">{{ experienceDetail.name || 'Private project' }}</span>
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            <span class="experience-detail-duration">{{ experienceDetail.duration }}</span>
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
 
-                        <ng-template #privateProjectBlock>
-                            <span class="private-project-text">
-                                🔒 Private project - details not publicly available
-                            </span>
-                        </ng-template>
+                    <div class="experience-detail-internal-container">
+                        <div class="experience-detail">
+                            <div
+                                *ngIf="!experienceDetail.isPrivateProject; else privateProjectBlock"
+                                class="project-info"
+                            >
+                                <ng-container *ngIf="experienceDetail.extendedDescription">
+                                    <div
+                                        class="project-description"
+                                        [innerHTML]="projectDescriptionAsHtml(experienceDetail.extendedDescription)"
+                                    >
+                                    </div>
+                                </ng-container>
+                            </div>
 
-                        <span class="label">Contribution:</span>
-                        <span class="experience-detail-contribution-text">{{ experienceDetail.contribution }}</span>
-                    </div>
-                    <div class="skills-container" *ngIf="experienceDetail.skills.length">
-                        <span class="label skills-label">Technologies used:</span>
-                        <div class="skills-list">
-                            <ng-container *ngFor="let skill of experienceDetail.skills">
-                                <div class="skill-item">
-                                    <img class="skill-logo" [src]="skill.logoPath" [alt]="skill.name"
-                                        loading="lazy" />
-                                    <span class="skill-name">{{ skill.name }}</span>
-                                </div>
-                            </ng-container>
+                            <ng-template #privateProjectBlock>
+                                <span class="private-project-text">
+                                    🔒 Private project - details not publicly available
+                                </span>
+                            </ng-template>
+
+                            <span class="label">Contribution:</span>
+                            <span class="experience-detail-contribution-text">{{ experienceDetail.contribution }}</span>
+                        </div>
+                        <div class="skills-container" *ngIf="experienceDetail.skills.length">
+                            <span class="label skills-label">Technologies used:</span>
+                            <div class="skills-list">
+                                <ng-container *ngFor="let skill of experienceDetail.skills">
+                                    <div class="skill-item">
+                                        <img class="skill-logo" [src]="skill.logoPath" [alt]="skill.name"
+                                            loading="lazy" />
+                                        <span class="skill-name">{{ skill.name }}</span>
+                                    </div>
+                                </ng-container>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </ng-container>
+                </mat-expansion-panel>
+            </ng-container>
+        </mat-accordion>
     </div>
 </mat-dialog-content>
 

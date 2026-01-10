@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { IExperienceInfo } from '@common/interfaces';
 import { ExperienceDetailModalComponent } from '../experience-detail-modal/experience-detail-modal.component';
 import { EXPERIENCES } from './constants';
-import { IExperienceInfo } from '@common/interfaces';
 
 @Component({
   selector: 'app-experiences',
@@ -21,6 +21,7 @@ export class ExperiencesComponent {
       data: experienceData,
       width: isMobile ? '100%' : '70%',
       maxWidth: '100vw',
+      autoFocus: false,
     });
   }
 }

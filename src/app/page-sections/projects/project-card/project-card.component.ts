@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ExperienceDetailModalComponent } from '../../experience-detail-modal/experience-detail-modal.component';
 import { IExperienceInfo, IPublicProject } from '@common/interfaces';
+import { ExperienceDetailModalComponent } from '../../experience-detail-modal/experience-detail-modal.component';
 
 @Component({
     selector: 'app-project-card',
@@ -37,6 +37,7 @@ export class ProjectCardComponent {
             data: experienceData,
             width: isMobile ? '100%' : '70%',
             maxWidth: '100vw',
+            autoFocus: false,
         });
     }
 }
