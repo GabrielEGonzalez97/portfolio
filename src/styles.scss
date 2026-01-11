@@ -40,6 +40,7 @@ html,
 body {
   height: 100%;
 }
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -60,6 +61,7 @@ body {
   --theme-profile-image-box-shadow-color: #000000;
   --theme-header-button-hover-background-color: #f4f4f4;
   --theme-border-color: #d1d1d1;
+  --theme-icon-filter: none;
 }
 
 [data-theme="dark"] {
@@ -76,4 +78,5 @@ body {
   --theme-profile-image-box-shadow-color: #ffffff;
   --theme-header-button-hover-background-color: #222836;
   --theme-border-color: #3c4252;
+  --theme-icon-filter: invert(1);
 }

@@ -25,6 +25,9 @@ app-experience-banner {
 }
 
 mat-expansion-panel {
+  background-color: var(--theme-background-color);
+  color: var(--theme-primary-text-color);
+
   &:last-child {
     border-bottom: none;
   }
@@ -34,6 +37,10 @@ mat-expansion-panel-header {
   padding: 0 1rem;
   height: auto !important;
   min-height: 64px;
+
+  ::ng-deep .mat-expansion-indicator::after {
+    color: var(--theme-secondary-text-color);
+  }
 }
 
 ::ng-deep .mat-expansion-panel-body {
@@ -131,7 +138,7 @@ mat-expansion-panel-header {
   align-items: center;
   gap: 0.4rem;
   padding: 0.3rem 0.6rem;
-  background: #f5f5f5;
+  background-color: var(--theme-header-button-hover-background-color);
   @include border-radius(6px);
 }
 

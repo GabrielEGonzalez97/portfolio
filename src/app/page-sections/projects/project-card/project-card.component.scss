@@ -117,6 +117,7 @@ app-card {
       img {
         width: 18px;
         height: 18px;
+        @include filter(var(--theme-icon-filter));
       }
 
       &:hover {
