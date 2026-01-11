@@ -45,6 +45,11 @@ export const DOCKER_SKILL: ISkill = {
     logoPath: 'assets/icons/docker-icon.svg',
 };
 
+export const ELASTICSEARCH_SKILL: ISkill = {
+    name: 'Elasticsearch',
+    logoPath: 'assets/icons/elasticsearch-icon.svg',
+};
+
 export const ENGLISH_SKILL: ISkill = {
     name: 'English',
     logoPath: 'assets/icons/united-kingdom-flag-icon.svg',

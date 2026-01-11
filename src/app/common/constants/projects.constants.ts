@@ -8,6 +8,7 @@ import {
   CSS_SKILL,
   CYPRESS_SKILL,
   DB2_SKILL,
+  ELASTICSEARCH_SKILL,
   FASTAPI_SKILL,
   FLASK_SKILL,
   HTML_SKILL,
@@ -19,6 +20,74 @@ import {
   SVELTE_SKILL,
   TYPESCRIPT_SKILL
 } from "./skills.constants";
+
+export const AGENTIC_CODE_EXPLORER_PROJECT: IPublicProject = {
+  name: 'Agentic Code Explorer',
+  shortDescription: `
+  ACE (Agentic Code Explorer) is a research prototype that helps software developers explore and understand large code repositories using an LLM based agent. I contributed to the implementation of the system, fully building the frontend and supporting backend features. My work included implementing multi level code summarization, retrieval augmented generation over repositories, and user profiling based on developer context. The project examines how agentic AI systems can support developers during the exploratory and understanding phases that come before code modification.
+  `,
+  extendedDescription: `
+ACE - the Agentic Code Explorer - is a prototype agentic system designed to help software developers conduct sensemaking tasks within large code repositories. The design of this system was motivated by the observation that software developers often use AI coding assistants to help understand and ask questions about source code prior to planning and implementing code changes. Using ACE as a testbed, we present initial steps to explore whether a large language model (LLM)-based agent that is capable of invoking external tools and iteratively refining its own outputs (per the agentic design pattern) might be able to robustly support such a code discovery process. In this way, we use ACE as a means to explore more generally how generative models need not solely focus on the artifact production aspects of co-creative tasks; instead they might focus on the co-investigative activities where initial understanding and plans are formed.
+
+Our initial prototype was built as a standalone web application, rather than as a plugin for existing developer IDEs, to allow us the freedom to control all aspects of interaction design, model prompting, agentic tool design, interaction design, and usage data collection during the early stages of our research.
+
+ACE's front end (Figure 1) was built using the Svelte framework and its back end was implemented in Python using FastAPI.
+
+<figure id="ace_user_interface">
+  <img class="project-description-image" src="assets/images/ace/ace_user_interface.png" alt="ACE User Interface"/>
+  <figcaption class="project-description-image-caption">
+    <strong>Figure 1: ACE User Interface.</strong> Three interface panels allow the user to (A) browse all files in a GitHub code repository, (B) view either the raw source code or an AI-generated summary of a selected code file (shown above), and (C) converse with an LLM-based agent that has access to the full code repository and can answer general programming questions and targeted questions about a file, a code summary, or selected lines of code.
+  </figcaption>
+</figure>
+
+ACE presents a code repository's files in a tree structure (Figure 1A), mirroring how they are typically presented in developer IDEs. When a file is selected, ACE generates a natural language overview of the file in the central panel (Figure 1B). The overview provides a high-level description of the file's functionality, summarizing the purpose of the code and all of the classes and methods defined in it. Within the same panel, the user can switch to the “Code” view to see the raw source code.
+
+Users can converse with ACE in the right sidebar (Figure 1C). ACE uses the user's current context - which file they have open and any text they have selected in the interface - to answer questions. Users can also select text in the interface and press a keyboard shortcut to open a chat input, allowing them to ask ACE a question about anything they see on the screen.
+
+As ACE uses an agentic workflow, the latency of its responses may be high. Therefore, ACE delivers its responses to the chat UI via a streaming API, enabling the user to follow its progress as it processes the query. Users can view or hide ACE's processing steps, which show information about ACE's reasoning, observations, tool invocations and outputs.
+
+We equipped ACE with tools tailored for summarizing and explaining code (Figure 1B), understanding code dependencies and querying the repository. Since
+these features operate at the level of a code repository, ACE first performs a preprocessing stage that divides the repository into manageable chunks, embeds them using an embedding model, and stores the resulting vectors in an Elasticsearch database. This setup enables ACE to perform retrieval-augmented generation (RAG) in response to a user's query.
+
+For code summarization, the agent pre-generates natural language summaries at multiple granularities: one for each function or method within the repository, one for each class, and one for each source file.
+
+As an initial step toward operationalizing mutual theory of mind, our ACE prototype modifies agent responses with prompts derived from an editable profile representing the user's expertise (Figure 2).
+
+<figure id="ace_user_profile">
+  <img class="project-description-image" src="assets/images/ace/ace_user_profile.png" alt="User Profile"/>
+  <figcaption class="project-description-image-caption">
+    <strong>Figure 2: User Profile.</strong> Information in this profile is used by ACE to adapt its responses to the user. For this user, ACE will provide more direct and succinct responses to questions about Python, and longer and more explanatory responses to questions about CSS.
+  </figcaption>
+</figure>
+        `,
+  contribution: `In this research project, I was deeply involved in the implementation of ACE, contributing both to the frontend (which I fully implemented) and to several areas of the backend. My backend work included developing user profile generation based on their GitHub activity as well as their professional information available on the company's platform.
+
+I also implemented the functionality for summarizing repository code—both at the file and function levels—enabling retrieval-augmented generation (RAG) based on these code summaries. Additionally, I participated in developing a Slack bot that allowed users to interact with ACE within group environments.
+
+Part of the research conducted through this project was presented at the ACM International Conference on Intelligent User Interfaces 2025: 6th Workshop on Human-AI Co-Creation with Generative Models, in the paper “ACE: Moving Toward Co-Investigation with the Agentic Code Explorer,” which I presented in person at the IUI 2025 conference held in Cagliari 🇮🇹.`,
+  role: 'Software Engineer',
+  duration: 'IBM Research | Jan 2025 - Nov 2025',
+  isFreelanceProject: false,
+  isPrivateProject: false,
+  logoPath: 'assets/images/ACE_Logo.png',
+  company: IBM_COMPANY,
+  githubRepoLink: '',
+  skills: [
+    SVELTE_SKILL,
+    TYPESCRIPT_SKILL,
+    FASTAPI_SKILL,
+    PYTHON_SKILL,
+    AI_AGENTS_SKILL,
+    LLM_SKILL,
+    SASS_SKILL,
+    HTML_SKILL,
+    CARBON_SKILL,
+    ELASTICSEARCH_SKILL,
+    CLOUDANT_SKILL,
+    OPENSHIFT_SKILL,
+    SLACK_SKILL,
+  ],
+};
 
 export const AI_ATTRIBUTION_TOOLKIT_PROJECT: IPublicProject = {
   name: 'AI Attribution Toolkit',
@@ -64,70 +133,6 @@ To ensure robustness and long term maintainability, I implemented automated end 
     SASS_SKILL,
     HTML_SKILL,
     CARBON_SKILL
-  ],
-};
-
-export const AGENTIC_CODE_EXPLORER_PROJECT: IPublicProject = {
-  name: 'Agentic Code Explorer',
-  shortDescription: '',
-  extendedDescription: `
-ACE - the Agentic Code Explorer - is a prototype agentic system designed to help software developers conduct sensemaking tasks within large code repositories. The design of this system was motivated by the observation that software developers often use AI coding assistants to help understand and ask questions about source code prior to planning and implementing code changes. Using ACE as a testbed, we present initial steps to explore whether a large language model (LLM)-based agent that is capable of invoking external tools and iteratively refining its own outputs (per the agentic design pattern) might be able to robustly support such a code discovery process. In this way, we use ACE as a means to explore more generally how generative models need not solely focus on the artifact production aspects of co-creative tasks; instead they might focus on the co-investigative activities where initial understanding and plans are formed.
-
-Our initial prototype was built as a standalone web application, rather than as a plugin for existing developer IDEs, to allow us the freedom to control all aspects of interaction design, model prompting, agentic tool design, interaction design, and usage data collection during the early stages of our research.
-
-ACE's front end (Figure 1) was built using the Svelte framework and its back end was implemented in Python using FastAPI.
-
-<figure id="ace_user_interface">
-  <img class="project-description-image" src="assets/images/ace/ace_user_interface.png" alt="ACE User Interface"/>
-  <figcaption class="project-description-image-caption">
-    <strong>Figure 1: ACE User Interface.</strong> Three interface panels allow the user to (A) browse all files in a GitHub code repository, (B) view either the raw source code or an AI-generated summary of a selected code file (shown above), and (C) converse with an LLM-based agent that has access to the full code repository and can answer general programming questions and targeted questions about a file, a code summary, or selected lines of code.
-  </figcaption>
-</figure>
-
-ACE presents a code repository's files in a tree structure (Figure 1A), mirroring how they are typically presented in developer IDEs. When a file is selected, ACE generates a natural language overview of the file in the central panel (Figure 1B). The overview provides a high-level description of the file's functionality, summarizing the purpose of the code and all of the classes and methods defined in it. Within the same panel, the user can switch to the “Code” view to see the raw source code.
-
-Users can converse with ACE in the right sidebar (Figure 1C). ACE uses the user's current context - which file they have open and any text they have selected in the interface - to answer questions. Users can also select text in the interface and press a keyboard shortcut to open a chat input, allowing them to ask ACE a question about anything they see on the screen.
-
-As ACE uses an agentic workflow, the latency of its responses may be high. Therefore, ACE delivers its responses to the chat UI via a streaming API, enabling the user to follow its progress as it processes the query. Users can view or hide ACE's processing steps, which show information about ACE's reasoning, observations, tool invocations and outputs.
-
-We equipped ACE with tools tailored for summarizing and explaining code (Figure 1B), understanding code dependencies and querying the repository. Since
-these features operate at the level of a code repository, ACE first performs a preprocessing stage that divides the repository into manageable chunks, embeds them using an embedding model, and stores the resulting vectors in an ElasticSearch database. This setup enables ACE to perform retrieval-augmented generation (RAG) in response to a user's query.
-
-For code summarization, the agent pre-generates natural language summaries at multiple granularities: one for each function or method within the repository, one for each class, and one for each source file.
-
-As an initial step toward operationalizing mutual theory of mind, our ACE prototype modifies agent responses with prompts derived from an editable profile representing the user's expertise (Figure 2).
-
-<figure id="ace_user_profile">
-  <img class="project-description-image" src="assets/images/ace/ace_user_profile.png" alt="User Profile"/>
-  <figcaption class="project-description-image-caption">
-    <strong>Figure 2: User Profile.</strong> Information in this profile is used by ACE to adapt its responses to the user. For this user, ACE will provide more direct and succinct responses to questions about Python, and longer and more explanatory responses to questions about CSS.
-  </figcaption>
-</figure>
-        `,
-  contribution: `In this research project, I was deeply involved in the implementation of ACE, contributing both to the frontend (which I fully implemented) and to several areas of the backend. My backend work included developing user profile generation based on their GitHub activity as well as their professional information available on the company's platform.
-
-I also implemented the functionality for summarizing repository code—both at the file and function levels—enabling retrieval-augmented generation (RAG) based on these code summaries. Additionally, I participated in developing a Slack bot that allowed users to interact with ACE within group environments.
-
-Part of the research conducted through this project was presented at the ACM International Conference on Intelligent User Interfaces 2025: 6th Workshop on Human-AI Co-Creation with Generative Models, in the paper “ACE: Moving Toward Co-Investigation with the Agentic Code Explorer,” which I presented in person at the IUI 2025 conference held in Cagliari 🇮🇹.`,
-  role: 'Software Engineer',
-  duration: 'IBM Research | Jan 2025 - Nov 2025',
-  isFreelanceProject: false,
-  isPrivateProject: false,
-  company: IBM_COMPANY,
-  githubRepoLink: '',
-  skills: [
-    SVELTE_SKILL,
-    SASS_SKILL,
-    HTML_SKILL,
-    TYPESCRIPT_SKILL,
-    CARBON_SKILL,
-    FASTAPI_SKILL,
-    PYTHON_SKILL,
-    SLACK_SKILL,
-    CLOUDANT_SKILL,
-    AI_AGENTS_SKILL,
-    LLM_SKILL,
-    OPENSHIFT_SKILL,
   ],
 };
 
