@@ -2,7 +2,7 @@
     *ngIf="project"
     [title]="project.name"
     [subtitle]="project.shortDescription"
-    fotterButtonText="View Details"
+    [fotterButtonText]="project.extendedDescription ? 'View Details' : undefined"
     (footerButtonClicked)="openProjectModal()"
 >
     <div id="card-company">

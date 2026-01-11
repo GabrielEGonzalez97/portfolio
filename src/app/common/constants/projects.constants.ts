@@ -351,13 +351,20 @@ export const EXACTAMENTE_PROJECT: IPublicProject = {
   extendedDescription: '',
   contribution: '',
   role: 'Software Engineer',
-  duration: '',
+  duration: 'Freelancer | Feb 2023 - Present',
   isFreelanceProject: true,
   isPrivateProject: false,
   logoPath: 'assets/images/Exactamente_Logo.jpg',
   websiteLink: 'https://www.exactamente.com.ar/',
-  githubRepoLink: '',
-  skills: [],
+  githubRepoLink: 'https://github.com/GabrielEGonzalez97/la-guia-exacta-ui',
+  skills: [
+    ANGULAR_SKILL,
+    TYPESCRIPT_SKILL,
+    FLASK_SKILL,
+    PYTHON_SKILL,
+    SASS_SKILL,
+    HTML_SKILL
+  ],
 };
 
 export const SURFPHOTOS_PROJECT: IPublicProject = {
@@ -366,11 +373,18 @@ export const SURFPHOTOS_PROJECT: IPublicProject = {
   extendedDescription: '',
   contribution: '',
   role: 'Software Engineer',
-  duration: '',
+  duration: 'Freelancer | Jan 2024 - May 2024',
   isFreelanceProject: true,
   isPrivateProject: false,
   logoPath: 'assets/images/SurfPhotos.jpeg',
   websiteLink: 'https://surfphotos.com.ar',
-  githubRepoLink: '',
-  skills: [],
+  githubRepoLink: 'https://github.com/GabrielEGonzalez97/surfphotos',
+  skills: [
+    ANGULAR_SKILL,
+    TYPESCRIPT_SKILL,
+    FLASK_SKILL,
+    PYTHON_SKILL,
+    SASS_SKILL,
+    HTML_SKILL
+  ],
 };
