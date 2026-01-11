@@ -217,7 +217,9 @@ During Koala's development, we noticed that the underlying LLM was unreliable in
 
 export const COLLABORATION_CANVAS_PROJECT: IPublicProject = {
   name: 'Collaboration Canvas',
-  shortDescription: '',
+  shortDescription: `
+  Collaboration Canvas is a research prototype that explores how groups can collaborate with large language models during ideation tasks using a shared, interactive canvas of virtual sticky notes. The tool supports real-time multi-user collaboration and multiple levels of AI involvement, ranging from on-demand generation to fully proactive idea contributions. I was the lead developer of the project, implementing the entire frontend and backend.
+  `,
   extendedDescription: `
 The Collaboration Canvas is a prototype tool for exploring ways for groups to interact with large language models (LLMs) in ideation tasks. Collaboration Canvas provides a shared, graphical canvas in which multiple parties - human and LLM - can share ideas in the form of virtual “sticky notes” that can be moved around the canvas. As we aimed not to replicate a commercial product, it possesses a minimally-useful set of functionality commonly found in shared canvas tools:
 
@@ -285,17 +287,18 @@ We implemented the Collaborativon Canvas using the Svelte framework for the fron
     <strong>Figure 6: Sticky Notes Generation Flow.</strong> The diagram shows the activity flow for generating sticky notes. First, the user enters a query in their personal scratchpad. Next, the front-end UX calls an API endpoint in the back end, which looks up the user's canvas session information from the database. Then, if the user is making a refinement to existing sticky notes, the system retrieves the request/response history for those sticky notes. Next, the system loads the prompt template and fills it in with the user's query and any retrieved refinement history. Finally, the system calls the LLM (via API) with the prompt to obtain a response, parses that response into a set of individual sticky notes, and adds them to the scratchpad UI.
   </figcaption>
 </figure>
-`,
+  `,
   contribution: `In this research project, I was the lead developer contributing to the project, both on the frontend (100% implemented) and the backend. The implementation of the canvas allowed us to conduct user studies where we evaluated Group Brainstorming with an AI Agent. The results were presented in two papers:
 - "AI and the Future of Collaborative Work: Group Ideation with an LLM in a Virtual Canvas" presented at CHIWORK '24: Annual Symposium on Human-Computer Interaction for Work. The paper received an honorable mention.
 - "Collaborative Canvas: A Tool for Exploring LLM Use in Group Ideation Tasks" presented at the ACM International Conference on Intelligent User Interfaces 2024: 5th Workshop on Human-AI Co-Creation with Generative Models. I had the opportunity to be the first author of this paper and to present it in person at the IUI 2024 conference held in Greenville, South Carolina 🇺🇸.
-`,
+  `,
   role: 'Software Engineer',
   duration: 'IBM Research | Jul 2023 - Dec 2023',
   isFreelanceProject: false,
   isPrivateProject: false,
+  logoPath: 'assets/images/Collaboration_Canvas_Logo.png',
   company: IBM_COMPANY,
-  githubRepoLink: '',
+  githubRepoLink: 'https://github.com/IBM/collaboration-canvas',
   skills: [
     SVELTE_SKILL,
     SASS_SKILL,
