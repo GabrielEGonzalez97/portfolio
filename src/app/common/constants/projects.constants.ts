@@ -43,7 +43,12 @@ Conceptually, the AI Attribution Toolkit draws inspiration from established syst
 
 Through its design, the project contributes to broader conversations around human-AI collaboration, responsible AI practices, and the social infrastructure needed to support transparent use of generative models in creative and professional domains.
   `,
-  contribution: '',
+  contribution: `I implemented the AI Attribution Toolkit end to end, translating an existing research concept and design specification into a fully functional web application. I was responsible for the complete front end architecture, implementation, and integration of the toolkit, ensuring that the system could reliably guide users through the attribution process and generate clear, structured AI attribution statements.
+
+The application was built using Svelte and TypeScript, with HTML and Sass used to implement the specified layouts and styling. I was responsible for implementing the complete questionnaire driven workflow, including application state management, input validation, conditional logic between questions, and the generation of AI attribution statements based on user responses.
+
+To ensure robustness and long term maintainability, I implemented automated end to end tests using Cypress, covering key user flows and interaction states. This testing setup helped validate both functional correctness and interaction behavior as the toolkit evolved.
+  `,
   role: 'Software Engineer',
   duration: 'IBM Research | Feb 2025 - Jul 2025',
   isFreelanceProject: false,
@@ -54,11 +59,11 @@ Through its design, the project contributes to broader conversations around huma
   githubRepoLink: 'https://github.com/aiattribution/aiattribution.github.io',
   skills: [
     SVELTE_SKILL,
+    TYPESCRIPT_SKILL,
+    CYPRESS_SKILL,
     SASS_SKILL,
     HTML_SKILL,
-    TYPESCRIPT_SKILL,
-    CARBON_SKILL,
-    CYPRESS_SKILL
+    CARBON_SKILL
   ],
 };
 
