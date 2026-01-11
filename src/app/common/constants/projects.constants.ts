@@ -154,14 +154,14 @@ I also collaborated on a master's thesis project investigating human-AI co-creat
   company: IBM_COMPANY,
   skills: [
     SVELTE_SKILL,
-    SASS_SKILL,
-    HTML_SKILL,
     TYPESCRIPT_SKILL,
-    CARBON_SKILL,
     FASTAPI_SKILL,
     PYTHON_SKILL,
-    CLOUDANT_SKILL,
+    SASS_SKILL,
+    HTML_SKILL,
+    CARBON_SKILL,
     LLM_SKILL,
+    CLOUDANT_SKILL,
     OPENSHIFT_SKILL,
   ],
 };
@@ -301,14 +301,14 @@ We implemented the Collaborativon Canvas using the Svelte framework for the fron
   githubRepoLink: 'https://github.com/IBM/collaboration-canvas',
   skills: [
     SVELTE_SKILL,
-    SASS_SKILL,
-    HTML_SKILL,
     TYPESCRIPT_SKILL,
-    CARBON_SKILL,
     FASTAPI_SKILL,
     PYTHON_SKILL,
-    CLOUDANT_SKILL,
+    SASS_SKILL,
+    HTML_SKILL,
+    CARBON_SKILL,
     LLM_SKILL,
+    CLOUDANT_SKILL,
     OPENSHIFT_SKILL,
   ],
 }
@@ -323,11 +323,11 @@ export const PRIVATE_PROJECT_2023: IProject = {
   company: IBM_COMPANY,
   skills: [
     ANGULAR_SKILL,
+    TYPESCRIPT_SKILL,
+    PYTHON_SKILL,
     CSS_SKILL,
     HTML_SKILL,
-    TYPESCRIPT_SKILL,
     CARBON_SKILL,
-    PYTHON_SKILL,
   ],
 };
 
@@ -341,12 +341,12 @@ export const CLARITY_PROJECT: IProject = {
   company: IBM_COMPANY,
   skills: [
     ANGULAR_SKILL,
-    CSS_SKILL,
-    HTML_SKILL,
     TYPESCRIPT_SKILL,
-    CARBON_SKILL,
     FLASK_SKILL,
     PYTHON_SKILL,
+    CSS_SKILL,
+    HTML_SKILL,
+    CARBON_SKILL,
     DB2_SKILL,
   ],
 };
