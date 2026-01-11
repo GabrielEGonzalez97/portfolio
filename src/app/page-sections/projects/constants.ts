@@ -2,6 +2,7 @@ import {
   AGENTIC_CODE_EXPLORER_PROJECT,
   AI_ATTRIBUTION_TOOLKIT_PROJECT,
   EXACTAMENTE_PROJECT,
+  KOALA_PROJECT,
   SURFPHOTOS_PROJECT
 } from "@common/constants";
 import { IPublicProject } from "@common/interfaces";
@@ -9,6 +10,7 @@ import { IPublicProject } from "@common/interfaces";
 export const PROJECTS: IPublicProject[] = [
   AGENTIC_CODE_EXPLORER_PROJECT,
   AI_ATTRIBUTION_TOOLKIT_PROJECT,
-  EXACTAMENTE_PROJECT,
+  KOALA_PROJECT,
   SURFPHOTOS_PROJECT,
+  EXACTAMENTE_PROJECT,
 ];

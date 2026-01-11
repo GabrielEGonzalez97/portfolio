@@ -168,7 +168,9 @@ I also collaborated on a master's thesis project investigating human-AI co-creat
 
 export const KOALA_PROJECT: IPublicProject = {
   name: 'Koala',
-  shortDescription: '',
+  shortDescription: `
+  Koala is an LLM-based conversational agent designed to participate in group discussions within Slack, exploring how AI agents can effectively “fit in” to collaborative settings. The project investigated reactive and proactive participation strategies, combining LLM-driven responses with external control logic to manage when and how the agent contributes. I contributed to the implementation of Koala and participated as a note-taker during user studies, helping analyze its impact on group ideation dynamics and inform the design of human-centered AI participation behaviors.
+  `,
   extendedDescription: `
 To understand the challenges of designing an agent that “fts in” to a group setting, we built an LLM-based conversational agent prototype called “Koala.” Koala is an AI-based group discussion participant, situated in Slack and implemented as a bot application. Given our desire to experiment with proactive ways of participating, we developed two confgurable variants of Koala (Figure 1): a reactive variant that only responds when directly addressed (by either “@Koala” or “Koala”), and a proactive variant that responds when it determines that it has something valuable to say. Koala can contribute to the conversation in the same manner as other human users, by sending textual messages as well as emoji-based reactions to existing messages.
 
@@ -200,15 +202,16 @@ During Koala's development, we noticed that the underlying LLM was unreliable in
   duration: 'IBM Research | Jul 2023 - Dec 2023',
   isFreelanceProject: false,
   isPrivateProject: false,
+  logoPath: 'assets/images/Koala_Logo.png',
   company: IBM_COMPANY,
-  githubRepoLink: '',
+  githubRepoLink: 'https://github.com/IBM/koala',
   skills: [
     FASTAPI_SKILL,
     PYTHON_SKILL,
-    SLACK_SKILL,
-    CLOUDANT_SKILL,
     LLM_SKILL,
+    CLOUDANT_SKILL,
     OPENSHIFT_SKILL,
+    SLACK_SKILL,
   ],
 };
 

@@ -41,7 +41,7 @@ app-card {
   img {
     width: 250px;
     max-width: 100%;
-    height: auto;
+    height: 250px;
     @include border-radius(50%);
   }
 }
@@ -133,6 +133,7 @@ app-card {
 
   #card-image img {
     width: 200px !important;
+    height: 200px !important;
   }
 }
 
@@ -144,5 +145,6 @@ app-card {
 
   #card-image img {
     width: 150px !important;
+    height: 150px !important;
   }
 }
