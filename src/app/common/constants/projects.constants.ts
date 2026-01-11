@@ -6,6 +6,7 @@ import {
   CARBON_SKILL,
   CLOUDANT_SKILL,
   CSS_SKILL,
+  CYPRESS_SKILL,
   DB2_SKILL,
   FASTAPI_SKILL,
   FLASK_SKILL,
@@ -21,24 +22,43 @@ import {
 
 export const AI_ATTRIBUTION_TOOLKIT_PROJECT: IPublicProject = {
   name: 'AI Attribution Toolkit',
-  shortDescription:
-    'Implementation of the toolkit as part of work conducted with my team at IBM Research. This effort aims to create a voluntary, detailed attribution standard that promotes transparency about how AI is used in creative work. It helps creators specify the type and degree of AI involvement in their work, encouraging more responsible and transparent use of generative tools.',
-  extendedDescription: '',
+  shortDescription: `
+  Implementation of the toolkit as part of work conducted with my team at IBM Research. This effort aims to create a voluntary, detailed attribution standard that promotes transparency about how AI is used in creative work. It helps creators specify the type and degree of AI involvement in their work, encouraging more responsible and transparent use of generative tools.
+  `,
+  extendedDescription: `
+AI Attribution Toolkit is a research prototype designed to support transparent, nuanced disclosure of how generative AI systems contribute to creative and knowledge work. The project was motivated by the observation that existing attribution and authorship conventions, such as citations, credits, or licenses, are poorly suited to describing collaborative workflows in which humans and AI systems jointly produce an artifact. As generative AI tools become embedded in professional and creative practice, simple statements such as “AI was used” fail to communicate meaningful information about agency, responsibility, and human oversight.
+
+Using the AI Attribution Toolkit as a design probe, we explored how structured reflection and guided questioning might help creators articulate what role AI played, what decisions remained human, and how the final output was reviewed and approved. Rather than attempting to automatically infer attribution, the toolkit centers human judgment and self reporting as a first step toward responsible disclosure.
+
+The toolkit takes the form of an interactive, questionnaire driven framework that guides users through a series of prompts about their creative process. These prompts cover dimensions such as the type of AI system used, the nature and scope of AI contributions, the degree of human modification or curation, and the locus of final accountability. Based on the user's responses, the system generates a standardized AI attribution statement that can be attached to a piece of work, much like a credit line or disclosure note.
+
+<figure id="ai_attribution_toolkit_interface">
+  <img class="project-description-image" src="assets/images/ai_attribution_toolkit/ai_attribution_toolkit_interface.png" alt="AI Attribution Toolkit Interface"/>
+  <figcaption class="project-description-image-caption">
+    The toolkit provides a set of questions to help users clarify how AI contributed to their creative process.
+  </figcaption>
+</figure>
+
+Conceptually, the AI Attribution Toolkit draws inspiration from established systems such as Creative Commons licenses and the CRediT contributor role taxonomy, while intentionally avoiding legal or compliance oriented framing. Instead, the project positions attribution as a communicative practice, a way of fostering trust, accountability, and shared understanding between creators and audiences in AI mediated work.
+
+Through its design, the project contributes to broader conversations around human-AI collaboration, responsible AI practices, and the social infrastructure needed to support transparent use of generative models in creative and professional domains.
+  `,
   contribution: '',
   role: 'Software Engineer',
-  duration: '',
+  duration: 'IBM Research | Feb 2025 - Jul 2025',
   isFreelanceProject: false,
   isPrivateProject: false,
   logoPath: 'assets/images/AI_Attribution_Toolkit_Logo.png',
   company: IBM_COMPANY,
   websiteLink: 'https://aiattribution.github.io/',
-  githubRepoLink: '',
+  githubRepoLink: 'https://github.com/aiattribution/aiattribution.github.io',
   skills: [
     SVELTE_SKILL,
     SASS_SKILL,
     HTML_SKILL,
     TYPESCRIPT_SKILL,
     CARBON_SKILL,
+    CYPRESS_SKILL
   ],
 };
 
