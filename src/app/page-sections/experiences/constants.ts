@@ -7,6 +7,7 @@ import {
   KOALA_PROJECT,
   PRIVATE_PROJECT_2023,
   PRIVATE_PROJECT_2024,
+  QUX360_PROJECT,
   UNICEN_COMPANY,
 } from '@common/constants';
 import { IExperienceInfo } from '@common/interfaces';
@@ -21,6 +22,7 @@ export const EXPERIENCES: IExperienceInfo[] = [
       'I work as a software engineer in Human-Centered AI (HCAI) research, focusing on the interaction between humans and AI agents in areas such as collaborative AI, mutual theory of mind, and group ideation with AI tools. I lead frontend development tasks and am responsible for implementing key features in that area, while also contributing to backend functionalities.',
     descriptionBullets: [],
     projects: [
+      QUX360_PROJECT,
       AGENTIC_CODE_EXPLORER_PROJECT,
       AI_ATTRIBUTION_TOOLKIT_PROJECT,
       PRIVATE_PROJECT_2024,

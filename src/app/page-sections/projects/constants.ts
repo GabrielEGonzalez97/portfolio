@@ -4,11 +4,13 @@ import {
   COLLABORATION_CANVAS_PROJECT,
   EXACTAMENTE_PROJECT,
   KOALA_PROJECT,
+  QUX360_PROJECT,
   SURFPHOTOS_PROJECT
 } from "@common/constants";
 import { IPublicProject } from "@common/interfaces";
 
 export const PROJECTS: IPublicProject[] = [
+  QUX360_PROJECT,
   AGENTIC_CODE_EXPLORER_PROJECT,
   AI_ATTRIBUTION_TOOLKIT_PROJECT,
   KOALA_PROJECT,

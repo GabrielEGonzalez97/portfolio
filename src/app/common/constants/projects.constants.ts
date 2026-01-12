@@ -21,6 +21,55 @@ import {
   TYPESCRIPT_SKILL
 } from "./skills.constants";
 
+export const QUX360_PROJECT: IPublicProject = {
+  name: 'Qux360 Demo',
+  shortDescription: `
+Qux360 Demo is a web-based demonstration application built to showcase the core capabilities of IBM Qux360, an open-source framework for AI-assisted qualitative interview analysis. The demo provides an interactive interface to explore features such as transcript ingestion, speaker anonymization, AI-assisted interviewee detection, topic extraction, thematic analysis, and bulk processing workflows. I designed and implemented the complete frontend architecture using Svelte, adhering to the provided UX design specifications, and contributed to the development of backend endpoints to ensure seamless frontend-backend integration.
+  `,
+  extendedDescription: `
+Qux360 Demo is a web-based demonstration application built to showcase the core capabilities of IBM [Qux360](https://github.com/IBM/qux360), an open-source Python framework for AI-assisted qualitative interview analysis. The demo translates Qux360's research-focused functionality into an interactive, user-friendly web experience, enabling stakeholders to explore and understand the framework's full analytical workflow without requiring direct interaction with code.
+
+The demo web application exposes and visualizes Qux360's main features, including:
+
+- **Interview Transcript Import**  
+  Upload and process interview transcripts in DOCX, XLSX, and CSV formats.
+
+- **Speaker Anonymization**  
+  Automatic anonymization of interview speakers to protect participant identities.
+
+- **AI-Assisted Interviewee Detection**  
+  Identification and structuring of interviewee contributions using AI-assisted methods.
+
+- **AI-Assisted Top-Down Topic Extraction**  
+  Extraction of high-level topics from interview data using LLM-driven analysis.
+
+- **AI-Assisted Thematic Analysis Across Topics**  
+  Thematic analysis that organizes statements and insights across extracted topics to support qualitative interpretation.
+
+- **Bulk Processing of Interview Collections**  
+  Support for batch operations across multiple interviews, such as large-scale anonymization workflows.
+  `,
+  contribution: `In this project, I designed and implemented the complete frontend architecture of the application using the Svelte framework, strictly adhering to the provided UX design specifications. I was responsible for translating the UX design into a scalable and maintainable frontend structure. Additionally, I contributed to the implementation of some backend endpoints, collaborating closely with the backend developer to ensure seamless integration between frontend and backend services.
+  `,
+  role: 'Software Engineer',
+  duration: 'IBM Research | Nov 2025 - Dec 2025',
+  isFreelanceProject: false,
+  isPrivateProject: false,
+  logoPath: 'assets/images/Qux360_Logo.png',
+  company: IBM_COMPANY,
+  websiteLink: '',
+  githubRepoLink: 'https://github.com/IBM/qux360-demo',
+  skills: [
+    SVELTE_SKILL,
+    TYPESCRIPT_SKILL,
+    FASTAPI_SKILL,
+    PYTHON_SKILL,
+    SASS_SKILL,
+    HTML_SKILL,
+    CARBON_SKILL
+  ],
+};
+
 export const AGENTIC_CODE_EXPLORER_PROJECT: IPublicProject = {
   name: 'Agentic Code Explorer',
   shortDescription: `
