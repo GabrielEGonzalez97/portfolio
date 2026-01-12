@@ -67,6 +67,7 @@ mat-expansion-panel-header {
 }
 
 .experience-detail-duration {
+  min-width: 250px;
   color: var(--theme-tertiary-text-color);
   font-weight: 300;
   font-size: 0.9rem;
@@ -260,6 +261,7 @@ mat-expansion-panel-header {
     }
 
     .experience-detail-duration {
+      min-width: unset;
       margin-left: 0;
     }
   }
