@@ -18,7 +18,8 @@ import {
   SASS_SKILL,
   SLACK_SKILL,
   SVELTE_SKILL,
-  TYPESCRIPT_SKILL
+  TYPESCRIPT_SKILL,
+  WEBSOCKETS_SKILL
 } from "./skills.constants";
 
 export const QUX360_PROJECT: IPublicProject = {
@@ -357,6 +358,7 @@ We implemented the Collaborativon Canvas using the Svelte framework for the fron
     HTML_SKILL,
     CARBON_SKILL,
     LLM_SKILL,
+    WEBSOCKETS_SKILL,
     CLOUDANT_SKILL,
     OPENSHIFT_SKILL,
   ],

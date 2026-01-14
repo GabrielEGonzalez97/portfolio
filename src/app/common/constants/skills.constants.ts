@@ -134,3 +134,8 @@ export const VUE_JS_SKILL: ISkill = {
     name: 'Vue JS',
     logoPath: 'assets/icons/vue-js-icon.svg',
 };
+
+export const WEBSOCKETS_SKILL: ISkill = {
+    name: 'WebSockets',
+    logoPath: 'assets/icons/websocket-icon.svg',
+};
