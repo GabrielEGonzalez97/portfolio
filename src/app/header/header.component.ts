@@ -23,11 +23,17 @@ export class HeaderComponent implements AfterViewInit {
 
   public headerHeight: number = 0;
 
+  public isMobileMenuOpen: boolean = false;
+
   constructor() {}
 
   public ngAfterViewInit(): void {
     this.headerHeight = this.headerElement.nativeElement.offsetHeight + 16;
     this.headerHeightChange.emit(this.headerHeight);
+  }
+
+  public toggleMobileMenu(): void {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
 
   public scrollToElement(id: string): void {
@@ -41,6 +47,9 @@ export class HeaderComponent implements AfterViewInit {
         top: offsetPosition,
         behavior: 'smooth',
       });
+
+      // Close mobile menu after navigation
+      this.isMobileMenuOpen = false;
     }
   }
 }

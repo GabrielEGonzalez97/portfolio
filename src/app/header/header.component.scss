@@ -78,12 +78,86 @@
 
 @media (max-width: 768px) {
   .header {
-    justify-content: end;
+    justify-content: space-between;
+
+    .hamburger-button {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 24px;
+      height: 24px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 1001;
+
+      .hamburger-line {
+        width: 100%;
+        height: 2px;
+        background-color: var(--theme-primary-text-color);
+        @include border-radius(2px);
+        @include transition(all 0.3s ease);
+        transform-origin: center;
+      }
+
+      &.active {
+        .hamburger-line:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+
+        .hamburger-line:nth-child(2) {
+          opacity: 0;
+        }
+
+        .hamburger-line:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+      }
+    }
 
     .menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 70%;
+      max-width: 300px;
+      height: 100vh;
+      padding-top: 60px;
+      background-color: var(--theme-background-color);
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+      @include transition(right 0.3s ease);
+
+      &.mobile-open {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+      }
+
       li {
-        display: none;
+        display: block;
+        float: none;
+        width: 100%;
+
+        a {
+          padding: 20px !important;
+          font-size: 1.2rem !important;
+          text-align: left;
+          border-bottom: 1px solid var(--theme-header-button-hover-background-color);
+        }
+      }
+    }
+
+    .menu ::ng-deep {
+      .theme {
+        padding: 17px 0;
       }
     }
   }
+}
+
+// Hide hamburger button on larger screens
+.hamburger-button {
+  display: none;
 }
