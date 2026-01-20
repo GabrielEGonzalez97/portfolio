@@ -13,12 +13,5 @@ export class AboutMeComponent {
 
   constructor() {}
 
-  public downloadResume(): void {
-    const pdfUrl: string = 'assets/resume.pdf';
 
-    const link: HTMLAnchorElement = document.createElement('a');
-    link.href = pdfUrl;
-    link.download = `${this.portfolioAuthorName.replace(/ /g, '_')}_Resume.pdf`;
-    link.click();
-  }
 }
