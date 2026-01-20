@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ExperienceDetailModalComponent } from '@common/components/experience-detail-modal/experience-detail-modal.component';
 import { IExperienceInfo } from '@common/interfaces';
-import { ExperienceDetailModalComponent } from '../experience-detail-modal/experience-detail-modal.component';
 import { EXPERIENCES } from './constants';
 
 @Component({

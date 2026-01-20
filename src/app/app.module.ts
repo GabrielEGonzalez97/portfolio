@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatChipsModule } from '@angular/material/chips';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
@@ -23,7 +21,6 @@ import { CoursesComponent } from './page-sections/education-and-courses/courses/
 import { EducationAndCoursesComponent } from './page-sections/education-and-courses/education-and-courses.component';
 import { EducationComponent } from './page-sections/education-and-courses/education/education.component';
 import { ItemComponent } from './page-sections/education-and-courses/item/item.component';
-import { ExperienceDetailModalComponent } from './page-sections/experience-detail-modal/experience-detail-modal.component';
 import { ExperiencesComponent } from './page-sections/experiences/experiences.component';
 import { LocationIconComponent } from './page-sections/reach-out-to-me/location-icon/location-icon.component';
 import { ReachOutToMeComponent } from './page-sections/reach-out-to-me/reach-out-to-me.component';
@@ -35,7 +32,6 @@ import { ReachOutToMeComponent } from './page-sections/reach-out-to-me/reach-out
     CoursesComponent,
     EducationAndCoursesComponent,
     EducationComponent,
-    ExperienceDetailModalComponent,
     ExperiencesComponent,
     FooterComponent,
     HeaderComponent,
@@ -53,8 +49,6 @@ import { ReachOutToMeComponent } from './page-sections/reach-out-to-me/reach-out
     BrowserModule,
     FormsModule,
     MatChipsModule,
-    MatDialogModule,
-    MatExpansionModule,
     MatFormFieldModule,
     MatIconModule,
     MatSelectModule,
