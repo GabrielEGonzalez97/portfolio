@@ -37,6 +37,11 @@
 
                             <span class="label">Contribution:</span>
                             <span class="experience-detail-contribution-text">{{ experienceDetail.contribution }}</span>
+
+                            <app-project-actions
+                                [websiteLink]="experienceDetail.websiteLink"
+                                [githubRepoLink]="experienceDetail.githubRepoLink"
+                            ></app-project-actions>
                         </div>
                         <div class="skills-container" *ngIf="experienceDetail.skills.length">
                             <span class="label skills-label">Technologies used:</span>

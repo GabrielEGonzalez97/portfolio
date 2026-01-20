@@ -91,41 +91,6 @@ app-card {
       }
     }
   }
-
-  .card-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-
-    .card-action-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      text-decoration: none;
-      color: var(--theme-primary-text-color);
-      font-size: 13px;
-      font-weight: 600;
-      padding: 6px 12px;
-      border: 1px solid var(--theme-border-color);
-      border-radius: 20px;
-      background-color: transparent;
-      transition: all 0.2s ease;
-      cursor: pointer;
-      font-family: inherit;
-
-      img {
-        width: 18px;
-        height: 18px;
-        @include filter(var(--theme-icon-filter));
-      }
-
-      &:hover {
-        background-color: var(--theme-border-color);
-        transform: translateY(-1px);
-      }
-    }
-  }
 }
 
 @media (max-width: 1380px) {

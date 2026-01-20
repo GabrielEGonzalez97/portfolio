@@ -10,6 +10,7 @@ import { CardsContainerComponent } from './cards-container/cards-container.compo
 import { ExperienceBannerComponent } from './experience-banner/experience-banner.component';
 import { ExperienceDetailModalComponent } from './experience-detail-modal/experience-detail-modal.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { ProjectActionsComponent } from './project-actions/project-actions.component';
 import { SectionTitleComponent } from './section-title/section-title.component';
 import { SectionComponent } from './section/section.component';
 import { SocialMediaComponent } from './social-media/social-media.component';
@@ -22,6 +23,7 @@ import { SocialMediaComponent } from './social-media/social-media.component';
         ExperienceBannerComponent,
         ExperienceDetailModalComponent,
         PaginationComponent,
+        ProjectActionsComponent,
         SectionComponent,
         SectionTitleComponent,
         SocialMediaComponent,
@@ -39,6 +41,7 @@ import { SocialMediaComponent } from './social-media/social-media.component';
         ExperienceBannerComponent,
         ExperienceDetailModalComponent,
         PaginationComponent,
+        ProjectActionsComponent,
         SectionComponent,
         SectionTitleComponent,
         SocialMediaComponent,

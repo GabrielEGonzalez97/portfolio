@@ -1,0 +1,11 @@
+<div class="project-actions" *ngIf="websiteLink || githubRepoLink">
+    <a class="action-btn" *ngIf="websiteLink" [href]="websiteLink" target="_blank" rel="noopener noreferrer">
+        <img src="assets/icons/open-external-link-icon.svg" alt="Open external link icon">
+        <span>Visit Website</span>
+    </a>
+
+    <a class="action-btn" *ngIf="githubRepoLink" [href]="githubRepoLink" target="_blank" rel="noopener noreferrer">
+        <img src="assets/icons/github-icon.svg" alt="GitHub">
+        <span>View Code</span>
+    </a>
+</div>
