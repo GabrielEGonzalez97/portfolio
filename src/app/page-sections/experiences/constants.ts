@@ -19,7 +19,7 @@ export const EXPERIENCES: IExperienceInfo[] = [
     role: 'Software Engineer',
     date: 'November 2021 - December 2025',
     description:
-      'I work as a software engineer in Human-Centered AI (HCAI) research, focusing on the interaction between humans and AI agents in areas such as collaborative AI, mutual theory of mind, and group ideation with AI tools. I lead frontend development tasks and am responsible for implementing key features in that area, while also contributing to backend functionalities.',
+      'I worked as a software engineer in Human-Centered AI (HCAI) research, focusing on the interaction between humans and AI agents in areas such as collaborative AI, mutual theory of mind, and group ideation with AI tools. I led frontend development tasks and was responsible for implementing key features in that area, while also contributing to backend functionalities.',
     descriptionBullets: [],
     projects: [
       QUX360_PROJECT,
