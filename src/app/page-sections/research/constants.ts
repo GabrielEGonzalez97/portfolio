@@ -33,8 +33,16 @@ const MURRAY_CAMPBELL: IAuthor = {
   name: 'Murray Campbell',
 };
 
+const HELOISA_CANDELLO: IAuthor = {
+  name: 'Heloisa Candello',
+};
+
 const MORGAN_A_FOREMAN: IAuthor = {
   name: 'Morgan A. Foreman',
+};
+
+const WERNER_GEYER: IAuthor = {
+  name: 'Werner Geyer',
 };
 
 const ARIELLE_GOLDBERG: IAuthor = {
@@ -51,6 +59,10 @@ const STEPHANIE_HOUDE: IAuthor = {
 
 const SIYA_KUNDE: IAuthor = {
   name: 'Siya Kunde',
+};
+
+const MARIELA_LANZA: IAuthor = {
+  name: 'Mariela Claudia Lanza',
 };
 
 const MIAO_LIU: IAuthor = {
@@ -77,6 +89,10 @@ const STEVEN_I_ROSS: IAuthor = {
   name: 'Steven I. Ross',
 };
 
+const DAITA_SARKAR: IAuthor = {
+  name: 'Daita Sarkar',
+};
+
 const DARIO_ANDRES_SILVA_MORAN: IAuthor = {
   name: 'Darío Andrés Silva Moran',
 };
@@ -90,6 +106,27 @@ const JUSTIN_D_WEISZ: IAuthor = {
 };
 
 export const PUBLICATIONS: IPublication[] = [
+  {
+    title:
+      'Qux360: A Validation Framework for Improving Reliability and Transparency of AI-Supported Qualitative Analysis',
+    bestPaperAwards: [],
+    abstract: `Driven by fast-paced product cycles and advancements in generative technology, the use of generative AI (GenAI) for qualitative analysis has become increasingly common in user research. However, user research requires robust qualitative methodologies, and the integration of GenAI creates challenges in maintaining rigor. This work introduces Qux360, a framework that implements validation as a first-class concept in AI-assisted qualitative analysis, based on pain points identified in exploratory interviews with user researchers. We demo an application that showcases the analysis and validation capabilities of Qux360, including validators that check for different aspects of quality in automated participant identification, topic extraction, and thematic analysis. By facilitating transparent analysis without compromising efficiency, Qux360 enables researchers to deliver actionable results while maintaining high standards of research quality and integrity.`,
+    publicationLink:
+      'https://doi.org/10.1145/3742414.3794768',
+    publicationDate: 'March 22, 2026',
+    presentedAt:
+      'ACM International Conference on Intelligent User Interfaces 2026: Demos',
+    authors: [
+      WERNER_GEYER,
+      JESSICA_HE,
+      PORTFOLIO_AUTHOR,
+      MARIELA_LANZA,
+      SIYA_KUNDE,
+      HELOISA_CANDELLO,
+      MICHAEL_MULLER,
+      DAITA_SARKAR
+    ],
+  },
   {
     title:
       'Bridging the Gap: Unifying HCI & ML Perspectives on Mutual Theory of Mind',
