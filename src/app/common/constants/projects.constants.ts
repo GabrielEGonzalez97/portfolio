@@ -58,7 +58,7 @@ The demo web application exposes and visualizes Qux360's main features, includin
   isPrivateProject: false,
   logoPath: 'assets/images/Qux360_Logo.png',
   company: IBM_COMPANY,
-  websiteLink: '',
+  websiteLink: 'https://ibm.github.io/qux360-demo/',
   githubRepoLink: 'https://github.com/IBM/qux360-demo',
   skills: [
     SVELTE_SKILL,
