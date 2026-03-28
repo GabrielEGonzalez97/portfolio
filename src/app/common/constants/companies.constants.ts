@@ -6,6 +6,12 @@ export const IBM_COMPANY: ICompany = {
     color: '#3E85C2',
 };
 
+export const SEEK_COMPANY: ICompany = {
+    name: 'Seek',
+    logoPath: 'assets/images/Seek_Logo.png',
+    color: '#0F41A2',
+};
+
 export const UNICEN_COMPANY: ICompany = {
     name: 'Universidad Nacional del Centro de la Provincia de Buenos Aires',
     logoPath: 'assets/images/UNICEN_Logo.png',
