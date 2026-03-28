@@ -5,38 +5,78 @@ app-card {
 }
 
 #awards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+
   .award-container {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    width: fit-content;
+    background-color: rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    padding: 6px 12px;
+    border-radius: 20px;
     color: var(--theme-primary-text-color);
+    font-size: 14px;
     font-weight: 600;
+    @include transition(all 0.2s ease);
 
     .award-icon {
-      margin-left: 0.25rem;
-      width: 32px;
-      height: 32px;
+      margin-left: 8px;
+      width: 20px;
+      height: 20px;
     }
   }
 
   .award-container:hover {
     cursor: pointer;
-    opacity: 0.5;
+    background-color: rgba(255, 215, 0, 0.2);
+    transform: translateY(-2px);
   }
 }
 
 #card-extra-details {
   display: flex;
   flex-direction: column;
+  gap: 12px;
   color: var(--theme-primary-text-color);
+  margin-top: 20px;
+}
+
+.metadata-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  line-height: 1.4;
+
+  .metadata-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    fill: var(--theme-secondary-text-color);
+    color: var(--theme-secondary-text-color);
+  }
+
+  span {
+    color: var(--theme-secondary-text-color);
+  }
+
+  .authors-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.25em;
+    row-gap: 2px;
+  }
 }
 
 .highlight-author {
-  color: #4e9ad0;
+  color: #4e9ad0 !important;
   font-weight: 600;
 
   .comma {
-    color: var(--theme-primary-text-color);
+    color: var(--theme-secondary-text-color) !important;
     font-weight: 400;
   }
 }

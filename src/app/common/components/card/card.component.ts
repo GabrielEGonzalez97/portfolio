@@ -8,8 +8,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class CardComponent {
   @Input() public title: string = '';
   @Input() public subtitle: string = '';
-  @Input() public fotterButtonText?: string = '';
-  @Input() public fotterButtonLink?: string = '';
+  @Input() public footerButtonText?: string = '';
+  @Input() public footerButtonLink?: string = '';
 
   @Output() footerButtonClicked = new EventEmitter<void>();
 
